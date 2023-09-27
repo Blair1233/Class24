@@ -1,10 +1,10 @@
 ## Activity File: Building an IP Lookup Tool  
   
-- You continue in your role as security analyst at Candy Corp.
+- You continue in your role as security analyst at Wonka Corp.
 
-- Candy Corp has been experiencing more attacks on its network.
+- Wonka has been experiencing more attacks on their network.
 
-- Your manager wants to know what country these attacks are coming from so Candy Corp can block the country from accessing its network.
+- Your manager wants to know what country these attacks are coming from so Wonka Corp can block the country from accessing their network.
 
 - Specifically, they would like you to design a script that can look up the countries of several IP addresses pulled from the logs.
 
@@ -23,23 +23,17 @@ Using only the command line, change into the `/03-student/day3/IP_Lookup_Tool` d
    Using  pipes, `grep`, and `awk`, modify the `curl` command to display only the country.
 
       - **Hints:**
-
          - Use `grep` to display only the line that contains the country. 
-
          - Use `awk` to parse out the country from that line.
 
   2.  Place the command into a new shell script called `IP_lookup.sh`.
 
   3.  Modify the script so the IP address is an argument that can be passed into the script.
 
-  4. The following IP addresses were found in Candy Corp's log files. Run your new  `IP_lookup.sh` with these IP addresses as arguments to determine their countries:
-
+  4. The following IP addresses were found in Wonka's log files. Run your new  `IP_lookup.sh` with these IP addresses as arguments to determine their countries:
        - IP 1: `133.18.55.255`
-
        - IP 2: `41.34.55.255`
-
        - IP 3: `187.54.23.8`
 
 --- 
-
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

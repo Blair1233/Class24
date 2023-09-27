@@ -59,13 +59,15 @@ In this module, we will gain technical hands-on experience by using bash and the
 
 ### Lab Environment
 
-You will use your web lab machine for today's activities.
+You will use your local Vagrant virtual machine for today's activities.
 
-- After logging into the web lab, student credentials to access the ubuntu VM:
-    - Username:`student`
+- Student access:
+    - Username:`sysadmin`
     - Password: `cybersecurity`
 
 ### What to Be Aware Of:
+
+- Your Vagrant local machine should be set-up before Day 1. 
 
 - Practice makes perfect! This is the first technical, hands-on module of the course and it can take some hard work to adjust to. Take the time you need to practice getting used to working on the command line. 
 
@@ -113,8 +115,9 @@ These resources are provided as optional, recommended resources to supplement th
 
 ### Module 3: Challenge Assignment
 
-This module's Challenge assignment can be found in Canvas.
--  For this week's Challenge assignment, students will use their new command-line skills to uncover the identities of a rogue casino player and dealer colluding to scam a casino out of thousands of dollars.
+This module's Challenge assignment can be viewed here: 
+
+- [Module Challenge File](../../2-Homework/03-Terminal-and-Bash)
 
 ### Looking Forward 
 

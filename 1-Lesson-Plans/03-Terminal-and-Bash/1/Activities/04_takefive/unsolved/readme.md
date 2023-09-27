@@ -1,8 +1,8 @@
 ## Activity File: Take Five and Practice the Command Line
 
-- You are playing the role of a security analyst at Candy Corp. 
+- You are playing the role of a security analyst at Wonka Corp. 
 
-- Candy Corp believes one of their employees might be selling secret recipes to Sugar Corp.
+- Wonka Corp believes one of their employees might be selling secret recipes to Slugworth Corp.
 
 - You have been tasked with creating evidence files for email, logs, and web access.  
 
@@ -10,7 +10,7 @@
 
 ### Instructions
 
-Using only the command line, complete the following tasks from within the `/03-student/day1/take_5/` folder in your Ubuntu virtual machine:
+Using only the command line, complete the following tasks from within the `/03-student/day1/take_5/` folder in your Ubuntu VM:
 
   1. Create a folder called `Internal_Investigation_Employee_A`.
 
@@ -20,19 +20,13 @@ Using only the command line, complete the following tasks from within the `/03-s
 
   4. Create three files inside the `Internal_Investigation_Employee_A` folder:
       * `email_evidence`
-
       * `log_evidence`
-
       * `web_evidence`
-
-  5. Delete the file called `web_evidence`, as you have realized Candy Corp has no web logs captured.
-
+  5. Delete the file called `web_evidence` as you realized Wonka has no web logs captured.
   6. Display (list) all the files created.
-
   7. Clear the terminal window.
 
 **Hint:** Don't be afraid to ask your neighbor or TA for help if you're having trouble with a command.
 
 ---
-
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

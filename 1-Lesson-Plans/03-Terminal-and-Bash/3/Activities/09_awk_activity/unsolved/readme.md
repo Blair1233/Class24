@@ -1,17 +1,16 @@
 ## Activity File: Using awk   
   
-- You continue in your role as security analyst at Candy Corp.
+- You continue in your role as security analyst at Wonka Corp.
 
-- Your manager still needs your help finding information on the cybercriminal attempting to log into several administrative websites owned by Candy Corp.
+- Your manager still needs your help finding information on the cybercriminal attempting to log into several administrative websites owned by Wonka.
 
 - You are now tasked with isolating several fields from the log file to determine the primary username being used to log in.
 
 ### Instructions
 
-Using only the command line, complete the following tasks from within the `/03-student/day3/learning_awk` folder in your Ubuntu virtual machine:
+Using only the command line, complete the following tasks from within the `/03-student/day3/learning_awk` folder in your Ubuntu VM:
   
   1. Move `Update1_Combined_Access_logs.txt` into the directory `/03-student/day3/learning_awk`.
-
      - If you didn't have a chance to finish the last activity feel free to use the `Update1_Combined_Access_logs.txt` file located [here](Update1_Combined_Access_logs.txt). 
 
   1. Use the `awk` command to isolate the time and username fields out from this file.
@@ -20,4 +19,4 @@ Using only the command line, complete the following tasks from within the `/03-s
 
 ---
 
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

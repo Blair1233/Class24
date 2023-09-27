@@ -55,7 +55,7 @@ $ man find
 $ find
 ```
 
-#### Find files in a specific directory
+#### List files in a specific directory
 
 ```bash
 $ find ./demo
@@ -98,6 +98,12 @@ $ find -type d -name 'Demo*'
 ```
 
 #### Find files that are over 5MB in size
+
+```bash
+$ find ~/joe -size +5M
+```
+
+#### Find files before or after a creation time
 
 ```bash
 $ find ~/joe -size +5M
@@ -169,7 +175,7 @@ $ man wc
 $ wc index.html
 ```
 
-#### Display the count for the number of lines, words, and characters within all files and directories within the current directory
+#### Display the count for all of the text files within a directory
 
 ```bash
 $ wc . *
@@ -177,4 +183,6 @@ $ wc . *
 
 -------
 
-2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+## Copyright
+
+2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

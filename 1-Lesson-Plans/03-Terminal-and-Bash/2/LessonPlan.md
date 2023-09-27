@@ -31,8 +31,16 @@ By the end of class, students will be able to:
 
 ### Lab Environment   
 
-You will use the Ubuntu VM inside your web lab for today's activities. Please note that instructors and students have different access credentials.
+You will use your local Vagrant virtual machine for today's activities. Please note that instructors and students have different access credentials.
   
+  - Instructor access:
+    - Username: `instructor`
+    - Password: `instructor`
+
+  - Student access:
+    - Username: `sysadmin`
+    - Password: `cybersecurity`
+
 :warning: **Heads Up**: In the event of lab malfunctions, use a backup zip file containing this module's student activity directories.
 
   - [Backup Student Activity Directories: Terminal Module](Resources/terminal.zip)
@@ -106,11 +114,11 @@ Remind the class that the best way to learn these commands is to repeatedly use 
 
 Explain the following to students:
 
-- You are a security analyst at Candy Corp.
+- You are a security analyst at Wonka Corp.
 
-- Candy Corp's management apprehended Ruth and Henry and they're grateful for all your work so far.
+- Wonka Corp's management apprehended Ruth and Henry and they're grateful for all your work so far.
 
-- The local authorities have video evidence that Sugar Corp delivered a cash payment to Candy Corp's back door on October 13, 2019.
+- The local authorities have video evidence that Slugworth delivered a cash payment to Wonka Corp's back door on October 13, 2019.
 
 - You are tasked with gathering physical access logs to prove Henry or Ruth opened the back door for the delivery. This will assist the authorities with solidifying their case.
 
@@ -274,7 +282,7 @@ Now we will practice using command line options by covering the following scenar
     - Note the syntax:
         - `head` is the command.
         - `-n` is the option, but requires a parameter.  
-        - `40` is a parameter for the `-n` option.
+        - `40` is an argument for the `-n` option.
         - `fileE` is the argument for the `head` command.
 
     - Note that the user Sheila does not exist in this file.
@@ -390,7 +398,7 @@ Explain the following scenario to show how man pages can assist with learning a 
 
 #### Man Pages Demonstration Summary  
 
-Summarize the demonstration by recapping the following:
+Summarize this demonstration by recapping the following:
 
 - Man pages: Documentation that exists in the terminal and provides details and options about command line commands.
 
@@ -400,22 +408,22 @@ Summarize the demonstration by recapping the following:
 
 Check for questions before proceeding.
 
-Explain that in the next command line activity, students will learn new commands with man pages to conduct another investigation at Candy Corp.   
+Explain that in the next command line activity, students will learn new commands with man pages to conduct another investigation at Wonka Corp.   
 
 
 ### 05. Student Do: Learning New Commands  (0:18)
 
 Explain the following scenario to students:
 
-- You continue to be a security analyst at Candy Corp.
+- You continue to be a security analyst at Wonka Corp.
 
-- Candy Corp has recently experienced a network attack on their websites and management needs your help determining which website was the main target of the attack.
+- Wonka Corp has recently experienced a network attack on their websites and management needs your help determining which website was the main target of the attack.
 
 - Your manager has provided you log files for each of their websites.
 
 - Each log file contains the IP addresses that were connecting to that website on the day of the attack.
 
-- You must count the IP addresses in each file in order to determine which Candy Corp website was the main target of the attack.
+- You must count the IP addresses in each file in order to determine which Wonka website was the main target of the attack.
 
 
 Send students the following:
@@ -457,7 +465,7 @@ First, navigate into the `/03-student/day2/learning_new_commands` folder on your
 
 Note that we can view the log files in this directory by running `ls`.
 
-- Point out that there are five files in this directory, each for one of Candy Corp's websites:
+- Point out that there are five files in this directory, each for one of Wonka Corp's websites:
 
    - `Chocolateyfun.com`  
    - `GummyGummy.com`
@@ -648,9 +656,9 @@ Now we will discuss the syntax for the various methods of finding a directory.
     - In this example, we are finding all directories that end with the date `1013`.
 
       - The command would output directories ending in `1013`, despite what comes before. For example:
-        - `apache1013`
+        - `apache1013.log`
 
-        - `textdata1013`
+        - `textdata1013.txt`
 
 5. `sudo find /root/desktop -type d -iname logs`
 
@@ -734,18 +742,18 @@ Summarize this demonstrations by reviewing the following concepts:
 
 :bar_chart: Take a moment to run a comprehension check poll and address any questions before moving on. 
 
-Explain that in the next activity, students will get to use the `find` command to locate a secret Candy Corp recipe buried within a file system.
+Explain that in the next activity, students will get to use the `find` command to locate a secret Wonka recipe buried within a file system.
 
 
 ### 08. Student Do: Finding Your Way (0:18)
 
 Explain the following scenario to students:
 
-- You will continue to play the role of a security analyst at Candy Corp.
+- You will continue to play the role of a security analyst at Wonka Corp.
 
-- Your manager has identified why PeanutButtery.net was targeted: Henry had hidden a secret recipe for a revolutionary Candy Corp treat within the file system, and Sugar Corp was trying to find it.
+- Your manager has identified why PeanutButtery.net was targeted: Henry had hidden a secret recipe for a revolutionary Wonka candy within the file system, and Slugworth was trying to find it.
 
-- Your manager at Candy Corp needs you to search through the files and file directories of the PeanutButtery.net server to find the hidden recipes in its file system.
+- Your manager at Wonka needs you to search through the files and file directories of the PeanutButtery.net server to find the hidden recipes in its file system.
 
 - You must scan the directories of the site PeanutButtery.net to uncover the secret recipes hidden by Henry.
 
@@ -767,9 +775,9 @@ Explain that this activity required the following steps:
 
   - Finding directories with a specific directory name.
 
-  - Finding files with case insensitivity.
+  - Finding files that with case insensitivity.
 
-  - Finding files with wildcards.
+  - Finding files that with wildcards.
 
   - Using the find command with conditional statements.
 
@@ -780,7 +788,7 @@ Send students the following:
 
 #### Walkthrough
 
-Explain that the first step is to navigate into the `/03-student/day2/finding_your_way/PeanutButtery.net` folder on your VM.
+Explain that the first step is to navigate into the `/03-student/day2/finding_your_way//PeanutButtery.net` folder on your VM.
 
 - To complete this, run the following commands:
 
@@ -806,9 +814,9 @@ Explain that the next step is to find all directories that have the word "secret
 
 Run the command and point out the results should return the following directory path containing the word "secret":     
 
-  - `./other/disregard/candysecretrecipes`
+  - `./other/disregard/wonkasecretrecipes`
 
-  - This path indicates that the directory `candysecretrecipes` is within the `disregard` directory, within the `other` directory.
+  - This path indicates that the directory `wonkasecretrecipes` is within the `disregard` directory, within the `other` directory.
 
 Next, we need to find the files that contain the word "`recipe`":
 
@@ -823,10 +831,10 @@ Next, we need to find the files that contain the word "`recipe`":
 
 - Run the command and point out that the results should return the following four files that have the word recipe in the name:  
 
-     - `./other/disregard/candysecretrecipes/recipe_crunchybars`
-     - `./other/disregard/candysecretrecipes/recipe_peanutballs`
-     - `./other/disregard/candysecretrecipes/recipe_peanutsquares`
-     - `./other/disregard/candysecretrecipes/recipe_yumbars`
+     - `./other/disregard/wonkasecretrecipes/recipe_crunchybars`
+     - `./other/disregard/wonkasecretrecipes/recipe_peanutballs`
+     - `./other/disregard/wonkasecretrecipes/recipe_peanutsquares`
+     - `./other/disregard/wonkasecretrecipes/recipe_yumbars`
 
 Point out the four files are: `recipe_yumbars`,  `recipe_peanutsquares`, `recipe_peanutballs`, `recipe_crunchybars`  
 
@@ -859,8 +867,8 @@ For the bonus, we were tasked with finding files that contain the words "recipe"
 
 - Run the command and note the results only show the two files that have the word "recipe" AND "peanut" in their names:
 
-     - `./other/disregard/candysecretrecipes/recipe_peanutballs`
-     - `./other/disregard/candysecretrecipes/recipe_peanutsquares`
+     - `./other/disregard/wonkasecretrecipes/recipe_peanutballs`
+     - `./other/disregard/wonkasecretrecipes/recipe_peanutsquares`
 
 
  Answer any questions that remain before proceeding to the next lesson.
@@ -1066,11 +1074,11 @@ Explain that in the next command line activity, students will get to use the `gr
 
 Explain the following scenario to students:
 
-- You continue to be security analyst at Candy Corp.
+- You continue to be security analyst at Wonka Corp.
 
-- Your manager found out that Sugar Corp recently made a large purchase of guavaberries. They currently do not have any candy that includes guavaberries, but Candy Corp does.
+- Your manager found out that Slugworth Corp recently made a large purchase of guavaberries. They currently do not have any candy that includes guavaberries, but Wonka does.
 
-- Your manager suspects that Sugar Corp is trying to reproduce some of Candy Corp's secret recipes that use guavaberries.
+- Your manager suspects that Slugworth is trying to reproduce some of Wonka's secret recipes that use guavaberries.
 
 - Your task is to determine which of the secret recipes contain guavaberries in their list of ingredients.
 
@@ -1107,7 +1115,7 @@ Explain that the first step is to navigate into the folder on your VM where the 
 
   - `cd finding_your_way`
 
-  - `cd PeanutButtery.net/other/disregard/candysecretrecipes`
+  - `cd PeanutButtery.net/other/disregard/wonkasecretrecipes`
 
 Now we need to write a command to search within the recipes for the ingredient "guavaberries."
 
@@ -1167,7 +1175,7 @@ Explain that for the bonus, we will adjust the `grep` command to search for the 
 
 - Point out that this shows the `recipe_peanutsquares` has an "optional" note that blueberries can substitute guavaberries.
 
-- Summarize these results and indicate that Peanut Squares is a recipe that Candy Corp should be concerned about in the near future, as Sugar Corp can make this without having guavaberries.
+- Summarize that these results and indicate that Peanut Squares is a recipe that Wonka should be the concerned about in the near future, as Slugworth can make this without having guavaberries.
 
 
 
@@ -1256,7 +1264,7 @@ Explain that we will now demonstrate how to use pipes with the following scenari
 
 Check for questions before proceeding.
 
-Explain that in the final command line activity, students will get to use all of the commands learned today to assist Candy Corp with creating an evidence file for the authorities to charge Sugar Corp with a cyber crime.
+Explain that in the final command line activity, students will get to use all of the commands learned today to assist Wonka Corp with creating an evidence file for the authorities to charge Slugworth with a cyber crime.
 
 
 
@@ -1265,11 +1273,11 @@ Explain that in the final command line activity, students will get to use all of
 
 Explain the following to students:
 
-- You continue to be a security analyst at Candy Corp.
+- You continue to be a security analyst at Wonka Corp.
 
-- Candy Corp believes they have enough evidence to send to the authorities to charge Sugar Corp with a cyber crime.
+- Wonka Corp believes they have enough evidence to send to the authorities to charge Slugworth with a cyber crime.
 
-- Your task is to gather several points of evidence from your file systems that can be provided to the authorities to prove Sugar Corp is stealing data.
+- Your task is to gather several points of evidence from your file systems that can be provided to the authorities to prove Slugworth is stealing data.
 
 Send students the following instructions:
 
@@ -1308,59 +1316,59 @@ Explain that the first step is to navigate into the `/03-student/day2/Gathering_
 
   `cd Gathering_Evidence`
 
-In the `Gathering Evidence Folder`, make a directory called `Sugar_Corp_evidence`.       
+In the `Gathering Evidence Folder`, make a directory called `Slugworth_evidence`.       
 
-  - `mkdir `Sugar_Corp_evidence`
+  - `mkdir Slugworth_evidence`
 
-Next, move into the email directory and list the emails referencing "sugar"
+Next, move into the email directory and list the emails referencing "slugworth."
 
-  - Place the results in a file called `Sugar_Corp_email_evidence`.
+  - Place the results in a file called `slugworth_web_evidence`.
 
     - `cd email`
 
-    - `grep -il sugar * > Sugar_Corp_email_evidence`
+    - `grep -il slugworth * > slugworth_email_evidence`
 
 
-Next, in the same file, add the count of emails that contain "sugar"
+Next, in the same file, add the count of emails that contain "slugworth."
 
 
-  - `grep -il sugar * | wc -l >> Sugar_Corp_email_evidence`
+  - `grep -il slugworth * | wc -l >> slugworth_email_evidence`
 
 
-Explain that the next step is to place the following data into a new file called `Sugar_Corp_web_evidence`:
-- Which web log file contains Sugar_Corp's IP.
-- Number of times Sugar_Corp's IP is found in the files.
+Explain that the next step is to place the following data into a new file called `slugworth_web_evidence`:
+- Which web log file contains Slugworth's IP.
+- Number of times Slugworth's IP is found in the files.
 
 
  Access the web_logs directory by going back a directory, `cd ..` , then `cd web_logs`
 
-- To find the log files that have the IP of `13.16.23.234` and place them in a new file, `Sugar_Corp_web_evidence`, run:
+- To find the log files that have the IP of `13.16.23.234` and place them in a new file, `slugworth_web_evidence`, run:
 
-  - `grep -il 13.16.23.234 * > Sugar_Corp_web_evidence`
+  - `grep -il 13.16.23.234 * > slugworth_web_evidence`
 
 
 - Next, to append to this file the count of records that have the IP:
 
 
-  - `grep -i 13.16.23.234 * | wc -l >> Sugar_Corp_web_evidence`
+  - `grep -i 13.16.23.234 * | wc -l >> slugworth_web_evidence`
 
 
-- Explain that next, we will move both of the evidence files over to the `Sugar_Corp_evidence` directory that we created.
+- Explain that next, we will move both of the evidence files over to the `Slugworth_evidence` directory that we created.
 
     - `cd ../../`
-    - `mv ./Gathering_Evidence/email/Sugar_Corp_email_evidence ./Gathering_Evidence/Sugar_Corp_evidence/`
-    - `mv ./Gathering_Evidence/web_logs/Sugar_Corp_web_evidence ./Gathering_Evidence/Sugar_Corp_evidence/`
+    - `mv ./Gathering_Evidence/email/slugworth_email_evidence ./Gathering_Evidence/Slugworth_evidence/`
+    - `mv ./Gathering_Evidence/web_logs/slugworth_web_evidence ./Gathering_Evidence/Slugworth_evidence/`
 
 
-- Explain the next step is to navigate to the `Sugar_Corp_evidence` directory and concatenate the files into a single file called `Sugar_Corp_evidence_for_authorities`.
+- Explain the next step is to navigate to the `Slugworth_evidence` directory and concatenate the files into a single file called `Slugworth_evidence_for_authorities`.
 
-  - `cd Gathering_Evidence/Sugar_Corp_evidence/`
+  - `cd Gathering_Evidence/Slugworth_evidence/`
 
-  - `cat Sugar_Corp_email_evidence Sugar_Corp_web_evidence > Sugar_Corp_evidence_for_authorities`
+  - `cat slugworth_email_evidence slugworth_web_evidence > Slugworth_evidence_for_authorities`
 
 -  Next, explain the last step is to confirm the data placed in the final file for the authorities:
 
-    - `cat Sugar_Corp_evidence_for_authorities`
+    - `cat Slugworth_evidence_for_authorities`
 
     Output should resemble:
 
@@ -1377,7 +1385,7 @@ Explain that the next step is to place the following data into a new file called
 
 
 
-Answer any questions that remain before moving on the final class wrap up.
+Answer any questions that remain before moving on the the final class wrap up.
 
 
 ### 18. Optional - Instructor Do: Review Key Commands (0:00)
