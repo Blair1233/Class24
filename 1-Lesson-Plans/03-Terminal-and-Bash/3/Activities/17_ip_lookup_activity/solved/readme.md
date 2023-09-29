@@ -1,6 +1,6 @@
 ## Solution Guide: Building an IP Lookup Tool
 
-- The first step is to create and navigate into the `/03-student/day3/IP_Lookup_Tool` folder on your VM. To do this, run the following command:
+- The first step is to create and navigate into the `/03-student/day3/IP_Lookup_Tool` folder on your virtual machine. To do this, run the following command:
  
   - `cd /03-student/day3/IP_Lookup_Tool`
        
@@ -22,6 +22,7 @@
     "timezone": "America/New_York",
     "readme": "https://ipinfo.io/missingauth"
     ```
+
 - Next, we are tasked with using `grep`, pipes, and `awk` to extract only the country from these results.
 
 - To do this, we will first modify the script to `grep` the line that has the country:
@@ -43,9 +44,11 @@
   - We also print out the second value since that field contains the country.
 
 - The above command returns the following:
+
    ```
     "US",
    ```
+
 - Next we will place this script into a file called `IP_lookup.sh`:
 
    - `nano IP_lookup.sh`
@@ -61,17 +64,23 @@
 - Run the following three commands to confirm the script can identify the country from the IP addresses:
 
    - `sh IP_lookup.sh  133.18.55.255`
+
    - `sh IP_lookup.sh  41.34.55.255`
+
    - `sh IP_lookup.sh  187.54.23.8`
      
 - The results should show:
-  ```
-  - "JP", 
-  - "EG", 
-  - "BR",
-  ```
-- We can clean this up a little by getting rid of the extraneous quotes and comma. We do this by telling awk to use a class of characters as field separators, changing the command in our script from `awk -F: '{print $2}'` to `awk -F'[:",]' '{print $5}'`
 
-- Next, we can go to `http://www.ip2country.net/ip2country/country_code.html` to identify which countries are associated with those codes
+  ```
+  - "JP",
+  - "EG",
+  - "BR",
+
+- You can then check `http://www.ip2country.net/ip2country/country_code.html` to confirm which countries are represented by these codes
+  ```
+
+- We can clean this up a little by getting rid of the extraneous quotes and comma. We do this by telling awk to use a class of characters as field separators, changing the command in our script from `awk -F: '{print $2}'` to `awk -F'[:",]' '{print $2}'`
+
 ---
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+
+© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

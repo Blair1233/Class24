@@ -1,12 +1,15 @@
 ## Solution Guide: Warm-Up
 
-- The first step is to navigate into the `/03-student/day2/warmup/` folder on your VM. To do this, run the following command:
+- The first step is to navigate into the `/03-student/day2/warmup/` folder on your virtual machine. To do this, run the following command:
 
     - `cd /03-student/day2/warmup/`
-- Next,  confirm which directories are in this folder by running `ls`. This will display the following three directories:
+
+- Next, confirm which directories are in this folder by running `ls`. This will display the following three directories:
 
     -  `physical_access_logs/`
+
     -  `server_logs/  `
+
     -  `web_logs/`
       
 - The next step is to create a directory called `additional_evidence`. Run the following command:      
@@ -17,7 +20,7 @@
 
     - `cd physical_access_logs/`
       
-- Within this folder are six physical access logs. To view the contents, run preview commands (`head`, `more` or `less`) to find out which contain the data for October 13th. For example:
+- Within this folder are six physical access logs. To view the contents, run preview commands (`head`, `more`, or `less`) to find out which contain the data for October 13th. For example:
 
     - `head physical1`
        
@@ -31,10 +34,8 @@
  
  - Lastly, we need to move this new file over to the `additional_evidence` folder. We will do this using absolute paths:
  
-    - `mv /03-student/day2/warmup/physical_access_logs/Physical_Access_evidence /03-student/day2/warmup/`
+    - `mv /03-student/day2/warmup/physical_access_logs/Physical_Access_evidence /03-student/day2/warmup/additional_evidence`
             
-        
-
 --- 
 
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

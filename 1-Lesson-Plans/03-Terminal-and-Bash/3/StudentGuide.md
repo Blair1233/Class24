@@ -11,19 +11,20 @@ In today's class, you will further develop your command line skills by learning 
 By the end of this class, you will be able to:
 
 * Define three benefits of text processing programs over programming languages for a security professional.
-* Use `sed` to make substitutions to a file.
-* Use `awk` to isolate data points from a complex log file.
-* Edit contents of a file using `nano`.
-* Design an IP lookup shell script by passing arguments.
 
+* Use `sed` to make substitutions to a file.
+
+* Use `awk` to isolate data points from a complex log file.
+
+* Edit contents of a file using `nano`.
+
+* Design an IP lookup shell script by passing arguments.
 
 ### Slideshow
 
 - The lesson slides are available on Google Drive here: [3.3 Slides](https://docs.google.com/presentation/d/1aVYucnkCZkQCJrRwiUVFsMIf0Q_p4s-zIXiV1_Dth-I/).
 
-
-- **Note:** Editing access is not available for this document. If you wish to modify the slides, please create a copy by navigating to File > "Make a copy...".
-
+- **Note:** Editing access is not available for this document. If you wish to modify the slides, please create a copy by navigating to File > "Make a copy..."
 
 -------
 
@@ -34,14 +35,19 @@ Before diving into the next set of commands, let's review what we've covered so 
 **Command Options and Man Pages**
 
 - Commands can have their default behavior modified using **options**.
+
 - Command options can have their own arguments called **parameters**.
+
 - **Man pages** are documentation that exist within the terminal containing command syntax, options, and parameters.
+
 - `man` followed by a command will display the documentation for that specific command.
 
 **Searching for Directories, Files, and Data Within Files**
 
-- The `find` command is used to find directories or files.
+- The `find` command is used to find directories or files:
+
   - `-type d` is the option and parameter for finding directories.
+
   - `-type f` is the option and parameter for finding a file.
 
 - The `grep` command is used to find a data point within a file.
@@ -49,6 +55,7 @@ Before diving into the next set of commands, let's review what we've covered so 
 - **Wildcards**, indicated with a `*`, can assist `grep` and `find` by:
 
      - Searching through multiple files. For example: `*.txt`.
+
      - Searching for part of a data point. For example: `*login*`.
 
 **Counting Data and Piping**
@@ -59,13 +66,15 @@ Before diving into the next set of commands, let's review what we've covered so 
 
 - Pipes take the output from the command on the left and apply it to the new command on the right.
 
-
 ### 02. Activity: Warm-Up Activity
 
 - [Activity File: Warm-Up Activity](Activities/02_warmup/unsolved/readme.md)
+
 - [Directories/Files: Warm-Up Activity](Resources/warmup.zip)
+
 - [Solution Guide: Warm-Up Activity](Activities/02_warmup/solved/readme.md)
 
+**EDITOR: Should the solved file not be placed under a new heading called "Activity Review: Warm-Up Activity"?**
 
 ### 03. Introduction to Text Processing
 
@@ -82,24 +91,20 @@ Security professionals often face the following challenges:
 - These complex data files can be difficult for anyone to analyze.
 
 - Embedded within these complex and large files are **data points** that can help security analysts research **security incidents**, such as:
+
     - Dates
+
     - Usernames
+
     - Phone numbers
 
 - These data points can help security professionals to:
 
-  - **Isolate attack signatures.**
+  - **Isolate attack signatures:** For example: An attacker might use a specific username to launch their attack. Finding this data point will assist with isolating out the username tied to an attacker.
 
-     For example: An attacker might use a specific username to launch their attack. Finding this data point will assist with isolating out the username tied to an attacker.
+  - **Identify attack vectors:** For example: An attacker might launch an attack through a field on a login page. Finding this data point will assist with identifying the field being used for the attack.
 
-  - **Identify attack vectors.**
-
-     For example: An attacker might launch an attack through a field on a login page. Finding this data point will assist with identifying the field being used for the attack.
-
-  - **Identify timing of attacks.**
-
-     For example: An attacker might launch their attack at exactly midnight every night. Finding this data point can help isolate out the timing of the attack.
-
+  - **Identify timing of attacks:** For example: An attacker might launch their attack at exactly midnight every night. Finding this data point can help isolate out the timing of the attack.
 
 We have to take these large and complex files and isolate the data points that are needed to complete tasks. This can be accomplished with **text processing commands**.
 
@@ -108,13 +113,16 @@ We have to take these large and complex files and isolate the data points that a
 **Text processing commands** are command languages used to manipulate text and simplify complex data.
 
   - Text processing commands have many capabilities to simplify working with complex data, such as:
+
     - Substituting text.
+
     - Filtering lines of text.
+
     - Delimiting text.
 
-  - Multiple text processing commands are already built-in to the terminal, such as `cut`, `awk` and `sed`.
+  - Multiple text processing commands are already built-in to the terminal, such as `cut`, `awk`, and `sed`.
 
-Other command languages can also manipulate text, such as Python and C++. Note that there are other command languages can also manipulate text, such as Python and C++. These are designed for programming, such as for running web applications.
+**Note:** There are other command languages that can also manipulate text, such as Python and C++. These are designed for programming, such as for running web applications.
 
 Text processing provides the following three benefits over programming languages:
 
@@ -122,13 +130,13 @@ Text processing provides the following three benefits over programming languages
 
  - **Convenience**: Most text processing commands are pre-installed in terminals, unlike many programming languages.
 
- - **Compatibility**:  Text processing commands can easily be added together to complete more advanced tasks. This is much more challenging to do with programming languages.
+ - **Compatibility**: Text processing commands can easily be added together to complete more advanced tasks. This is much more challenging to do with programming languages.
 
 This lesson we will be focusing on two powerful text processing utilities: `awk` and `sed`.  
 
 ### 04. Introduction to `sed`
 
-We just covered how security professionals spend a lot of time working with complex log files.  One source of added time and complication is the need to analyze and consolidate complex data from different sources.
+We just covered how security professionals spend a lot of time working with complex log files. One source of added time and complication is the need to analyze and consolidate complex data from different sources.
 
 - For example:
 
@@ -136,17 +144,17 @@ We just covered how security professionals spend a lot of time working with comp
 
     - One application labels logins as "LOGGED IN" while the other labels them as "ACCESS ACCEPTED."
 
-    - The challenge is to replace all the strings of `ACCESS ACCEPTED` with `LOGGED IN` so the data is consistent when analyzing the datasets together.
+    - The challenge is to replace all the strings of `ACCESS ACCEPTED` with `LOGGED IN` so that the data is consistent when analyzing the datasets together.
 
 We can use the text processing command `sed` to accomplish this task.
 
-  - `sed` stands for _**s**tream **ed**itor_.
+  - `sed` stands for "**s**tream **ed**itor."
 
   - This means that it reads and edits text, line-by-line, from an input stream.
 
-  - An *input stream* is a string of all characters in a text file.
+  - An **input stream** is a string of all characters in a text file.
 
-  - It's called a *stream* because `sed` reads the file from top-to-bottom, line-by-line, and only reads each line once.
+  - It's called a **stream** because `sed` reads the file from top-to-bottom, line-by-line, and only reads each line once.
 
 In other words, `sed` is a utility that works from the command line to modify text using an easy and compact coding language.
 
@@ -154,7 +162,7 @@ In other words, `sed` is a utility that works from the command line to modify te
 
 #### Using `sed` for String Replacement
 
-**Note**: String replacement is synonymous with string substitution, similar to the Windows _find and replace_ feature.
+**Note:** String replacement is synonymous with string substitution, similar to the Windows "find and replace" feature.
 
 We will walk through a simple `sed` command to create a basic string replacement.
 
@@ -190,7 +198,6 @@ We will walk through a simple `sed` command to create a basic string replacement
 
    - `The Dog Chased the Cat`
 
-
 ### Demo Summary
 
 We covered the following concepts:
@@ -199,14 +206,13 @@ We covered the following concepts:
 
   - The most basic `sed` capability is **string replacement**. This can increase consistency across separate data sources, which can assist in research.
 
-  - The basic syntax of string replacement is `sed   s/(old value)/(replacement value)/`.
-
+  - The basic syntax of string replacement is `sed s/(old value)/(replacement value)/`.
 
 ### 05. Activity: Using `sed`
 
 - [Activity File: Using `sed`](Activities/06_sed_activity/unsolved/readme.md)
-- [Directories/Files: Using `sed`](Resources/learning_sed.zip)
 
+- [Directories/Files: Using `sed`](Resources/learning_sed.zip)
 
 ### 06. Activity Review: Using `sed`
 
@@ -214,7 +220,7 @@ We covered the following concepts:
 
 ### 07. Introduction to `awk`
 
-When working with data, you'll often often need to obtain specific data points within complex log files.
+When working with data, you'll often need to obtain specific data points within complex log files.
 
 - For example:
 
@@ -238,7 +244,6 @@ We'll demonstrate how to isolate the State field from the above example by using
 
 #### `awk` Simple Demonstration
 
-
 1. Access the `/03-instructor/day3/awk_demonstration/` directory:
 
     `cd /03-instructor/day3/awk_demonstration/`
@@ -255,7 +260,7 @@ We'll demonstrate how to isolate the State field from the above example by using
 
     `awk -F, '{print $2}' awk.txt`
 
-   -  The syntax (after the pipe):  `awk -F(delimiter)  '{print $(field_number)}' `  
+   -  The syntax: `awk -F(delimiter) '{print $(field_number)}'`  
 
       - `awk`: Indicator telling your operating system to run the `awk` command.
 
@@ -283,14 +288,13 @@ We'll demonstrate how to isolate the State field from the above example by using
 
     - This is a much simpler set of code then what was required by `sed`.
 
-
 This was a very basic example, and security professionals often need to isolate out multiple fields from complex log files. Now we will do another more challenging demonstration to illustrate how `awk` can be used to assist with a security incident.
 
 ### `awk` Demonstration for a Security Incident
 
 In this scenario, you are security analysts at ACME Corp, which has just experienced an attack of a high volume of network requests. You have been provided the logs of these network requests.
 
-You are tasked with isolating out the IP addresses and time or requests from these logs to determine which IP address is appearing most frequently. This IP likely belongs to the attacker.
+You are tasked with isolating out the IP addresses and time of requests from these logs to determine which IP address is appearing most frequently. This IP likely belongs to the attacker.
 
 1. Access the `/03-instructor/day3/awk_demonstration/` directory. Run:
 
@@ -306,16 +310,15 @@ You are tasked with isolating out the IP addresses and time or requests from the
 
         - The fields are separated out by spaces, so a space will be used as a field separator.
 
-        - When we separate out the fields by spaces,  Time is in the second field, so we will need to print out the second field first.
+        - When we separate out the fields by spaces, Time is in the second field, so we will need to print out the second field first.
 
         - The IP Address is in the first field, so we will need to print this field after Time.
 
 5. Type the following `awk` command to see how this will be accomplished:
 
-      `awk -F" "  '{print $2, $1}' access_logs`
+      `awk -F" " '{print $2, $1}' access_logs`
 
-
-   - The first part of the `awk` syntax (after the pipe):  `awk -F" "`
+   - The first part of the `awk` syntax (after the pipe): `awk -F" "`
 
      - This instructs the operating system to run the `awk` command of field separation.
 
@@ -329,16 +332,15 @@ You are tasked with isolating out the IP addresses and time or requests from the
 
 6. Run the command and notice how `awk` is able to take a complex log file and parse it out to show only the fields needed: Time and IP Address.
 
-    -  In this result, the top reoccurring IP,  `41.33.233.87`,  is easy to detect. This is likely IP address of the attacker.
+    -  In this result, the top reoccurring IP, `41.33.233.87`, is easy to detect. This is likely the IP address of the attacker.
 
     - Identifying an IP address of an attacker can assist a security professional with determining what IP address should be blocked from the network to prevent future attacks.
-
 
  ### `awk` Summary  
 
  Review the following concepts:
 
-  - `awk` is a text processing utility like `sed`, but is more robust, as it can separate out fields with simple code.
+  - `awk` is a text processing utility like `sed`, but it is more robust, as it can separate out fields with simple code.
 
   - `awk` can assist security professionals by isolating specific data points, like IP addresses, to assist with determining what IP addresses should be blocked.
 
@@ -346,13 +348,11 @@ You are tasked with isolating out the IP addresses and time or requests from the
 
     `awk -F(delimiter)  '{print $(field_number)}' `  
 
+### 08.  Activity: Using `awk`
 
-### 08.  Activity: Using `awk` Activity
 - [Activity File: Using `awk` ](Activities/09_awk_activity/unsolved/readme.md)
 
-
 ### 09. Activity Review: Using `awk`
-
 
 - [Solution Guide: Using `awk`](Activities/09_awk_activity/solved/readme.md)
 
@@ -360,12 +360,12 @@ You are tasked with isolating out the IP addresses and time or requests from the
 
 ### 11. Introduction to Shell Scripting
 
-
 As IT and security professionals, we are required to complete security tasks that involve multiple subsequent commands.
 
   - For example: We might be tasked with cleaning up space in a directory because log files are taking up too much space
 
   - To complete these tasks, we would need to run the following  three separate commands, in order:
+
     1. `cd` to navigate to the directory containing log files.
 
     2. `zip` to compress the files.
@@ -384,7 +384,7 @@ Writing scripts, or **scripting**,  provides the following benefits to IT and se
 
    - Scripts can be provided to other users for **reusability**, meaning the exact same tasks can be completed by someone unfamiliar with the individual commands necessary to complete them.
 
-In the terminal, we will focus on a specific type of scripting known as  **shell scripting**.
+In the terminal, we will focus on a specific type of scripting known as **shell scripting**.
 
   - **Shell** is a terminal program that assists in the interaction between the user and the terminal.
 
@@ -398,10 +398,12 @@ How **shell scripts** are designed:
 
      - The `.sh` is a required extension to make the shell script executable.
 
-   - Within `diskcleanup.sh ` are the three commands in the order they need to be run, from the top down, one line per command:
+   - Within `diskcleanup.sh` are the three commands in the order they need to be run, from the top down, one line per command:
 
       -  `cd log_directory`  
+
        -  `zip logs* logfiles.zip`  
+
        -  `mv logfiles.zip ./archive_directory`
 
    - To execute the shell script, we'd only need to run this single command:
@@ -410,9 +412,7 @@ How **shell scripts** are designed:
 
    - Running that single command would execute all the three commands inside of the script in order.
 
-
 However, before we start writing our own scripts, we need to learn how to write into a file to add in our commands.   
-
 
 ### 12. Writing and Editing Files
 
@@ -433,17 +433,19 @@ We will be completing a file editing demonstration with the text editor **Nano**
 We will use Nano to create a simple shell script that contains the two following commands:
 
    - `mkdir new_directory`
-   - `cd new_directory`
 
+   - `cd new_directory`
 
 ### Building a Shell Script Demonstration
 
 1.  Create a `nano_demonstration` directory:
 
     `mkdir nano_demonstration`
+
 2. Access the `/03-instructor/day3/nano_demonstration/ directory`:
 
     `cd nano_demonstration`         
+
 2. To create a new script called `myfirstscript.sh` with Nano,  run:
 
     `nano myfirstscript.sh`
@@ -468,9 +470,9 @@ We will use Nano to create a simple shell script that contains the two following
 
       `mv myfirstscript.sh scripts`
 
-8. Next, we need to save the changes in this file. Save the Nano file using Ctrl+X, then Ctrl+Y and keep the file name.
+8. Next, we need to save the changes in this file. Save the Nano file using Ctrl+X, then press Y and keep the file name.
 
-   It will confirm the name of the file:  `myfirstscript.sh`
+   It will confirm the name of the file: `myfirstscript.sh`.
 
       - Press `Enter` to keep this file name.
 
@@ -490,10 +492,10 @@ We will use Nano to create a simple shell script that contains the two following
 
   - Nano is an easy-to-use text editor that is available in most terminals, and is good for creating shell scripts.
 
-
 ### 13. Activity: My First Shell Script
 
 - [Activity File: My First Shell Script](Activities/14_shell_scripting/unsolved/readme.md)
+
 - [Directories/Files: My First Shell Script](Resources/first_shell_script.zip)
 
 ### 14. Activity Review: My First Shell Script
@@ -524,9 +526,9 @@ How to pass a single argument in a shell script:
 
     - For the above example, we can run:
 
-      `sh diskcleanup.sh  0519`
+      `sh diskcleanup.sh 0519`
 
-    - The syntax is: `sh   shellscript   Argument1`.
+    - The syntax is: `sh shellscript Argument1`.
 
   - To pass the `0519` into the script, we have to add a `$1` indicating where the first argument, `0519`, will be passed.
 
@@ -538,7 +540,7 @@ How to pass a single argument in a shell script:
 
         `zip logs$1 logfiles.zip`  
 
-      - This way, when the script `sh diskcleanup.sh  0519` runs, the command will be changed to:
+      - This way, when the script `sh diskcleanup.sh 0519` runs, the command will be changed to:
 
         `zip logs0519 logfiles.zip`
 
@@ -546,15 +548,18 @@ How to pass a single argument in a shell script:
 
   - Additional arguments can be added with the following syntax:
 
-    `sh   shellscript   Argument1 Argument2 Argument3`
+    `sh shellscript Argument1 Argument2 Argument3`
 
     - For example:
 
-       `sh diskcleanup.sh  0519  backupfolder`
+       `sh diskcleanup.sh 0519 backupfolder`
 
   - Within the script, the arguments would be represented by:   
+
        - Argument1 = `$1`
+
        - Argument2 = `$2`
+
        - Argument3 = `$3`
 
  ### Passing Arguments summary  
@@ -567,41 +572,14 @@ How to pass a single argument in a shell script:
 
   - Within the script itself, an argument or arguments can be represented by a `$1` for the first argument, and `$2` for the second argument, and so on.
 
-
-
 ### 16. Activity: Building an IP Lookup Tool
 
 - [Activity File: Building an IP Lookup Tool](Activities/17_ip_lookup_activity/unsolved/readme.md)
-
-
 
 ### 17. Activity Review: Building an IP Lookup Tool
 
 - [Solution Guide: Building an IP Lookup Tool](Activities/17_ip_lookup_activity/solved/readme.md)
 
-### 18. Keeping Vagrant Updated
-
-You'll be using your Vagrant lab pretty extensively for a large portion of the bootcamp.
-
-Documentation around Vagrant use has been created for the bootcamp and is available at the following link:
-
-- https://docs.google.com/document/d/1h-zcoKt6c4AnZBENHLPWsXJ1djs1c96-9zkf7Jsb_GQ/
-
-Understand that Vagrant uses Vagrant box files as a base to create VirtualBox virtual machines, and we're going to look at the steps to ensure our Vagrant box files and VirtualBox virtual machines are updated.
-
-In your `Git Bash` or `Mac Terminal`:
-
-1. First run `vagrant global-status --prune` to find where all of our Vagrant machines are.
-2. Navigate to the directory where the machine is installed with `cd $HOME/Documents/Cybersecurity-Bootcamp/Linux-Module` (this directory may be different depending on your class's setup).
-3. Check for machine updates with `vagrant box update` (this step may take awhile if there are updates, as you will be downloading a new Vagrant box file).
-4. Shutdown the current VM if it's running with `vagrant destroy`.
-5. Load the new virtual machines with `vagrant up`.
-6. Optionally, remove outdated Vagrant base boxes with `vagrant box prune`.
-
-- _OR_ to run all of the Vagrant commands in sequence: `vagrant box update && vagrant destroy --force && vagrant up && vagrant box prune` (`vagrant destroy --force` skips the prompt).
-
 -------
 
-## Copyright
-
-2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

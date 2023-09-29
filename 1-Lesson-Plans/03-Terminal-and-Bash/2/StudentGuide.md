@@ -9,17 +9,22 @@ In today's class, you will expand your command line skills by working in your te
 By the end of class, you will be able to:
 
 * Identify and explain the structure of a terminal command.
+
 * Explain how options modify the default behavior of a terminal command.
+
 * Use the `man` command to list instructions and options for each command.
+
 * Use the `find` command to locate files based on search parameters.
-* Use the `grep` command to search within the contents of files.  
+
+* Use the `grep` command to search within the contents of files.
+
 * Use the `wc` command to count words and lines.
+
 * Combine multiple commands in sequence with pipes to accomplish intermediate IT tasks.  
 
 ### Slideshow
 
 - The lesson slides are available on Google Drive here: [3.2 Slides](https://docs.google.com/presentation/d/1VOTC2YCClLcO1cJv6rbmcDHEdi7ub7xadupy7aKF3PE).
-
 
 -------
 
@@ -30,53 +35,65 @@ Today you will be expanding your command line skill set. Let's review the comman
 Commands for navigating a file directory:
 
    - `pwd`: Displays the current working directory.
+
    - `ls`: Lists the directories and files in the current directory.
+
    - `cd`: Navigates into a directory.
+
    - `cd ../`: Navigates out of a directory.
+
    - `clear`: Clears out the terminal history on the page.
 
 Commands for making and removing files and directories:
 
    - `mkdir`: Creates a new directory.
+
    - `rmdir`: Removes a directory.
+
    - `touch`: Creates an empty file.
+
    - `rm`: Removes a file.
 
 Commands for moving and copying files:
 
    - `cp`: Copies files.
+
    - `mv`: Moves files.
 
 Commands for previewing files:
 
    - `more`: Shows a file one page at a time. Space bar is used to move from page to page.
+
    - `less`: Similar to `more`, but allows scrolling up and down pages.
+
    - `head`: Previews the top 10 lines of a file.
+
    - `tail`: Previews the bottom 10 lines of a file.
 
 Commands for concatenating and redirecting:
 
    - `cat`: Concatenates and combines multiple files together.
+
    - `>`: Writes to a file, and overwrites file if the file name already exists.
+
    - `>>`: Writes to a file, and appends to the file if the file name already exists.
 
 ### 02. Activity: Warm-Up 
 
-
 - [Activity File: Warm-Up](Activities/02_warmup/unsolved/readme.md)
+
 - [Directories/Files: Warm Up](Resources/warmup.zip)
+
 - [Solution Guide: Warm-Up](Activities/02_warmup/solved/readme.md)
 
-
-
 ### 03. Command-Line Structure
-So far we have covered many basic command line commands to complete common IT tasks.
+So far, we have covered many basic command line commands to complete common IT tasks.
 
 These commands have to follow a specific structure to run successfully.
+
   - The structure we are already familiar with is:
 
-     `<command>   <argument>`
-
+     `<command> <argument>`
 
   - **Arguments** appear immediately after the command if they are inputs for the command. For example: `touch myfile`.
 
@@ -98,8 +115,8 @@ Example: `ls -S`
 
   - The added option modifies the behavior of the command. Adding `-S` after the `ls` command changes the behavior of the `ls` command from simply listing the files, to listing them by size, with the largest first.
 
+- The syntax for the above command is as follows:
 
-- The syntax for the above command:
     - `ls` is the command.
 
     - `-S` is the option.     
@@ -108,7 +125,7 @@ Example: `ls -S`
 
 - The option, just like the command, is case sensitive, meaning it matters whether you use capital or lowercase letters.
 
-  - The lowercase `-s` will provide a very different result than an uppercase  `-S`.
+  - The lowercase `-s` will provide a very different result than an uppercase `-S`.
 
   - The lowercase `-s` option prints the size of each file.
 
@@ -128,6 +145,7 @@ Example: `cat -n logfile1.txt`
   - The default behavior of the `cat` command is to concatenate multiple files or simply display the contents of a single file.
 
   - To modify the behavior of the `cat` command for a file, we can run:
+
        `cat -n logfile1.txt`.
 
     - Adding the option `-n` modifies the behavior of the `cat` command to display the line numbers preceding each line.
@@ -140,7 +158,6 @@ Example: `cat -n logfile1.txt`
 
      - `logfile1.txt` is the argument for the `cat` command.
 
-
 #### Method 3: Adding options that require their own arguments, called parameters.
 
 Example: `head -n 4 logfile1.txt`
@@ -151,7 +168,7 @@ Example: `head -n 4 logfile1.txt`
 
   - The default behavior of `head` will display the top 10 lines of a file.
 
-  - `head`'s `-n` option modifies the default behavior by changing the number of lines displayed.
+  - The `-n` option of `head` modifies the default behavior by changing the number of lines displayed.
 
     - The `-n` option requires a parameter to specify the number of lines to display.
 
@@ -159,10 +176,9 @@ Example: `head -n 4 logfile1.txt`
 
       - `head` is the command.
 
-      - `-n` is the option. This specific option requires a parameter.  
-      - `4` is the parameter for the `-n` option.
-      - `logfile1.txt` is the argument for the head command.
+      - `-n` is the option. This specific option requires a parameter.
 
+      - `4` is the parameter for the `-n` option.
 
       - `logfile1.txt` is the argument for the `head` command.
 
@@ -174,9 +190,7 @@ Now we will practice using command line options by covering the following scenar
 
   - They asked you to delete the three largest evidence files as long as they don't contain the user Sheila. They will need those files for a future investigation.
 
-
   - You have been told that the log files do not contain more than 40 lines.
-
 
 #### Options Demonstration
 
@@ -189,40 +203,51 @@ Now we will practice using command line options by covering the following scenar
     Note that this shows the following six files:
 
       - `fileA`
+
       - `fileB`
+
       - `fileC`
+
       - `fileD`
+
       - `fileE`
+
       - `fileF`
 
 3. Now, we need to know which are the three largest files.
 
    - Run the following command:
-      - `ls -S`
 
+      - `ls -S`
 
    - Note that this lists the files in order of largest to smallest:
 
      - `fileE  fileB  fileC  fileA  fileF  fileD`
 
-3. We now know the three largest files are `fileE  fileB  fileC`. Before we delete them we need to confirm that the user Sheila is not named in these files.
+3. We now know the three largest files are `fileE  fileB  fileC`. Before we delete them, we need to confirm that the user Sheila is not named in these files.
 
     - We can do this by previewing the top 40 lines of the files, since none of them are longer than this.
 
     - To do this, we will run the following command on the first file:
-        `head -n 40 fileE`.
+
+        `head -n 40 fileE`
 
     - Note the syntax:
-        - `head` is the command.
-        - `-n` is the option, but requires a parameter.  
-        - `40` is an argument for the `-n` option.
-        - `fileE` is the argument for the `head` command.
+
+       - `head` is the command.
+
+       - `-n` is the option, but requires a parameter.  
+
+       - `40` is a parameter for the `-n` option.
+
+       - `fileE` is the argument for the `head` command.
 
     - Note that the user Sheila does not exist in this file.
 
 4. Run the other `head` commands to preview the other two largest files:
 
     - `head -n 40 fileB`
+
     - `head -n 40 fileC`
 
       - Note that `fileC` contains the user Sheila, so this will not be deleted.
@@ -239,14 +264,14 @@ Now we will practice using command line options by covering the following scenar
 
   - Some **options** require **arguments** called **parameters**, which provide additional details on how to modify the default behavior.
 
-
-
-### 4.  Welcome to Man Pages
+### 04.  Welcome to Man Pages
 
 We just covered how commands have default behaviors, and options can modify this default behavior to perform additional tasks.
 
 Additionally, each command:
+
   - Has its own unique list of options.
+
   - Has certain options that require parameters.
 
 So, how can IT and security professionals know and manage all of these options for all of these commands?
@@ -260,14 +285,16 @@ So, how can IT and security professionals know and manage all of these options f
 - Each man page contains the following:
 
   - Name of the command
+
   - Synopsis, which includes the syntax of the command
+
   - Description
+
   - Options and option parameters
 
-The command to display the man page is very simple:   `man   <command>`.
+The command to display the man page is very simple: `man <command>`.
 
 - For example: `man ls` will display the man page of the `ls` command.
-
 
 #### Man Pages Demonstration Setup  
 
@@ -293,19 +320,19 @@ The following scenario shows how man pages can assist with learning a new comman
 
 3. Scroll through the man page for the `wc` command and note the following:
 
-    - The **Name** defines and provides a brief summary of the command:
+    - The **name** defines and provides a brief summary of the command:
 
       - `NAME: wc - print newline, word, and byte counts for each file`
 
-    - The **Synopsis** shows the format:
+    - The **synopsis** shows the format:
 
       - `SYNOPSIS: wc [OPTION]... [FILE]...`
 
       - This means the basic syntax is the `wc` command, followed by the option, followed by the file to run the command against.
 
-    - The **Description** shows a more detailed definition of the `wc` command.
+    - The **description** shows a more detailed definition of the `wc` command.
 
-    - Below the Description are the options and parameters available for `wc`.
+    - Below the description are the options and parameters available for `wc`.
 
     - To exit the man page, enter `q`.
 
@@ -314,9 +341,10 @@ The following scenario shows how man pages can assist with learning a new comman
     - In the man pages file, several options are listed. The best one for our task is `-l`, the line count option.
 
 5. Lastly, we will run the command with the option:
+
  `wc -l 10_13_logs.txt`.
 
-    - The results show the line count, 53, and the name of the file: 
+    - The results show the line count (53) and the name of the file: 
       - `53 10_13_logs.txt`.
 
 #### Man Pages Demonstration Summary  
@@ -327,18 +355,17 @@ The following scenario shows how man pages can assist with learning a new comman
 
 - Man pages can be used to learn about new commands and the options of those commands.
 
-### 5. Activity: Learning New Commands
+### 05. Activity: Learning New Commands
 
 - [Activity File: Learning New Commands](Activities/06_learning_new_commands/unsolved/readme.md)
+
 - [Directories/Files: Learning New Commands](Resources/learning_new_commands.zip)
 
-
-### 6. Activity Review: Learning New Commands
+### 06. Activity Review: Learning New Commands
 
 - [Solution Guide: Learning New Commands](Activities/06_learning_new_commands/solved/readme.md)
 
-
-### 7.  The find Command 
+### 07.  The find Command 
 
 In order to find files or directories, we have been navigating in and out of multiple directories. But this process is very time consuming and some file systems have hundreds of directories to search through.
 
@@ -351,7 +378,6 @@ There is a terminal command called `find` designed to simplify this task by sear
   - However, `find` does not look at the contents of a file, only the file name or the directory name.
   
 Now we will now discuss the syntax for the various methods of finding a file. We will be using the same base command throughout the examples, but we will slightly modify the command to achieve different results.
-
 
 #### Syntax for Finding a File
 
@@ -367,13 +393,11 @@ Now we will now discuss the syntax for the various methods of finding a file. We
 
     - In order to do this, we are using an option, `-name`, to search for an exact match of the specified parameter `log.txt`.
 
-
 3. `find -type f -iname log.txt`
 
     - To remove case sensitivity and find all relevant files regardless of whether the file name matches the parameter's case, we will change the `-name` option to `-iname`. This option requires a parameter identifying what you are looking for.
 
     - We can use the above example to find the files called `log.txt` (lowercase) and `LOG.TXT` (uppercase) in your current directory and its subdirectories.
-
 
 4. `find -type f -iname '*.txt'`
 
@@ -381,8 +405,7 @@ Now we will now discuss the syntax for the various methods of finding a file. We
 
     - The `*` wildcard symbol indicates that any file ending with `.txt` will be included in the results, regardless of what comes before `.txt`. Using wildcards with `find` is known as a wildcard search.
 
-    - We can run the above example to find all files ending with lowercase `.txt`  or uppercase `.TXT` in our current directory and its subdirectories.
-
+    - We can run the above example to find all files ending with lowercase `.txt` or uppercase `.TXT` in our current directory and its subdirectories.
 
     - At times, you may need to search for part of a file name.
 
@@ -394,7 +417,7 @@ Now we will now discuss the syntax for the various methods of finding a file. We
 
          - It may appear to work without the quotes, but the results may be inaccurate because of how the Bash Shell handles file globbing.  
 
-    - Wildcards can come before text, such as `*.txt`, or after text such as `0517*`
+    - Wildcards can come before text, such as `*.txt`, or after text such as `0517*`.
 
       - As with the above example, if we use the `find` command to search for `*.txt`, the command might return the following:
 
@@ -409,7 +432,6 @@ Now we will now discuss the syntax for the various methods of finding a file. We
           - `0517apache.log`
 
           - `0517textdata.txt`
-
 
 5. `sudo find /root/desktop -type f -iname log.txt`   
 
@@ -439,7 +461,6 @@ Now we will now discuss the syntax for the various methods of finding a file. We
 
     - In this example, we are looking for a directory called `logs` or `LOGS`.
 
-
 4. `find -type d -iname '*1013'`  
 
     - The `*` symbol indicates this is a wildcard search.
@@ -447,6 +468,7 @@ Now we will now discuss the syntax for the various methods of finding a file. We
     - In this example, we are finding all directories that end with the date `1013`.
 
       - The command would output directories ending in `1013`, despite what comes before. For example:
+
         - `apache1013.log`
 
         - `textdata1013.txt`
@@ -457,10 +479,9 @@ Now we will now discuss the syntax for the various methods of finding a file. We
 
     - Specifically, this command finds directories called `logs` in the `/root/desktop` directory.
 
-
 #### find Demonstration Setup
 
-  - Your manager at ACME Corp has tasked you with finding logs for a certain type of webserver called Apache, for the date of October 13.
+  - Your manager at ACME Corp has tasked you with finding logs for a certain type of webserver called "Apache" for the date of October 13.
 
   - They told you the directory should be named `apache` and the log files should have the date noted as `1013` in their file names.
 
@@ -478,28 +499,38 @@ Now we will now discuss the syntax for the various methods of finding a file. We
 
     - `find -type d -iname apache`
 
+    - Note the syntax:
 
-      - `find`: The command used to search for the specified file or directory.  
-      - `-type`: The option used to distinguish if we are looking for a file or directory.
-      - `d`: The parameter for the  `-type` option, indicating that we are searching for a directory.
-      - `-iname`: The option indicating that we are searching for a specific case-insensitive value.
-      - `apache`: The parameter indicating the value (file name) we are searching for.
+       - `find`: The command used to search for the specified file or directory.  
+
+       - `-type`: The option used to distinguish if we are looking for a file or directory.
+
+       - `d`: The parameter for the `-type` option, indicating that we are searching for a directory.
+
+       - `-iname`: The option indicating that we are searching for a specific case-insensitive value.
+
+       - `apache`: The parameter indicating the value (file name) we are searching for.
 
  3. Run the command and note that the results show the directory containing the name `apache`:
 
      - `./apache`
 
-
 4.  Next, we will find the log files that have the date `1013` in their name. Run the following command:
 
      - `find -type f -iname '*1013*'`
 
+    - Note the syntax:
 
         - `find`: The command used to search for the specified file or directory.
+
         - `-type`: The option used to distinguish if we are looking for a file or directory.
+
         - `f`: The parameter for the  `-type` option, indicating that we are searching for file.
+
         - `-iname`: The option indicating that we are searching for a specific case-insensitive value.
+
         - `*1013*`: The parameter indicating the value that we are searching for.  
+
           - The wildcards on either end indicate that the value `1013` can be located anywhere in the file name.
 
 5. Run the command and note that the results show the path to the  two files that contain `1013` in their file name:
@@ -507,7 +538,6 @@ Now we will now discuss the syntax for the various methods of finding a file. We
      - `./apache/1013_backuplogs`
 
     - `./apache/apache_1013`
-
 
 #### Demonstration Summary
 
@@ -521,23 +551,17 @@ Now we will now discuss the syntax for the various methods of finding a file. We
 
    - `iname`: Additional option used for finding case insensitive  names.
 
-
-
 ### 08. Activity: Finding Your Way 
 
-
 - [Activity File: Finding Your Way](Activities/09_finding_your_way/unsolved/readme.md)
+
 - [Directories/Files: Finding Your Way](Resources/finding_your_way.zip)
 
-
 ### 09. Activity Review: Finding Your Way
+
 - [Solution Guide: Finding Your Way](Activities/09_finding_your_way/solved/readme.md)
 
-
-------
-
 ### 10. Break
-------
 
 ### 11. grep Command 
 
@@ -547,7 +571,7 @@ However, IT and security professionals are often tasked with searching for speci
 
   - For example: You might be tasked with finding out if a specific user logged in on a specific day. You would first find the access log file for that day and then need to verify if the specific user was inside that log file.
 
-We have previously used preview commands, such as `head`, `more`, `tail`, and `less`, in order to view a file's contents. The challenges of using preview commands to search for data inside a file include:
+We have previously used preview commands – such as `head`, `more`, `tail`, and `less` – in order to view a file's contents. The challenges of using preview commands to search for data inside a file include:
 
   - Files that are large in size take a long time to scan for data.
 
@@ -557,16 +581,15 @@ We have previously used preview commands, such as `head`, `more`, `tail`, and `l
 
 There is a command called `grep` that allows us to search within a file or multiple files to find a specific data point.
 
-  - `grep`, which stands for 
-  "global regular expression print," is a command to search for data inside of files.
+  - `grep`, which stands for "global regular expression print," is a command to search for data inside of files.
 
   - `grep` by default returns the entire line that the desired data point is found in.
 
-  - `grep` by default will only search for data in the current directory and not in sub-directories.
+  - `grep` by default will only search for data in the current directory and not in subdirectories.
 
 #### Syntax for grep
 
-1. `<grep   data_point    File_to_search_inside>`
+1. `<grep data_point File_to_search_inside>`
 
     - In this basic syntax, `grep` is used to find a specific data point within a **single** file.
 
@@ -577,13 +600,14 @@ There is a command called `grep` that allows us to search within a file or multi
     - In this example, we are using `grep` to find the lines in which the user `bob` is mentioned in the file `log1.txt`.
 
         - `grep`: The command being run.
+
         - `bob`: The specific data point being searched for.
+
         - `log1.txt`: The file being searched for the data point.
 
     - After this command is run, all the lines where the data point `bob` was found inside of the file `log1.txt` will be displayed.
 
     - If no matches of `bob` are found in the file, nothing will be returned.
-
 
 3. `grep bob *.txt`
 
@@ -591,12 +615,11 @@ There is a command called `grep` that allows us to search within a file or multi
 
     - Specifically, we are using `grep` to find where `bob` exists within in all `.txt` files.
 
-
         - `bob` is the specific data point being searched for.
+
         - `*.txt` is the wildcard. `*` indicates that the command will search through all files that end with `.txt`.
 
-    - After this command is run, it will display the files where the value of `bob`  was found, followed by the lines where it was found inside of all the `.txt` files.
-
+    - After this command is run, it will display the files where the value of `bob` was found, followed by the lines where it was found inside of all the `.txt` files.
 
 4. `grep -i bob *.txt`
 
@@ -605,26 +628,33 @@ There is a command called `grep` that allows us to search within a file or multi
     - Specifically, this command finds the lines where the user `bob` or `BOB` exist in all TXT files.
 
       - `grep`: The command being run.
+
       - `-i`: The option for `grep` that indicates case insensitivity.
+
       - `bob`: The specific data case-insensitive point being searched for.
+
       - `*.txt` is the wildcard of `*` that indicates it will search through all files that end with `.txt`.
 
 5. `grep -il bob *.txt`
 
     - In the final example, we are showing that `grep` can be used to find the **file name** that contains a specific data point.
 
-    - Specifically, this command only outputs the **file name** where the user of `bob` or `BOB` exist within all TXT files. When this command is run, it will only display the names of the file that contain `bob`.
+    - Specifically, this command only outputs the **file name** where the file name contains `bob` or `BOB` exists inside of all TXT files. 
+
 
       - `grep`: The command being run.
+
       - `-il`: Two options placed together.
+
         - `i`: An option for grep that indicates case insensitivity.
+
         - `l`: An additional option that indicates to only return the file name.
 
-        - Note that `i` and `l` are two separate options. However, we can place them under a single hyphen.  
+        - Note that `i` and `l` are two separate options. However, we can place them behind a single hyphen.  
 
       - `bob`: The specific data point.
-      - `*.txt`: The wildcard.
 
+      - `*.txt`: The wildcard.
 
 #### grep Demonstration Setup
 
@@ -639,25 +669,31 @@ There is a command called `grep` that allows us to search within a file or multi
 1. Navigate into the instructor directory called `grep_demonstration`. Run:
 
    - `cd /03-instructor/day2/`
+
    - `cd grep_demonstration`
 
 2. The next step is to see all the log files that exist in this directory. Run `ls`.
 
-    - This will show three log files, two for `0517`, and one for `0519`.
+    - This will show three log files, two for `0517` and one for `0519`.
 
 3. We will first use `grep` to see in which files the user Sally Stealer appears. This will show if Sally has ever logged in.
 
     - Run the following command: `grep -il Sallystealer *`
 
         - `grep`: The command being run.
+
         - `-il`: `i` is an option for `grep` that indicates case insensitivity. `l` indicates to only return the file names.
+
             - Note that `i` and `l` are two separate options. However, we can place them under a single hyphen.  
+
         - `Sallystealer`: The specific data point being searched for.
+
         - `*`: The wildcard, indicating a search for all files in the current directory
 
 4. Run the command and note that the results show two files that clearly prove that Sally Stealer does have activity.
 
       - `banklogs0517`
+
       - `banklogs0519`
 
 5. Next, we need to prove if and when Sally Stealer transferred any funds on May 17.
@@ -665,80 +701,83 @@ There is a command called `grep` that allows us to search within a file or multi
     - For this example, we will search for the word "transfer."
 
     - Run the following command: `grep -i transfer banklogs0517`
+
       - `grep`: The command being run.
+
       - `-i`: The option indicating case insensitivity.
+
       - `transfer`: The specific data point being searched for.
 
       - `banklogs0517`: The file we will search through, since the transfer happened on 0517, and this was the only file from this date in which Sally Stealer appears.
      
 6. After running the command, note that the results show the following line:
 
-
     - `81.220.24.207 - - [17/May/2015:10:05:52 +0000] "SALLYSTEALER : Transfer funds : $1,000,754 from Company DDA 012  to Personal SAV 876:`
 
     - This clearly proves that Sally Stealer did transfer funds from a company account to a personal account.   
     
-    - Furthermore, this happened at 10:05:52 on  May 17.  
+    - Furthermore, this happened at 10:05:52 on May 17.  
 
-
-    - This happened at `10:05:52` on  May 17.  
+    - This happened at `10:05:52` on May 17.  
 
 #### Demonstration Summary   
 
    -  `grep`: Command-line command to find a data point inside of a file.
+
       - The basic syntax:
 
-         `<grep   data_point    File_to_search_inside>`
-       - `grep` by default will return the **whole line** containing a data point.
-   - `i`: Option indicating to search for the data point with case insensitivity.
-   - `l`: Option indicating to return only the file names of the files containing the data point.
+         `<grep data_point File_to_search_inside>`
 
+       - `grep` by default will return the **whole line** containing a data point.
+
+   - `i`: Option indicating to search for the data point with case insensitivity.
+
+   - `l`: Option indicating to return only the file names of the files containing the data point.
 
 ### 12. Activity: grep 
 
-
 - [Activity File: grep](Activities/13_grep_activity/unsolved/readme.md)
-- [Directories/Files: grep](Resources/finding_your_way.zip)
 
+- [Directories/Files: grep](Resources/finding_your_way.zip)
 
 ### 13. Activity Review: grep
  
 - [Solution Guide: grep](Activities/13_grep_activity/solved/readme.md)
-
 
 ### 14. Combining Commands with Piping
 
 Today we covered many powerful command line commands that IT and security professionals use, such as:
 
  - `find`: Searches for file names or directories.
+
  - `grep`: Searches for data points inside of files.
+
  - `wc`: Counts lines or words inside of a file.
 
 Security professionals are often tasked with combining these commands to complete certain tasks.
 
   - For example: You may be asked to determine if a user exists in a log file, and how many times that user appears in the log file.
 
-    - We can use the `grep` command to see _if_ a user appears in the log file by redirecting the results into an output file.
+    - We can use the `grep` command to see **if** a user appears in the log file by redirecting the results into an output file.
 
-    - We can use the `wc -l` command to determine _how many times_ the user appears in the file by counting the results of this output.
+    - We can use the `wc -l` command to determine **how many times** the user appears in the file by counting the results of this output.
 
 
 Rather than running these multiple commands separately, we can combine them using **pipes**. 
 
   - A pipe takes the output of one command and redirects it to another command, in order to complete additional tasks on the output.
 
-  - A pipe is designated with the following symbol : `|`
+  - A pipe is designated with the following symbol: `|`
 
   - Multiple pipes can be used in a single command.
 
   - Pipes are unidirectional, meaning the processing of the data only flows from left to right through the pipeline.
 
-
 #### Pipes Demonstration Setup
 
   - Your manager at ACME Corp has tasked you with continuing the previous investigation against Sally Stealer. They believe she may have transferred other large amounts of money.
 
-  - Your manager created a single file called, `largetransfers.txt`  that contains all transfers over one million dollars.
+  - Your manager created a single file called `largetransfers.txt` that contains all transfers over $1 million.
 
   - Your manager asked you to count how many of those transfers belong to Sally Stealer.
 
@@ -747,6 +786,7 @@ Rather than running these multiple commands separately, we can combine them usin
 1. The first step is to navigate into the instructor directory called `pipes_demonstration`.
 
    - `cd /03-instructor/day2/`
+
    - `cd pipes_demonstration`
 
 2. Next, we will use the following `grep` script to identify the transfers that belong to `SallyStealer`:
@@ -758,35 +798,35 @@ Rather than running these multiple commands separately, we can combine them usin
 4. Next, we will use pipes to add an additional command to count the transfers from the previous query.
 
    - Run the following: `grep -i SallyStealer largetransfers.txt | wc -l `
+
      - `grep -i "SallyStealer largetransfers.txt`: Lists the lines that have the value `SallyStealer`.
+
      - `|`: Pipes (redirects) the results into the next command.
+
      - `wc -l`: Counts the number of lines resulting from the previous output.
 
 5. Run the command and note that the result is now the count of `9`.
 
 #### Pipes Demonstration Summary
 
-
   - A pipe takes the output of one command and redirects it to another command in order to complete an additional task on the output.
 
-  - A pipe is designated with the following symbol : `|`
+  - A pipe is designated with the following symbol: `|`
 
   - Multiple pipes can be used in a single command.
 
   - Pipes are unidirectional, meaning the processing of the data flows from left to right through the pipeline.
 
-
 ### 15. Activity: Gathering Evidence
 
 - [Activity File: Gathering Evidence](Activities/16_Gathering_Evidence/unsolved/readme.md)
-- [Directories/Files: Gathering Evidence](Resources/Gathering_Evidence.zip)
 
+- [Directories/Files: Gathering Evidence](Resources/Gathering_Evidence.zip)
 
 ### 16. Activity Review: Gathering Evidence  
 
 - [Solution Guide: Gathering Evidence](Activities/16_Gathering_Evidence/solved/readme.md)
 
- 
 -------
 
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

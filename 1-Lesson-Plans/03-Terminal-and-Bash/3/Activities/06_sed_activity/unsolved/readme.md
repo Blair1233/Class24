@@ -1,8 +1,8 @@
 ## Activity File: Using sed   
   
-- You continue in your role as security analyst at Wonka Corp.
+- You continue in your role as security analyst at Candy Corp.
 
-- Your manager believes there is a new cybercriminal trying, but failing, to log into several administrative websites owned by Wonka.
+- Your manager believes there is a new cybercriminal trying, but failing, to log into several administrative websites owned by Candy Corp.
 
 - Your manager wants to find out information about this cybercriminal before they get unauthorized access.
 
@@ -12,18 +12,20 @@
 
 ### Instructions
 
-Using only the command line, complete the following tasks from within the `/03-student/day3/learning_sed` folder in your Ubuntu VM:
+Using only the command line, complete the following tasks from within the `/03-student/day3/learning_sed` folder in your Ubuntu virtual machine:
   
   1. Within this directory are two log files from different administrative websites. 
   
       - Combine the two log files into a single log file called `Combined_Access_logs.txt`.
-      - Note: Use the file named `combined` to check your work. 
+
+      - **Note:** Use the file named `combined` to check your work. 
 
   2. Failed logins are titled as `ACCESS_DENIED` or `INCORRECT_PASSWORD`.
 
-     - Using `sed`, replace all instances of `INCORRECT_PASSWORD` with `ACCESS_DENIED` so the data is consistent.
+     - Using `sed`, replace all instances of `INCORRECT_PASSWORD` with `ACCESS_DENIED` so that the data is consistent.
 
   3. Save the results to a new file called `Update1_Combined_Access_logs.txt`. 
 
 ---
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+
+© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

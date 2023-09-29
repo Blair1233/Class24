@@ -1,14 +1,14 @@
 ## Activity File: Finding your Milky Way 
  
-- You will continue in your role as security analyst at Wonka Corp, investigating the employee potentially selling secret recipes to Slugworth Corp.
+- You will continue in your role as security analyst at Candy Corp, investigating the employee potentially selling secret recipes to Sugar Corp.
 
-- Your manager at Wonka Corp needs you to create an additional directory, as they believe there is a second employee working with Slugworth Corp.
+- Your manager at Candy Corp needs you to create an additional directory, as they believe there is a second employee working with Sugar Corp.
 
 - You also must copy and move several of the evidence files after creating this new directory.
 
 ### Instructions
 
-Using only the command line, continue to complete the following tasks in the `/03-student/day1/take_5` folder in your Ubuntu VM:
+Using only the command line, continue to complete the following tasks in the `/03-student/day1/take_5` folder in your Ubuntu virtual machine:
 
   1. Create an additional folder called `Internal_Investigation_Employee_B`.
 
@@ -19,4 +19,5 @@ Using only the command line, continue to complete the following tasks in the `/0
   4. Check your directories to confirm the files are all in the correct locations.
 
 ---
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+
+© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

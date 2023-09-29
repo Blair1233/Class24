@@ -3,9 +3,11 @@
 ## Key Terms
 
 - **Shell**: The shell is the program used to interpret and manage commands. It is the operating system command line interface (CLI) and provides a way to create and execute scripts.  
-  - **Example**: The *bash* shell which stands for Bourne Again Shell is included in most Unix distributions.
 
-- **Shell Script**: A shell script is a text file consisting of commands that are stored and run.  Shell scripting is a powerful tool to use because it allows IT and security professionals to prescript repeatable processes for future use. Shell scripts have the extension *.sh*
+  - **Example**: The **bash** shell which stands for Bourne Again Shell is included in most Unix distributions.
+
+- **Shell Script**: A shell script is a text file consisting of commands that are stored and run. Shell scripting is a powerful tool to use because it allows IT and security professionals to prescript repeatable processes for future use. Shell scripts have the extension **.sh**
+
   - **Example**: `script.sh`
   
  ```bash 
@@ -24,6 +26,4 @@ head Summary/MySummary.txt
 
 -------
 
-## Copyright
-
-2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

@@ -20,15 +20,7 @@ By the end of class, students will be able to:
 
 ### Lab Environment   
 
-You will use your local Vagrant virtual machine for today's activities. Please note that instructors and students have different access credentials.
-  
-  - Instructor access:
-    - Username: `instructor`
-    - Password: `instructor`
-
-  - Student access:
-    - Username:`sysadmin`
-    - Password: `cybersecurity`
+You will use the Ubuntu VM inside your web lab for today's activities. Please note that instructors and students have different access credentials.
 
 :warning: **Heads Up**: In the event of lab malfunctions, use a backup zip file containing this unit's student activity directories.
 
@@ -57,8 +49,6 @@ The lesson slides are available on Google Drive here: [3.1 Slides](https://docs.
 ### Time Tracker
 
 The time tracker is available on Google Drive here: [3.1 Time Tracker](https://docs.google.com/spreadsheets/d/18jHileJ4feOD3YuQQV6bxTey37utF-sUBQSo1xWj_qc/edit#gid=0).
-
-- **Note:** Editing access is not available for this document. If you or your students wish to modify the slides, please create a copy by navigating to File > "Make a copy...".
 
 ### Student Guide 
 
@@ -130,9 +120,9 @@ Explain that while the command line may seem challenging at first, learning and 
 
 Finally, stress that the best way to learn the command line is to use it. Therefore, this week is built around hands-on exercises.
 
-Let students know that in today's exercises, they will be playing the role of security analysts at a candy manufacturing company, Wonka Corp.
+Let students know that in today's exercises, they will be playing the role of security analysts at a candy manufacturing company, Candy Corp.
 
-- They will be using the command line to  investigate a potential rogue employee, who may be selling secret Wonka Corp recipes to a rival organization, Slugworth Corp.  
+- They will be using the command line to  investigate a potential rogue employee, who may be selling secret Candy Corp recipes to a rival organization, Sugar Corp.  
 
 - Students will be tasked with using the command line to identify evidence on the system of suspicious activity from this rogue employee.
 
@@ -220,7 +210,7 @@ This computer doesn't have a GUI, so we have to complete all these tasks on the 
 
    - Run the `pwd` command and show that you are now located in the `/03-instructor/day1/terminal_demonstration/security_evidence` folder.
 
-5. Explain that we are now in the `evidence_folder` and can create several directories to place our evidence.
+5. Explain that we are now in the `security_evidence` folder and can create several directories to place our evidence.
 
    - Run the command `mkdir Case1`.
 
@@ -273,7 +263,7 @@ Summarize this demonstration by using the slides to review the commands just cov
    - `clear` clears the terminal history on the page.
 
 
-Explain that in the first command line activity of the day, you will use these commands to prepare for an investigation into the malicious employee who may or may not be selling secrets to your rival organization, Slugworth Corp.
+Explain that in the first command line activity of the day, you will use these commands to prepare for an investigation into the malicious employee who may or may not be selling secrets to your rival organization, Sugar Corp.
 
 :bar_chart: Take a moment to run a comprehension check poll and address any questions before moving on.
 
@@ -281,9 +271,9 @@ Explain that in the first command line activity of the day, you will use these c
 
 Explain the following to students:
 
-- You are security analyst at Wonka Corp.
+- You are security analyst at Candy Corp.
 
-- Wonka Corp believes one of their employees might be selling secret recipes to Slugworth Corp.
+- Candy Corp believes one of their employees might be selling secret recipes to Sugar Corp.
 
 - You have been tasked with creating evidence directories for `email`, `logs`, and `web_access`.  
 
@@ -502,7 +492,7 @@ Explain that we will practice relative and absolute paths in the following demo 
 
       - Point out that no matter where in the file system you are, this absolute path will take you to the `Case1` directory.
 
-      - Run `pwd` again. You should now be in the `/03-instructor/day1/pathnav_demonstration/security_evidence/Case2/` directory.
+      - Run `pwd` again. You should now be in the `/03-instructor/day1/pathnav_demonstration/security_evidence/Case1/` directory.
       - Create an empty file called `Web_logs` by running `touch Web_logs`.
 
       - Run `ls` to confirm the file has been created.
@@ -515,7 +505,7 @@ Explain that we will practice relative and absolute paths in the following demo 
 
       - For example, to go backwards out of four directories, you would enter the command `cd ../../../../`.
 
-    - Explain that to go back to the `03-instructor` from our current location, we need to go back home directories.
+    - Explain that to go back to the `03-instructor` from our current location, we need to go back four directories.
 
       - Run the command `cd ../../../../`.
 
@@ -632,7 +622,7 @@ Summarize the commands covered in the previous two demonstrations:
    - `mv` moves files.
 
 
-Explain that in the next activity, students will use these same concepts to continue preparing for an investigation into the malicious employee that may or may not be selling secret recipes to Wonka Corp's rival organization, Slugworth Corp.
+Explain that in the next activity, students will use these same concepts to continue preparing for an investigation into the malicious employee that may or may not be selling secret recipes to Candy Corp's rival organization, Sugar Corp.
 
 Check if students have questions before continuing to the next part of the lesson.      
 
@@ -640,9 +630,9 @@ Check if students have questions before continuing to the next part of the lesso
 
 Explain the following to students:
 
-- You will continue to play the role of a security analyst at Wonka Corp investigating the employee potentially selling secret recipes to Slugworth Corp.
+- You will continue to play the role of a security analyst at Candy Corp investigating the employee potentially selling secret recipes to Sugar Corp.
 
-- Your manager at Wonka Corp needs you to create an additional directory, as they believe there is a second employee working with Slugworth Corp.
+- Your manager at Candy Corp needs you to create an additional directory, as they believe there is a second employee working with Sugar Corp.
 
 - You also must copy and move several of the evidence files after creating this new directory.
 
@@ -793,14 +783,14 @@ Explain that we will walk through how to use the preview commands in the followi
 
      - Output should confirm the presence of four files: `File1`, `File2`, `File3`, `File4`.
 
-3. Next, we need to preview the first file  with the `more` command in order to determine it is an access log file.
+3. Next, we need to preview the first file  with the `more` command in order to determine if it is an access log file.
 
      - First, use the `more` command by running:
         - `more File1`
 
      - Note that this file clearly does not look like an access log file.
 
-     - Demonstrate using the space bar to scroll down through the file.
+     - Demonstrate using the space bar to scroll down through the file one screen at a time.
 
 4. Explain that we will preview the next file using the `less` command.
 
@@ -848,7 +838,7 @@ Summarize the demonstration as covering the following preview commands:
    - Adding a `-number` after `head` or `tail` will change the number of lines previewed.
 
 
-Explain that in the next activity, students will use these preview commands to begin investigating the malicious employees that may be selling secret recipes to Wonka Corp's rival organization, Slugworth Corp.      
+Explain that in the next activity, students will use these preview commands to begin investigating the malicious employees that may be selling secret recipes to Candy Corp's rival organization, Sugar Corp.      
 
 
 Check if there are any questions before proceeding.
@@ -857,9 +847,9 @@ Check if there are any questions before proceeding.
 
 Explain the following to students:
 
-- You continue in your role as security analyst at Wonka Corp, investigating the insider employee potentially selling secret recipes to Slugworth Corp.
+- You continue in your role as security analyst at Candy Corp, investigating the insider employee potentially selling secret recipes to Sugar Corp.
 
-- Your manager at Wonka has identified two possible insiders who may be working with Slugworth: Henry and Ruth.
+- Your manager at Candy has identified two possible insiders who may be working with Sugar Corp: Henry and Ruth.
 
 - Your manager has quickly pulled some files from Henry and Ruth's computers, without their knowledge.
 
@@ -898,12 +888,6 @@ First, navigate into the `oh_henry` folder on your VM:
 
    `cd /03-student/day1/oh_henry/`
 
-Next, you will need to navigate into Henry's Folder:
-
-- Run:    
-
-  `cd oh_henry`
-
 There are many files in this directory and we can preview each by using `head`, `more`, or `less`.
 
    - For example: `head do.txt` or `more do.txt`
@@ -937,9 +921,9 @@ Explain that to view the date on the bottom of each file, we will run the `tail`
 
   `tail do.txt`
 
-On the bottom of the file called `do.txt` is the date October 10, 2019.
+On the bottom of the file called `do.txt` is the date October 13, 2019.
 
-- To add this date to file name, we will run the following command:
+- To add this date to the file name, we will run the following command to rename the file appending the date to the end:
 
   `mv do.txt do.txt_10_13_2019`
 
@@ -1043,7 +1027,7 @@ We will walk through using the `cat` command with the following scenario:
 
   - You are a security analyst at ACME Corp and tasked with combining several evidence log files from a potential rogue employee.
 
-  - Your manager provided you a directory called `Logfile_evidence_directory` that contains four files (`LogFile1`, `LogFile2`, `LogFile3`, `LogFile4`).  Each file has logs from a different day.
+  - Your manager provided you a directory called `Logfile_evidence` that contains four files (`LogFile1`, `LogFile2`, `LogFile3`, `LogFile4`).  Each file has logs from a different day.
 
   - Your manager explained that your forensic team will be doing an analysis of these logs, but the team's job will be easier if you can combine the log files into a single file.
 
@@ -1086,8 +1070,7 @@ We will walk through using the `cat` command with the following scenario:
 
 5. Finally, preview the file called  `rogue_employee_log_evidence`  to show that the four files were successfully combined.
 
-     - Run `more rogue_employee_log_evidence` and push the space bar to scroll through the file and confirm the combination of the four log files.
-
+     - Run `more rogue_employee_log_evidence` and push the space bar to move a page down through the file and confirm the combination of the four log files.
 
 Summarize the demonstration by recapping the following commands:
 
@@ -1099,7 +1082,7 @@ Summarize the demonstration by recapping the following commands:
 
      - `>>` will write to a file, but append to the file if the file name already exists.
 
-Explain that in the final command line activity of the day, students will use all the commands they've learned that day to help Wonka Corp identify the insider selling secret recipes to Slugworth Corp.
+Explain that in the final command line activity of the day, students will use all the commands they've learned that day to help Candy Corp identify the insider selling secret recipes to Sugar Corp.
 
 
 Answer any remaining questions before proceeding.
@@ -1109,13 +1092,13 @@ Answer any remaining questions before proceeding.
 
 Explain the following to students:
 
-- You will continue to play the role of a security analyst at Wonka Corp investigating the employees potentially selling secret recipes to Slugworth Corp.
+- You will continue to play the role of a security analyst at Candy Corp investigating the employees potentially selling secret recipes to Sugar Corp.
 
 - Your manager believes that Henry and Ruth are sharing secret recipes. Your manager has collected some additional files from Henry and Ruth's computers in order to help build a case against them.
 
 - Your manager wants you to analyze this additional data and prepare a combined evidence file for the local authorities.
 
-- You must act fast so the secret recipes don't get into the hands of Slugworth Corp.
+- You must act fast so the secret recipes don't get into the hands of Sugar Corp.
 
 Send students the following:
 
@@ -1195,7 +1178,7 @@ The final step is to concatenate all the files together.
 
 - Move into `Evidence_for_authorities` and run:
 
-    `cat  emailA sd.txt  email1 email4 log1 log2 recipe_for_sugarplum  recipe_for_sweetums > Wonka-evidence.txt `     
+    `cat  emailA sd.txt  email1 email4 log1 log2 recipe_for_sugarplum  recipe_for_sweetums > Candy-evidence.txt `     
 
  **Bonus**
  
@@ -1209,7 +1192,7 @@ The final step is to concatenate all the files together.
    
  - Open the file to display the images. 
 
-Congratulate the class on a job well done! They have saved Wonka Corp by handing the evidence over to the authorities before Slugworth got their hands on the secret recipes!
+Congratulate the class on a job well done! They have saved Candy Corp by handing the evidence over to the authorities before Sugar got their hands on the secret recipes!
 
 Answer any remaining questions.
 

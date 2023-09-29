@@ -1,16 +1,16 @@
 ## Activity File: Finding Your Way 
  
-- In this activity you will continue your role as a security analyst at Wonka Corp.
+- In this activity you will continue your role as a security analyst at Candy Corp.
 
-- Your manager has identified why PeanutButtery.net was targeted: Henry had hidden a secret recipe for a revolutionary Wonka candy within the file system, and Slugworth was trying to find it.
+- Your manager has identified why PeanutButtery.net was targeted: Henry had hidden a secret recipe for a revolutionary Candy Corp treat within the file system, and Sugar Corp was trying to find it.
 
-- Your manager at Wonka needs you to search through the files and file directories of the PeanutButtery.net server to find the hidden recipes in its file system.
+- Your manager at Candy Corp needs you to search through the files and file directories of the PeanutButtery.net server to find the hidden recipes in its file system.
 
 - You are tasked with scanning the directories of the site PeanutButtery.net to uncover the secret recipes hidden by Henry
 
 ### Instructions
 
-Using only the command line, complete the following tasks in the `/03-student/day2/finding_your_way/` folder in your Ubuntu VM:
+Using only the command line, complete the following tasks in the `/03-student/day2/finding_your_way/` folder in your Ubuntu virtual machine:
 
 1. Navigate into the `PeanutButtery.net` directory.
 
@@ -25,3 +25,6 @@ Using only the command line, complete the following tasks in the `/03-student/da
  
  **Hint:** Research how to use the AND functionality with the `find` command.
   
+---
+
+© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

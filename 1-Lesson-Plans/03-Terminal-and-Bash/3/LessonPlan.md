@@ -18,26 +18,11 @@ By the end of class, students will be able to:
 
 - Design an IP lookup shell script by passing arguments.
 
-### Instructor Notes
-
-At the end of class today, we will revisit the Using Vagrant Doc from 1.2 to demonstrate pulling the latest virtual machine build. Share the document with students: [Using Vagrant](https://docs.google.com/document/d/1Grxbagm-2jg22LiatDHzLDpJOsOl5JWJ9gl00TtiX6k/edit?usp=sharing). 
-
-- Emphasize to students that they should be frequently pulling the latest build of their virtual machine as it is being consistently refined and improved. 
-
-- This demonstration was optional in Day 1.2. If you have not demonstrated this yet, you are encouraged to do so in this class. In necessary, use office hours after class to make sure all students know how to run these commands.  
 
 ### Lab Environment   
 
-You will use your local Vagrant virtual machine for today's activities. Please note that instructors and students have different access credentials.
+You will use the Ubuntu VM inside your web lab for today's activities. Please note that instructors and students have different access credentials.
   
-  - Instructor access:
-    - Username: `instructor`
-    - Password: `instructor`
-
-  - Student access:
-    - Username: `sysadmin`
-    - Password: `cybersecurity`
-
 :warning: **Heads Up**: In the event of lab malfunctions, use a backup zip file containing this module's student activity directories.
 
   - [Backup Student Activity Directories: Terminal Module](Resources/terminal.zip)
@@ -107,11 +92,11 @@ Remind the class that the best way to learn these commands is to practice them, 
 
 Explain the following to students:
 
-- In this activity you will continue your role as a security analyst at Wonka Corp.
+- In this activity you will continue your role as a security analyst at Candy Corp.
 
-- Thanks to your great work, the authorities have been able to charge Slugworth.
+- Thanks to your great work, the authorities have been able to charge Sugar Corp.
 
-- The prosecutor of the case has subpoenaed you for a list of additional data to help build their case against Slugworth.
+- The prosecutor of the case has subpoenaed you for a list of additional data to help build their case against Sugar Corp.
 
 - You are tasked with gathering additional information specified in the subpoena.
 
@@ -285,9 +270,9 @@ Explain that in the next command line activity, students will get to use the `se
 
 Explain the following to students:
 
-- In this activity you will continue your role as a security analyst at Wonka Corp.
+- In this activity you will continue your role as a security analyst at Candy Corp.
 
-- Your manager believes there is a new cybercriminal attempting, but failing, to log in to several administrative websites owned by Wonka.
+- Your manager believes there is a new cybercriminal attempting, but failing, to log in to several administrative websites owned by Candy.
 
 - Your manager has provided you with the access logs for two different administrative websites. They want to find out information about this cybercriminal before they get unauthorized access.
 
@@ -364,7 +349,7 @@ Explain that we will demonstrate how to isolate the State field from the above e
 
     - `awk -F, '{print $2}' awk.txt`
 
-    Break down the above syntax of the `awk` command (everything after the pipe):
+    Break down the above syntax of the `awk` command:
 
     - `awk -F(delimiter)  '{print $(field_number)}' `  
 
@@ -434,7 +419,7 @@ Explain that we will demonstrate how to isolate the State field from the above e
 
       - `awk -F" "  '{print $2, $1}' access_logs`
 
-     Explain the syntax of the `awk` command (after the pipe):
+     Explain the syntax of the `awk` command:
 
      - `awk -F" "`
 
@@ -442,7 +427,7 @@ Explain that we will demonstrate how to isolate the State field from the above e
 
         - In this example, one space is the delimiter.
 
-          To indicate that want to separate the fields by spaces, we place once space between two double quotes.
+          To indicate that want to separate the fields by spaces, we place one space between two double quotes.
 
 
       - `{print $2, $1}`
@@ -451,7 +436,7 @@ Explain that we will demonstrate how to isolate the State field from the above e
 
 6. Run the command and point out that `awk` is able to take a complex log file, and parse it out to show only the fields needed: Time and IP Address.
 
-7. Explain that in this result, the top reoccurring IP of  `41.33.233.87`  is easy to detect. This is likely IP address of the attacker.
+7. Explain that in this result, the top reoccurring IP of  `41.33.233.87`  is easy to detect. This is likely the IP address of the attacker.
 
 8. Explain that identifying an IP address of the attacker can assist a security professional with determining what IP address should be blocked from a network to prevent future attacks.
 
@@ -476,9 +461,9 @@ Explain that in the next command line activity, students will get to use the `aw
 
 Explain the following to students:
 
-- You will continue your role as a security analyst at Wonka Corp.
+- You will continue your role as a security analyst at Candy Corp.
 
-- Your manager needs your assistance finding information on the cybercriminal who is attempting to log in to several administrative websites owned by Wonka.
+- Your manager needs your assistance finding information on the cybercriminal who is attempting to log in to several administrative websites owned by Candy Corp.
 
 - You are now tasked with isolating several fields from the log file to determine the primary username attempting to log in to the administrative websites.
 
@@ -624,7 +609,7 @@ Explain that we will use Nano to create a simple shell script that contains the 
 
       - `#!/bin/bash`
     
-    Remind students that the line `#!/bin/bash` this tells our Linux OS that this is a bash script, and should be run with the bash shell. This will also create a log in the `/bin/bash` directory, which is important so that we may see when different scripts were run. 
+    Remind students that the line `#!/bin/bash` tells our Linux OS that this is a bash script, and should be run with the bash shell. This will also create a log in the `/bin/bash` directory, which is important so that we may see when different scripts were run. 
 
 8.  Next we'll type the first command on the first line:
 
@@ -664,7 +649,7 @@ Explain that we will use Nano to create a simple shell script that contains the 
 
 Take a moment to address questions before proceeding.
 
-Explain that in the next command line activity, students will get to use the `nano` command to do write their first shell script.
+Explain that in the next command line activity, students will get to use the `nano` command to write their first shell script.
 
 
 ### 13. Student Do: My First Shell Script (0:15)
@@ -672,7 +657,7 @@ Explain that in the next command line activity, students will get to use the `na
 
 Explain the following to students:
 
-- In this activity you will continue your role as a security analyst at Wonka Corp.
+- In this activity you will continue your role as a security analyst at Candy Corp.
 
 - Your manager needs your assistance creating a simple shell script to automate the `awk` and `sed` tasks you did today on your log file.
 
@@ -762,6 +747,45 @@ Explain how to pass a single argument in a shell script by covering the followin
        - Argument2 = `$2`
        - Argument3 = `$3`
 
+
+### 16. Passing Argument Demo
+
+In this demo, we will create a simple script called `greet.sh` that will take a person's name as an argument and display a greeting message.
+
+1. Navigate to `/03-instructor/day3/`
+
+2. Create a `passing_variables` directory
+    - `mkdir passing_variables`
+
+3. Navigate to this new directory
+    - `cd passing_variables`
+
+4. Create your new script
+    - `nano greet.sh`
+
+5. For your first line of your new script write:
+    - `#!/bin/bash`
+
+6. Then add the following two lines:
+    - `name=$1`
+    - `echo "Hello, $name!"`
+
+  - This sets the first variable `name` to whatever you enter when you run the script
+
+  ![](../3/Images/greetscript.png)
+
+7. Save the script and exit nano.
+
+8. Make the script executable:
+    -`chmod 777 greet.sh`
+
+9. Run the script with any name after the script
+    -`./greet.sh John`
+
+  ![](../3/Images/greetrun.png)
+
+
+
  #### Passing Arguments Summary  
 
  Review the following concepts:
@@ -777,16 +801,16 @@ Take a moment to address questions before proceeding.
 Explain that in the final command line activity, students will get to use all the skills learned today to build their own IP lookup script.
 
 
-### 16. Student Do: Building an IP Lookup Tool (0:15)
+### 17. Student Do: Building an IP Lookup Tool (0:15)
 
 
 Explain the following to students:
 
-- In this activity you will continue your role as a security analyst at Wonka Corp.
+- In this activity you will continue your role as a security analyst at Candy Corp.
 
 - Your manager needs to know which country these attacks are coming from so they can block it from accessing their network.
 
-- You manager is impressed with the great work you did on the last script and  would like you to design one that can look up the the country from an IP address in the logs.
+- Your manager is impressed with the great work you did on the last script and  would like you to design one that can look up the the country from an IP address in the logs.
 
 Send students the following instructions:
 
@@ -794,7 +818,7 @@ Send students the following instructions:
 
 
 
-### 17. Instructor Review: Building an IP Lookup Tool Activity (0:05)
+### 18. Instructor Review: Building an IP Lookup Tool Activity (0:05)
 :bar_chart: Using [Zoom's](https://support.zoom.us/hc/en-us/articles/213756303-Polling-for-meetings) or [Slack's](https://slack.com/help/articles/229002507-Create-a-poll-) poll feature, conduct a comprehension check and evaluate how well students completed the activity. 
 
 Remind students that the goal of this activity was to review many of the command line skills covered during the week.  Additionally, let students know that looking up a location associated with an IP is a common security task.
@@ -812,103 +836,6 @@ Send students the following solution file and use it to guide your review:
 
 - [Solution Guide: Building an IP Lookup Tool](Activities/17_ip_lookup_activity/solved/readme.md)
 
-
-Ask the class if they have any questions before moving onto the weekly recap.
-
-### 18. Optional Instructor Do: Weekly Recap and Vagrant Updates Demo (0:00)
-
-Explain to students that they'll be using their Vagrant lab extensively for a large portion of the boot camp. Documentation for Vagrant use has been created for students.
-
-- Share the following link with students: https://docs.google.com/document/d/1Grxbagm-2jg22LiatDHzLDpJOsOl5JWJ9gl00TtiX6k/edit?usp=sharing
-
-#### Finding and Updating Vagrant Machines 
-
-Explain that we are going to cover how to manage the boot camp's virtual environment using Vagrant. We're covering these commands at the end of the week's classes because the Challenge requires no dependencies from this week.
-
-Explain that Vagrant uses Vagrant box files as a base to create VirtualBox virtual machines. We're going to move through the steps below to ensure our Vagrant box files and VirtualBox VMs are updated.
-
-Explain that in order to make sure they are using the latest machines, we'll do the following steps in the terminal:
-1. Find all Vagrant machine installations.
-2. Navigate to one of the Vagrant machine locations.
-3. Update the Vagrant box that's used to create the VirtualBox VM.
-4. Destroy the old, outdated VirtualBox VM.
-5. Bring up the updated VirtualBox VM.
-6. Discard old, unused versions of Vagrant boxes.
-
-- Have everyone open their Git Bash or Mac Terminal.
-
-Explain that we're going to use the command `vagrant global-status --prune` to see where we have Vagrant machines installed in order to update them properly.
-
-- Have everyone run `vagrant global-status --prune` and point out the `directory` column of the ouput:
-
-  ```
-  id       name    provider   state    directory                                  
-  -----------------------------------------------------------------------------------------------
-  f99ec56  default virtualbox poweroff C:/Users/student/Documents/Cybersecurity-Bootcamp/Linux-Module
-
-  The above shows information about all known Vagrant environments
-  on this machine. This data is cached and may not be completely
-  up-to-date (use "vagrant global-status --prune" to prune invalid
-  entries). To interact with any of the machines, you can go to that
-  directory and run Vagrant, or you can use the ID directly with
-  Vagrant commands from any directory. For example:
-  "vagrant destroy 1a2b3c4d"
-  ```
-
-Explain that we'll want to navigate to the directory where we have the `Linux-Module` installed to update the machine. Have everyone run:
-
-- `cd $HOME/Documents/Cybersecurity-Bootcamp/Linux-Module`
-
-Explain that this directory has the virtual machine definitions for the Ubuntu machine that we'll be using in upcoming lessons. It should be updated at the end of every week in case there are critical virtual machine-specific issues. We can download updates with the command `vagrant box update`.
-
-:warning: **Heads Up**: The following updating step may take a long time depending on your and students' bandwidth. If that is the case, it may be better to cancel the process (Ctrl+C) and simply demonstrate the remaining steps.
-
-- Have everyone run `vagrant box update` and explain that we may see output telling us what version we are on. (The version will be different than below.):
-
-  ```console
-  $ vagrant box update
-  ==> default: Checking for updates to 'cybersecurity/UbuntuVM'
-      default: Latest installed version: 1.1.1
-      default: Version constraints:
-      default: Provider: virtualbox
-  ==> default: Updating 'cybersecurity/UbuntuVM' with provider 'virtualbox' from version
-  ==> default: '1.1.1' to '1.1.2'...
-  ==> default: Loading metadata for box 'https://vagrantcloud.com/cybersecurity/UbuntuVM?access_token=QzFrkLuXSrDBgA.atlasv1.22jkxzzRPPhfg1jmWDfaTmr5KFywkVXT7sKowBPfGkbAVyQIuQDiKsgUZHdmeNDzBbQ'
-  ==> default: Adding box 'cybersecurity/UbuntuVM' (v1.1.2) for provider: virtualbox
-      default: Downloading: https://vagrantcloud.com/cybersecurity/boxes/UbuntuVM/versions/1.1.2/providers/virtualbox.box
-      default: Download redirected to host: vagrantcloud-files-production.s3.amazonaws.com
-      default:
-  ==> default: Successfully added box 'cybersecurity/UbuntuVM' (v1.1.2) for 'virtualbox'!
-  ```
-
-- Note that this only locally loads the base Vagrant box that will be used to create our VirtualBox VM. The machines themselves are not updated yet. 
-
-- In order to update the virtual machines, we need to run `vagrant destroy` to remove the old virtual machine, and then `vagrant up` to create a new virtual machine using the updated Vagrant box.
-
-  - :warning: **Heads Up**: Even if there isn't an update to the machine, it is important to have students practice running the steps to update their own Vagrant machine so that they can keep their virtual machines updated outside of class.
-
-- Demonstrate or have everyone run `vagrant destroy`. Note that many students may still be downloading the newer boxes. 
-  - Explain that this process will shut down the machine if it's running, and then ask if you want to remove the machine. Enter Y to accept.
-
-- After Vagrant is done removing the virtual machine, you'll notice that it no longer shows up in the VirtualBox GUI. We'll now use `vagrant up` to load the new VirtualBox VM using the newly downloaded Vagrant box.
-
-After the virtual machine is started up, we can optionally delete any old virtual machines with `vagrant box prune`.
-
-- Demonstrate or have everyone run `vagrant box prune` and explain that this process removes any unused virtual machines.
-
-Summarize that at the end of each week, or if students encounter machine-breaking issues, they should do the following to make sure their Vagrant lab environment is updated:
-
-1. Run `vagrant global-status --prune` to find the locations of all Vagrant machines.
-
-2. Navigate to the directory where the machine is installed with `cd $HOME/Documents/Cybersecurity-Bootcamp/Linux-Module` (this directory may be different depending on your class's setup).
-3. Check for machine updates with `vagrant box update`.
-4. Shut down the current VM, if it's running, with `vagrant destroy`.
-5. Load the new virtual machines with `vagrant up`.
-6. Optionally, remove outdated Vagrant base boxes with `vagrant box prune`.
-
-To run all of the Vagrant commands in sequence, run: 
-- `vagrant box update && vagrant destroy --force && vagrant up && vagrant box prune` 
-  - (`vagrant destroy --force` skips the prompt).
 
 Spend the remaining class time reviewing any questions students have regarding material from today and the week. 
 
