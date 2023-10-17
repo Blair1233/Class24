@@ -71,6 +71,8 @@ In this activity, you are a junior administrator at Rezifp Pharma Inc. The compa
    **Terminal #1**
  
      - Run: `sudo journalctl -ef`.
+
+     - **Note:** The web machines can generate a lot of DPMS errors that look like `Sep 28 16:51:03 vm-image-ubuntu-dev-1 org.xfce.ScreenSaver[2264]: Xlib:  extension "DPMS" missing on display ":2"`  These can be filtered out with `grep` using the command: `journalctl -ef | grep -v "extension \"DPMS\" missing on display"`
  
    **Terminal #2**
  

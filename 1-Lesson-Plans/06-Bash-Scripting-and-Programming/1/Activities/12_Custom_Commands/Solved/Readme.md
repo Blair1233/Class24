@@ -55,7 +55,7 @@ echo "" >> ~/research/sys_info.txt
 echo "Machine Type Info:" >> ~/research/sys_info.txt
 echo $MACHTYPE >> ~/research/sys_info.txt
 echo -e "Uname info: $(uname -a) \n" >> ~/research/sys_info.txt
-echo -e "IP Info: $(ip addr | grep inet | tail -2 | head -1) \n" >> ~/research/sys_info.txt
+echo -e "IP Info: $(ip addr | head -9 | tail -2) \n" >> ~/research/sys_info.txt
 echo "Hostname: $(hostname -s) " >> ~/research/sys_info.txt
 echo -e "\n777 Files:" >>  ~/research/sys_info.txt
 find / -type f -perm 777 >> ~/research/sys_info.txt

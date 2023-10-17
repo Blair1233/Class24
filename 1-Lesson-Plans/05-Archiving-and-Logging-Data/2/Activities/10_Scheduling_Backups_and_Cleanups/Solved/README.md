@@ -38,10 +38,13 @@ In addition to scheduling the above tasks, you should perform regular security s
 
     - `nano lynis.partial.sh`
 
-    ```bash
-    #!/bin/bash
-    lynis audit --tests-from-group malware,authentication,networking,storage,filesystems >> /tmp/lynis.partial_scan.log
-    ```
+```bash
+#!/bin/bash
+export TestGroup=('malware' 'authentication' 'networking' 'storage' 'filesystems'); 
+for TG in ${TestGroup[@]}; 
+do sudo lynis audit system --tests-from-group $TG >> /tmp/lynis.partial_scan.log; 
+done
+```
 
 - Then add both `lynis` scripts to the `root` crontab to create the tasks.
 

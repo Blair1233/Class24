@@ -38,6 +38,14 @@ By the end of class students should be able to:
 
 You will use the Ubuntu VM inside your web lab for today's activities. Please note that instructors and students have different access credentials.
 
+  - Student credentials:
+    - Username:`student`
+    - Password: `cybersecurity`
+
+  - Instructor credentials:
+    - Username: `instructor`
+    - Password: `instructor`
+
 ### Slideshow
 
 You can access the slides for today on Google Drive here: [4.1 Slides](https://docs.google.com/presentation/d/1HI73cjG9SolDervfsoYLs201N-q8LOWhgoH4x67mwJc).

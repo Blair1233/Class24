@@ -22,7 +22,7 @@ By the end of class, students will be able to:
 
 Students may have varying levels of competency regarding bash scripting. 
 
-- For students with less technical experience, today's class will serve as an introduction bash. They will be equipped with the knolwedge to work through scripts without getting lost.  
+- For students with less technical experience, today's class will serve as an introduction bash. They will be equipped with the knowledge to work through scripts without getting lost.  
 
 - For more technically advanced students, today's class activities should provide enough bonuses in order to keep those students engaged and challenged. 
 
@@ -438,9 +438,9 @@ Log into the lab environment with the username `sysadmin` and password `cybersec
 
    - Add the `head` and output parts of the command: 
    
-      `ps aux --sort -%mem | awk {'print $1, $2, $3, $4, $11'} | head > ~/research/top_processes.txt`
+      `ps aux --sort -%mem | awk {'print $1, $2, $3, $4, $11'} | head -n 11 > ~/research/top_processes.txt`
 
-   - We are using `head` to give us only the first ten lines, before we send the command to our research directory.
+   - We are using `head -n 11` to give us only the first ten processes plus the command line, before we send the command to our research directory.
 
 - **Bonus**: Create a list of home folders along with user info from the `passwd` file. Only add the user info to your list if the UID is greater than 1000.
 
@@ -812,7 +812,7 @@ Create aliases for the following:
 
 - `nano ~/.bashrc`
 
-- `mkdir ~/research && cp /var/logs/* /etc/passwd /etc/shadow /etc/hosts ~/research`
+- `mkdir -p ~/research && sudo cp -r /var/log/* /etc/passwd /etc/shadow /etc/hosts ~/research`
 
 Create an alias in your `~/.bashrc` file for `nano ~/.bashrc`.
 
@@ -853,7 +853,7 @@ Complete the same steps for the following:
 
 1. `mkdir ~/research && cp /var/logs/* /etc/passwd /etc/shadow /etc/hosts ~/research`
 
-    - **Solution**: `echo "alias logs='mkdir ~/research && cp /var/logs/* /etc/passwd /etc/shadow /etc/hosts ~/research'" >> ~/.bashrc`
+    - **Solution**: `echo "alias logs='mkdir -p ~/research && sudo cp -r /var/log/* /etc/passwd /etc/shadow /etc/hosts ~/research'" >> ~/.bashrc`
 
 The `Custom Aliases` section should now look like:
 
@@ -864,7 +864,7 @@ alias docs='cd ~/Documents'
 alias dwn='cd ~/Downloads'
 alias etc='cd /etc'
 alias rc='nano ~/.bashrc'
-alias logs='mkdir ~/research && cp /var/logs/* /etc/passwd /etc/shadow /etc/hosts ~/research'
+alias logs='mkdir -p ~/research && sudo cp -r /var/log/* /etc/passwd /etc/shadow /etc/hosts ~/research'
 ```
 
 Explain that we can either keep the output file redirection `>> ~/research/users.txt` or we can leave it out. If we do leave it out, we can still use redirection when we run our custom alias.
@@ -1477,7 +1477,7 @@ echo ""
 echo "Machine Type Info:"
 echo $MACHTYPE
 echo -e "Uname info: $(uname -a) \n"
-echo -e "IP Info: $(ip addr | grep inet | tail -2 | head -1) \n"
+echo -e "IP Info: $(ip addr | head -9 | tail -1) \n"
 echo "Hostname: $(hostname -s) "
 ```
 
@@ -1517,7 +1517,7 @@ Go through the bonus answers if you have time.
 
       - `lscpu` gives us a ton of info about the computer's CPU.
 
-      - Remember: `ls` has a number of extended commands to show hardware and other system info.
+      - Remember: `lscpu` has a number of extended commands to show hardware and other system info.
 
       - `| grep` pipes that output into `grep` so we can parse just the info we want.
 
@@ -1565,7 +1565,7 @@ echo ""
 echo "Machine Type Info:"
 echo $MACHTYPE
 echo -e "Uname info: $(uname -a) \n"
-echo -e "IP Info: $(ip addr | grep inet | tail -2 | head -1) \n"
+echo -e "IP Info: $(ip addr | head -9 | tail -2) \n"
 echo "Hostname: $(hostname -s) "
 echo "DNS Servers: "
 cat /etc/resolv.conf
@@ -1818,7 +1818,7 @@ echo "" >> ~/research/sys_info.txt
 echo "Machine Type Info:" >> ~/research/sys_info.txt
 echo $MACHTYPE >> ~/research/sys_info.txt
 echo -e "Uname info: $(uname -a) \n" >> ~/research/sys_info.txt
-echo -e "IP Info: $(ip addr | grep inet | tail -2 | head -1) \n" >> ~/research/sys_info.txt
+echo -e "IP Info: $(ip addr | head -9 | tail -2) \n" >> ~/research/sys_info.txt
 echo -e "Hostname: $(hostname -s) \n" >> ~/research/sys_info.txt
 echo "DNS Servers: " >> ~/research/sys_info.txt
 cat /etc/resolv.conf >> ~/research/sys_info.txt

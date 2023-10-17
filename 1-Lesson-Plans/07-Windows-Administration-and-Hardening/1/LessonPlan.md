@@ -25,9 +25,12 @@ By the end of class, students will be able to:
 
 In this module, you will be using a new Windows lab environment located in Windows Azure Lab Services. RDP into the **Windows RDP host machine** using the following credentials:
 
-  - Username: `azadmin`
-
-  - Password: `p4ssw0rd*`
+    - RDP login credentials for labs provisioned prior to 9/12/23
+      - Username: `azadmin`
+      - Password: `p4ssw0rd*`
+    - RDP login credentials for labs provisioned after 9/12/23
+      - Username: `azadmin`
+      - Password: `p@ssw0rdp@ssw0rd`
 
 Open the Hyper-V Manager in the Windows RDP Host machine to access the nested virtual machines:
 
@@ -159,9 +162,12 @@ Instruct students to use RDP to log into their Azure lab if they have not yet.
 
   - Credentials for the Azure labs Windows RDP Host machine:
 
+  - RDP login credentials for labs provisioned prior to 9/12/23
     - Username: `azadmin`
-
     - Password: `p4ssw0rd*`
+  - RDP login credentials for labs provisioned after 9/12/23
+    - Username: `azadmin`
+    - Password: `p@ssw0rdp@ssw0rd`
 
 ### 03. Instructor Do: Introduction to Task Manager (0:15)
 
@@ -625,8 +631,12 @@ Share the following file with the class:
 
 Start by making sure you're logged into the **Windows RDP Host Machine** with the following credentials:
 
-- Username: `azadmin`
-- Password: `p4ssw0rd*`
+  - RDP login credentials for labs provisioned prior to 9/12/23
+    - Username: `azadmin`
+    - Password: `p4ssw0rd*`
+  - RDP login credentials for labs provisioned after 9/12/23
+    - Username: `azadmin`
+    - Password: `p@ssw0rdp@ssw0rd`
 
 To find what processes are running, we'll launch the GUI tool, Task Manager: 
 
@@ -1570,11 +1580,24 @@ Use the user, `azadmin`, to create a newly scheduled task.
 
   ![Task Scheduler](./Images/task_scheduler.PNG)
 
+  ![Task Scheduler](./Images/task_scheduler_create_task.png)
+
 - Create a new task by selecting **Create Task...** on the **Actions** pane.
+ 
+    - Click `New`
+    - In the Action tab, select `Start a program` and click `Browse`
+    - Select the System32 Folder on the left and type `CMD` in the File Name section
+    - Select CMD.exe from the list
+
+  ![Start a Program](./Images/StartProgram.png)
+
+  ![Select a Program](./Images/SYS32List.png)
+
+  ![Return to Action Screen](./Images/CMD_Task.png)
 
   - Note: If you don't see the Actions pane on the right, go to **View** > **Customize** and make sure Action Pane is enabled.
 
-  ![Task Scheduler](./Images/task_scheduler_create_task.png)
+  
 
 #### Setting the Task Trigger
 

@@ -33,7 +33,7 @@ Before you begin Day 2, you are required to have completed the following tasks f
 
 - [Day 2 Guide Using Free Domain ](https://docs.google.com/document/d/1dt5_1zmOJ8tfvq9-v7BeNz9Pr3qQKckdq9A5L5YdWxc/edit) 
 
-- [Day 2 Guide Using Paid Domains](https://docs.google.com/document/d/1Hi7oIU5LfI4YIjRYPukgcGfvrCJSZIVTk8qkw1-lVT4/edit)
+- [Day 2 Guide Using Paid Domains](https://docs.google.com/document/d/1rcdsH-ZhU1AzZoSHo8SWk4La8GBxchiHqU2etr-Qxc0/edit?usp=sharing)
 
 
 ### Part 1: Answering Review Questions

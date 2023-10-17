@@ -25,8 +25,12 @@ In this module, you will use a new Forensics lab environment located in Microsof
 
 Using RDP, log into the new environment with the following credentials:
 
-  - Username: `azadmin`
-  - Password: `p4ssw0rd*`
+  - RDP login credentials for labs provisioned prior to 9/12/23
+    - Username: `azadmin`
+    - Password: `p4ssw0rd*`
+  - RDP login credentials for labs provisioned after 9/12/23
+    - Username: `azadmin`
+    - Password: `p@ssw0rdp@ssw0rd`
 
 Today's lectures, demonstrations, student activities, and reviews will be completed using the **Kali Linux** VM. Use the following credentials to log into the **Kali Linux** machine:
 

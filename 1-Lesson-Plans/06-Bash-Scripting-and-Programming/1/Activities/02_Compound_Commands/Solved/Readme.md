@@ -28,11 +28,11 @@ We'll use `&&` to combine the two following commands together:
 
 Type the solution into the command line:
 
-- `mkdir ~/research && sudo cp -r /var/log/* /etc/passwd /etc/shadow /etc/hosts ~/research`
+- `mkdir -p ~/research && sudo cp -r /var/log/* /etc/passwd /etc/shadow /etc/hosts ~/research`
 
 Syntax breakdown:
 
-- `mkdir ~/research`: Creates our directory.
+- `mkdir -p ~/research`: Checks for a directory and creates it if not existing.
 
 - `&&`: Completes the second command if the first command is successful.
 
@@ -91,9 +91,9 @@ Parsing the output of the `ps` command will require using a program like `awk`.
       - `$1, $2, $3, $4, $11'}`: Each item on a line, separated by white space, that is given to `awk` is given a number. We can later choose those items using the `$`. Here, we are choosing `USER`, `PID`, `%CPU`, `%MEM` and `COMMAND`.
 
 Add the `head` and output parts of the command:
-`ps aux --sort -%mem | awk {'print $1, $2, $3, $4, $11'} | head > ~/research/top_processes.txt`
+`ps aux --sort -%mem | awk {'print $1, $2, $3, $4, $11'} | head -n 11> ~/research/top_processes.txt`
 
-- We are using `head` to give us only the first ten lines, before we send the command to our research directory.
+- We are using `head -n 11` to give us only the first ten processes plus the title line, before we send the command to our research directory.
 
 #### Bonus
 

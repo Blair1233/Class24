@@ -42,8 +42,12 @@ In this module, we will explore the the unique field of digital forensics&mdash;
 
 In this module, you will use a new Forensics lab environment located in Windows Azure Lab Services. RDP into the **Windows RDP host machine** using the following credentials:
 
-  - Username: `azadmin`
-  - Password: `p4ssw0rd*`
+  - RDP login credentials for labs provisioned prior to 9/12/23
+    - Username: `azadmin`
+    - Password: `p4ssw0rd*`
+  - RDP login credentials for labs provisioned after 9/12/23
+    - Username: `azadmin`
+    - Password: `p@ssw0rdp@ssw0rd`
   
 ### Module Checklist
 

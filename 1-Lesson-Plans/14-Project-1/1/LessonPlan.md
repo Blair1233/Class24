@@ -279,8 +279,8 @@ Remind the students of the following before they start:
 Send out the following two student guides:
 
 
-- [Day 1 Guide Using Free Domain with Azure - No Cost](https://docs.google.com/document/d/1NTiTeEeCRCIrI99Vp9XoeEsjEvVedNx4Qb1wK1yK2nM/edit) 
-- [Day 1 Guide Using Paid Domain with GoDaddy - $0.99](https://docs.google.com/document/d/1C1Kv1aqOVh5zMikkJKwn_ooxqWQePpb_JlNDPa0d-H8/edit?usp=sharing) 
+- [Day 1 Guide Using Free Domain with Azure - No Cost](https://docs.google.com/document/d/1LCmP_Aklpcr7ipUaqMzSN7iNCfx6J_1TWjXBM_umduE/edit?usp=sharing)
+- [Day 1 Guide Using Paid Domain with GoDaddy - $0.99](https://docs.google.com/document/d/1pQEQgcv_7nyoOBGT7u6Ruhs_DOWlAzi8vLoh3Hdruks/edit?usp=sharing)
 
 Additionally, provide students with the following resources to assist with their projects:
 

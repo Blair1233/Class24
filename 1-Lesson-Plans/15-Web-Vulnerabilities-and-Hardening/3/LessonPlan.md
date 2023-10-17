@@ -1484,15 +1484,18 @@ Answer any questions that remain before proceeding.
 
 Let students know that in the next module, we will return to Azure Lab Services. We will use a new lab environment: Pen testing.
 
-Tell students to switch to their local computer environment. Send students the registration link for the Pen testing environment. Once they click on it, the Pen testing environment card will be added to their Azure dashboard.
+Tell students to switch to their local computer environment.
 
 **Details Around the Environment**
 
 We can access the **Windows RDP host machine** via RDP using the following credentials:
 
-  - Username: `azadmin`
-  
-  - Password: `p4ssw0rd*`
+  - RDP login credentials for labs provisioned prior to 9/12/23
+    - Username: `azadmin`
+    - Password: `p4ssw0rd*`
+  - RDP login credentials for labs provisioned after 9/12/23
+    - Username: `azadmin`
+    - Password: `p@ssw0rdp@ssw0rd`
 
 Make sure that all students are set up and can access this environment. Address any troubleshooting issues prior to the next class.
 

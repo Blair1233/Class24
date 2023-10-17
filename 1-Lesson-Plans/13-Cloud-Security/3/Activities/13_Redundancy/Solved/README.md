@@ -37,7 +37,7 @@ To complete this activity, you had to create a copy of your VM using your Ansibl
 2. Once your machine is set up, connect to the Ansible container on your jump box and test the Ansible connection using SSH.
 
     ```bash
-    $ ssh ansible@10.0.0.7
+    $ ssh <username>@10.0.0.7
     The authenticity of host '10.0.0.7 (10.0.0.7)' can't be established.
     ECDSA key fingerprint is SHA256:Jes0kNsSifAVf/TEcfPxhP4/p2fmS7WGk2O8xo8vC64.
     Are you sure you want to continue connecting (yes/no)? yes
@@ -139,14 +139,14 @@ To complete this activity, you had to create a copy of your VM using your Ansibl
 
 6. When the Ansible playbook is finished running, SSH to your new VM and test the DVWA app using `curl`.
 
-    - Run: `ssh ansible@10.0.0.7`.
+    - Run: `ssh <username>@10.0.0.7`.
 
     - Run: `curl localhost/setup.php`.
 
     - Your output should look like the following:
 
     ```bash
-    root@1f08425a2967:~# ssh ansible@10.0.0.7
+    root@1f08425a2967:~# ssh <username>@10.0.0.7
     Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 5.0.0-1027-azure x86_64)
 
     * Documentation:  https://help.ubuntu.com

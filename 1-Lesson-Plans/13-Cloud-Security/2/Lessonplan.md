@@ -1361,7 +1361,7 @@ Return to the Azure portal and locate one of your web-VM's details page.
 - Now run an SSH command to connect to your VM.
 
     ```bash
-    root@23b86e1d62ad:~# ssh ansible@10.0.0.6
+    root@23b86e1d62ad:~# ssh <username>@10.0.0.6
     The authenticity of host '10.0.0.6 (10.0.0.6)' can't be established.
     ECDSA key fingerprint is SHA256:7Wd1cStyhq5HihBf+7TQgjIQe2uHP6arx2qZ1YrPAP4.
     Are you sure you want to continue connecting (yes/no)? yes

@@ -12,7 +12,7 @@ Today, students will determine whether the monitoring solutions that they design
 ### Lab Environment
 
 
-- Students will use Vagrant to complete all of this week's activities.
+- Students will use their WebLab virtual machine to complete all of this week's activities.
 
 ### Additional Resources
 

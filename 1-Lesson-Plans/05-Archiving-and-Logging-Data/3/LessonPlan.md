@@ -192,6 +192,10 @@ Introduce the first option: `journalctl --list-boots`
 `journalctl -ef`
   - `-e`: Displays the **end** of the journal 
   - `-f`: **Follow mode** keeps the journal screen open, displaying real-time messages in order of occurrence.
+
+   - **Note:** The web machines can generate a lot of DPMS errors that look like `Sep 28 16:51:03 vm-image-ubuntu-dev-1 org.xfce.ScreenSaver[2264]: Xlib:  extension "DPMS" missing on display ":2"`  These can be filtered out with `grep` using the command: `journalctl -ef | grep -v "extension \"DPMS\" missing on display"`
+
+    - The `-v` option will `grep` everything that is not included in the statement
  
 `journalctl _UID`
  
@@ -1025,7 +1029,7 @@ The `auditd` daemon allows you to choose which actions on the server to monitor 
 
 Point out that the one caveat to `auditd` is that it does not actually add any additional security to your system. Instead, it provides the ability to keep track of violations that have already occurred on a system, allowing you to take action.
 
-Once an event is written to disk, reporting tools such as `ausearch`, `aureport`, and `aulast` are used to generate reports.
+Once an event is written to disk, reporting tools such as `ausearch`, `aureport`, and `auditctl` are used to generate reports.
 
 - `ausearch` is a tool designed to query `auditd` daemon logs based on different search criteria for event-driven log records.
 
@@ -1127,7 +1131,7 @@ Launch an instance of Ubuntu using your VM environment.
 
 4. It's best practice to verify if there are any rules that currently exist before making changes or additions to the system.
 
-   - Run: `sudo auditctl -l` to list any exsisting rules. 
+   - Run: `sudo auditctl -l` to list any existing rules. 
 
    - Output should display no existing rules:
 

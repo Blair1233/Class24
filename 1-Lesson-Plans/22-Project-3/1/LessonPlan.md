@@ -30,9 +30,9 @@ The **grading rubric** for this project is located in the following document:
 ### Lab Environment
 
 
-- Students will use Vagrant to complete all of this week's activities.
+- Students will use their Web Lab to complete all of this week's activities.
 
-- Students can refer back to the following [guide](https://github.com/coding-boot-camp/cybersecurity-v2/blob/main/v2.5-Curriculum/1-Lesson-Plans/19-SIEMs/1/resources/splunk_lab_setup.md) to configure Splunk on their VM.
+- Students can refer back to the following [guide](../../19-SIEMs/1/resources/splunk_lab_setup.md) to configure Splunk on their VM.
 
 ### Additional Resources
 

@@ -1340,7 +1340,14 @@ Wrap up the lesson and answer any questions.
       
    - Distribute the following instructions if needed: [Personal Azure Account Setup Guide](https://docs.google.com/document/d/1gs_09b7eotl7hzTL82xlqPt-OwOd0aWA78qcQxtMr6Y/edit) 
    
-   - Make sure all students are set up prior to the next class. 
+   - Make sure all students are set up prior to the next class.
+
+
+>Instructional staff who are unable to sign up for a free account will need to pay upfront and seek reimbursement. Let your AMs know and they will walk you through the reimbursement process. 
+
+>Same goes for students. Instruct students to work with their SSA for reimbursement.
+
+
 
 
 ---

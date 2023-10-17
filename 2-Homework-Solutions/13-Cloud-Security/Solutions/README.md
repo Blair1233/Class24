@@ -11,7 +11,7 @@ Use a free account at [draw.io](https://app.diagrams.net/) to diagram the entire
         - Flow of specific traffic (e.g., HTTP, SSH)
         - Security group blocking traffic
         - Load balancer
-        - All five VMs that you have launched
+        - All VMs that you have launched with host names and IP addresses (internal and external where applicable)
         - Where Docker and Ansible are deployed
         - Availability Zones
 

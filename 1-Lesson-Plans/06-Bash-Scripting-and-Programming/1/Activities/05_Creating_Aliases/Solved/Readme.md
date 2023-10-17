@@ -87,7 +87,7 @@ Create aliases for the following:
 
 - `nano ~/.bashrc`
 
-- `mkdir ~/research && cp /var/logs/* /etc/passwd /etc/shadow /etc/hosts ~/research`
+- `mkdir -p ~/research && sudo cp -r /var/log/* /etc/passwd /etc/shadow /etc/hosts ~/research`
 
 Create an alias in your `~/.bashrc` file for `nano ~/.bashrc`.
 
@@ -126,9 +126,9 @@ Scroll to the bottom where the aliases are being added.
 
 Complete the same steps for the following: 
 
-1. `mkdir ~/research && cp /var/logs/* /etc/passwd /etc/shadow /etc/hosts ~/research`
+1. `mkdir -p ~/research && sudo cp -r /var/log/* /etc/passwd /etc/shadow /etc/hosts ~/research`
 
-    - **Solution**: `echo "alias logs='mkdir ~/research && cp /var/logs/* /etc/passwd /etc/shadow /etc/hosts ~/research'" >> ~/.bashrc`
+    - **Solution**: `echo "alias logs='mkdir -p ~/research && sudo cp -r /var/log/* /etc/passwd /etc/shadow /etc/hosts ~/research'" >> ~/.bashrc`
     
 The `Custom Aliases` section should now look like:
 
@@ -139,7 +139,7 @@ alias docs='cd ~/Documents'
 alias dwn='cd ~/Downloads'
 alias etc='cd /etc'
 alias rc='nano ~/.bashrc'
-alias logs='mkdir ~/research && cp /var/logs/* /etc/passwd /etc/shadow /etc/hosts ~/research'
+alias logs='mkdir -p ~/research && sudo cp -r /var/log/* /etc/passwd /etc/shadow /etc/hosts ~/research'
 ```
 
 We can either keep the output file redirection `>> ~/research/users.txt` or we can leave it out. If we do leave it out, we can still use redirection when we run our custom alias.

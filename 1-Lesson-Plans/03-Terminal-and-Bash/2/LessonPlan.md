@@ -32,6 +32,14 @@ By the end of class, students will be able to:
 ### Lab Environment   
 
 You will use the Ubuntu VM inside your web lab for today's activities. Please note that instructors and students have different access credentials.
+
+  - Student credentials:
+    - Username:`student`
+    - Password: `cybersecurity`
+
+  - Instructor credentials:
+    - Username: `instructor`
+    - Password: `instructor`
   
 :warning: **Heads Up**: In the event of lab malfunctions, use a backup zip file containing this module's student activity directories.
 

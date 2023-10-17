@@ -31,7 +31,7 @@ Create aliases in your `~/.bashrc` file for the following commands:
 
 - `nano ~/.bashrc`
 
-- `mkdir ~/research && cp /var/logs/* /etc/passwd /etc/shadow /etc/hosts ~/research`
+- `mkdir -p ~/research && sudo cp -r /var/log/* /etc/passwd /etc/shadow /etc/hosts ~/research`
 
 **Note:** Remember to reload your `~/.bashrc` file before trying out your new aliases.
 

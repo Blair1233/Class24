@@ -1295,8 +1295,6 @@ Let students know that in the next module, we will be returning to Azure Lab Ser
 
 Tell students to switch to their local computer environment.
 
-Please send students the registration link for the NetSec environment. Once they click on it, the NetSec environment card will be added to their Azure dashboard.
-
 **Details Around the Environment**
 
 Inside of the NetSec instance, you will find a Windows 10 machine hosting a Security Onion machine and two virtual Linux machines named UFW and firewalld.

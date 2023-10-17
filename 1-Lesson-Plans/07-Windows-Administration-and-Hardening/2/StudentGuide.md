@@ -23,9 +23,12 @@ In this module, you will be using a Windows lab environment located in Windows A
 
 **Windows RDP Host Machine**
 
-  - Username: `azadmin`
-
-  - Password: `p4ssw0rd*`
+  - RDP login credentials for labs provisioned prior to 9/12/23
+    - Username: `azadmin`
+    - Password: `p4ssw0rd*`
+  - RDP login credentials for labs provisioned after 9/12/23
+    - Username: `azadmin`
+    - Password: `p@ssw0rdp@ssw0rd`
 
 Open up the Hyper-V Manager in the Windows RDP Host machine to access the nested virtual machines:
 

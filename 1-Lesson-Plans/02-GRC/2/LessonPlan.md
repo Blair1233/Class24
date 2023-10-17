@@ -20,7 +20,7 @@ By the end of today's class, students will be able to:
 
 Today's lesson will use the **OWASP Threat Modelling** protocol and its subsequent steps in order to approach  cyber risk management and threat modeling.
 
-- We will use a macro-enabled, risk analysis spreadsheet that includes a heat map: [Risk Analysis Template](https://docs.google.com/spreadsheets/d/1gwNSDxTnVOv7d8PXXZCjZl00ymtKwQjkWCKD1IaMC-A/edit#gid=1384626883)
+- We will use a macro-enabled, risk analysis spreadsheet that includes a heat map: [Risk Analysis Template](https://docs.google.com/spreadsheets/d/1gwNSDxTnVOv7d8PXXZCjZl00ymtKwQjkWCKD1IaMC-A/copy)
 
 - Editing access is not available for this document. In order to work in this file, you and students will need to make a copy by navigating to **File** > **Make a copy...**
 

@@ -8,8 +8,9 @@
 - **Method/Payload to Exploit:** On the Domain Dossier webpage, view the WHOIS data for totalrekall.xyz. The address will show the flag:
   - `Registrant Street: h8s692hskasd Flag1`
 
-#### Flag 2: 34.102.136.180
-- **Method/Payload to Exploit:**  Ping totalrekall.xyz
+#### Flag 2: 7sk67cjsdbs
+- **Method/Payload to Exploit:**
+  - `nslookup -type=txt totalrekall.xyz`
  
 #### Flag 3: s7euwehd
 - **Location:** `crt.sh`

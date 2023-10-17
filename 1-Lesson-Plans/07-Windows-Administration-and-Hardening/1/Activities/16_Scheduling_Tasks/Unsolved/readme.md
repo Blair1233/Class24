@@ -16,6 +16,12 @@ Continue using the Windows RDP Host machine.
 
 3. Create a new task.
 
+    **NOTE:** The action item would normally execute a prepared script.  Since we have not yet created Windows Scripts we can simulate the process by launching an existing program.
+    
+    - Under Action tab, select `new` then select `Start a program` and click `Browse`
+    - Select the System32 Folder on the left and type `CMD` in the File Name section
+    - Select CMD.exe from the list
+
 4. Navigate to the scheduling section.
 
 5. Schedule the task to execute every day.

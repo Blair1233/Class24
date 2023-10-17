@@ -2,7 +2,7 @@
 
 ### Lesson Overview
 
-In today's class students will dive into a capture the flag challenge. At the end of class today, students will sign up and register for Azure Lab Services, which they will use in the upcoming Windows module. 
+In today's class students will dive into a capture the flag challenge. At the end of class today, students will sign into [Azure Lab Services - https://labs.azure.com](https://labs.azure.com) with the credentails provided to prepare for the upcoming Windows module. 
 
 ### Lesson Objectives
 
@@ -14,7 +14,7 @@ By the end of today's class, students will:
 
 | :warning: Azure Lab Services Registration For Upcoming Windows Module :warning: |
 |:-:|
-| You will spend the final 25 minutes of today's class getting students set up on Azure Lab Services. You will distribute the class-specific registration link for the Windows lab environment as well as unique student credentials. |
+| You will spend the final 25 minutes of today's class getting students set up on Azure Lab Services. 
 
 - Once all students have logged in, you will give a brief overview of the Windows environment along with additional steps for students to take in order to better manage their environments. You will also demonstrate how to properly shut down lab environments.  
 
@@ -26,11 +26,9 @@ By the end of today's class, students will:
 
     - **Do not share this sheet with students**. This document contains sensitive information of other other cohorts.
 
-- If you have not done so already, make sure to review the [Azure instructional training documents](https://github.com/coding-boot-camp/cybersecurity-v2/blob/master/00-Teaching-Staff-Prework/Up-and-Running-with-Azure.md)
+- If you have not done so already, make sure to review the [Azure instructional training documents](../../../00-Teaching-Staff-Prework/Up-and-Running-with-Azure.md)
 
-- If you or your TAs do not have lab owner privileges for Azure, please submit a ticket in BCS using the following guide. You will need lab owner privileges in order to perform common tasks such as resetting VMs for your students. 
-
-    -  [Instructor Azure Support Request Form](https://docs.google.com/document/d/1l146wPR-XzNdoTLQYvNpOK7i5wJ2QJNsvtZ2OgAypm4/edit). 
+- If you or your TAs do not have lab owner privileges for Azure, please submit a `/cyberlabsupport` ticket in the #05-cyber-security channel.  You will need lab owner privileges in order to perform common tasks such as resetting VMs for your students and adjusting your class lab schedule.  
 
 ### Lab Environment
 
@@ -243,9 +241,9 @@ Open the VM and review how to get each flag.
 
 **`A famous hacker has created a user on the system. Find this user, crack his password and login to his account.`**
 
-- Point out that the hacker's name is Kevin Mitnik.
+- Point out that the hacker's name is Kevin Mitnick.
 
-    - Explain that students can learn about Mitnik with a quick "famous hackers" google search.
+    - Explain that students can learn about Mitnick with a quick "famous hackers" google search.
 
     - They can also see his user name at the bottom of the `shadow` file located in `~/my-files/shadow` and correlate that with all the user names in the `/home` directory.
 
@@ -262,7 +260,7 @@ Open the VM and review how to get each flag.
     Loaded 2 password hashes with 2 different salts (crypt, generic crypt(3) [?/64])
     Press 'q' or Ctrl-C to abort, almost any other key for status
     letmein     (student)
-    trustno1    (mitnik)
+    trustno1    (mitnick)
     2g 0:00:00:00 100% 3.030g/s 145.4p/s 290.9C/s 123456..webcam1
     Use the "--show" option to display all of the cracked passwords reliably
     Session completed
@@ -277,25 +275,25 @@ Open the VM and review how to get each flag.
 
     ```bash
     student:letmein:18197:0:99999:7:::
-    mitnik:trustno1:18197:0:99999:7:::
+    mitnick:trustno1:18197:0:99999:7:::
 
     2 password hashes cracked, 0 left
     student:Desktop\ $
     ```
 
-- Point out that we can easily see the password for `mitnik` is `trustno1`.
+- Point out that we can easily see the password for `mitnick` is `trustno1`.
 
-- Log into the `mitnik` account to see flag 2.
+- Log into the `mitnick` account to see flag 2.
 
     - Run:
 
         ```bash
-        student:Desktop\ $  su mitnik
+        student:Desktop\ $  su mitnick
         Password:
 
         You found flag_2:$1$PEDICYq8$6/U/a5Ykxw1OP0.eSrMZO0
 
-        mitnik:Desktop\ $
+        mitnick:Desktop\ $
         ```
 
 Pause and ask if there are any questions here before moving onto the next flag.
@@ -312,11 +310,11 @@ Pause and ask if there are any questions here before moving onto the next flag.
 
 - Luckily, we can find the `.zip` file easily with the same `R` flag with `ls`.
 
-- Point out also that you are currently inside the `Desktop` of the `student` user and the `mitnik` user does not have privileges to do anything inside the home folder for `student`, so we need to `cd` back to the `mitnik` home directory.
+- Point out also that you are currently inside the `Desktop` of the `student` user and the `mitnick` user does not have privileges to do anything inside the home folder for `student`, so we need to `cd` back to the `mitnick` home directory.
 
-    - Run : `cd` to move to the home directory for `mitnik`
+    - Run : `cd` to move to the home directory for `mitnick`
 
-    - Run: `mitnik:~\ $ls -Ra`
+    - Run: `mitnick:~\ $ls -Ra`
 
 - Your output should be:
 
@@ -343,16 +341,16 @@ Pause and ask if there are any questions here before moving onto the next flag.
 ```bash
 alternatives.log  dpkg.log   lastlog     tallylog
 apt               faillog    lxd         vboxadd-setup.log
-auth.log          journal    mitnik.log  vboxadd-setup.log.1
+auth.log          journal    mitnick.log  vboxadd-setup.log.1
 btmp              kern.log   samba       vboxadd-setup.log.3
 dist-upgrade      landscape  syslog      wtmp
 ```
 
-- Point out the `mitnik.log` file.
+- Point out the `mitnick.log` file.
 
 - Open the file to inspect it with the students.
 
-    - Run: `less /var/log/mitnik.log`
+    - Run: `less /var/log/mitnick.log`
 
 - Point out that inspecting the `file` shows that the IP addresses are only at the beginning of each line.
 
@@ -377,7 +375,7 @@ dist-upgrade      landscape  syslog      wtmp
 
 - Note that `uniq` only removes duplicate lines if they are right next to each other. Therefore, we must use `sort` in the chain to put duplicate lines next to each other. Only then will `uniq` remove all the duplicates.
 
-    - Run the following compound command: `$ cat /var/log/mitnik.log | sort | uniq | wc -l`
+    - Run the following compound command: `$ cat /var/log/mitnick.log | sort | uniq | wc -l`
 
 - Your output should be `102`.
 
@@ -388,13 +386,13 @@ dist-upgrade      landscape  syslog      wtmp
     - Enter the password.
 
     ```bash
-    mitnik:~\ $ unzip ~/Documents/.secret.zip
-    Archive:  /home/mitnik/Documents/.secret.zip
-    [/home/mitnik/Documents/.secret.zip] babbage password:
+    mitnick:~\ $ unzip ~/Documents/.secret.zip
+    Archive:  /home/mitnick/Documents/.secret.zip
+    [/home/mitnick/Documents/.secret.zip] babbage password:
     inflating: babbage                 
-    mitnik:~\ $ ls
+    mitnick:~\ $ ls
     babbage  Desktop  Documents  Downloads  Pictures  Public  Videos
-    mitnik:~\ $ cat babbage
+    mitnick:~\ $ cat babbage
     -----------------
     babbage : freedom
     -----------------
@@ -405,12 +403,12 @@ dist-upgrade      landscape  syslog      wtmp
 - Login as `babbage` to find flag_3:
 
     ```bash
-    mitnik:~\ $ su babbage
+    mitnick:~\ $ su babbage
     Password:
 
     You found flag_3:$1$Y9tp8XTi$m6pAR1bQ36oAh.At4G5s3.
 
-    babbage:mitnik\ $
+    babbage:mitnick\ $
     ```
 
 Pause for any questions here.
@@ -435,7 +433,7 @@ Pause for any questions here.
     ./Desktop:
 
     ./Documents:
-    ancheta    berners-lee  gonzalez  kernighan  mitnik   rossum      torvalds
+    ancheta    berners-lee  gonzalez  kernighan  mitnick   rossum      torvalds
     anonymous  bevan        gosling   knuth      poulsen  stallman    wirth
     assange    calce        hopper    lamo       pryce    stroustrup  woz
     astra      gates        james     lovelace   ritchie  thompson
@@ -467,7 +465,7 @@ Pause for any questions here.
     ---x---r-- 1 babbage babbage 0 Oct 30 21:05 knuth
     -rw-r--r-- 1 babbage babbage 0 Oct 30 21:05 lamo
     -rwx-w---- 1 babbage babbage 0 Oct 30 21:05 lovelace
-    -rw-r--r-- 1 babbage babbage 0 Oct 30 21:05 mitnik
+    -rw-r--r-- 1 babbage babbage 0 Oct 30 21:05 mitnick
     --w--w-rwx 1 babbage babbage 0 Oct 30 21:05 poulsen
     --w--w-rwx 1 babbage babbage 0 Oct 30 21:05 pryce
     -rw-rw-rw- 1 babbage babbage 0 Oct 30 21:05 ritchie
@@ -757,7 +755,7 @@ Pause for questions before moving onto flag_5:
 
         ```bash
         sysadmin:~\ $ touch file && sudo less file
-        root:~\ $
+        root:/home/sysadmin#
         ```
 
 - Explain that because you now have a root shell, you can change the password for the root user and then login as root.
@@ -765,7 +763,7 @@ Pause for questions before moving onto flag_5:
     - Run: `passwd`
 
     ```bash
-    root:~\ $ passwd
+    root:/home/sysadmin# passwd
     Enter new UNIX password:
     Retype new UNIX password:
     passwd: password updated successfully
@@ -819,7 +817,7 @@ Gauge if students are following; if they had trouble with these flags; and if th
     /home/student/Desktop/.flag_1: You found 'flag_1:$1$WYmnR327$5C1yY4flBxB1cLjkc92Tq.'
     /home/babbage/.bashrc:echo You found 'flag_3:$1$Y9tp8XTi$m6pAR1bQ36oAh.At4G5s3.'
     /home/stallman/.bashrc:echo You found 'flag_4:$1$lGQ7QprJ$m4eE.b8jhvsp8CNbuIF5U0'
-    /home/mitnik/.bashrc:echo You found 'flag_2:$1$PEDICYq8$6/U/a5Ykxw1OP0.eSrMZO0'
+    /home/mitnick/.bashrc:echo You found 'flag_2:$1$PEDICYq8$6/U/a5Ykxw1OP0.eSrMZO0'
     /home/sysadmin/.bashrc:alias flag="echo You found 'flag_6:$1$Qbq.XLLp$oj.BXuxR2q99bJwNEFhSH1'"
     ```
 
@@ -929,7 +927,7 @@ Explain that up until now you have only needed to have access to a single virtua
 
 Let students know that Azure is a “cloud”, which they will learn about in great detail in the Cloud Security module. For now, let them know that it is essentially a service that allows us to host our lab environments in a place that is convenient for everyone in the world to access. It can also be easily updated to fix bugs and add improvements as time goes on.
 
-Let students know that when they log in for the first time, they will only see the Windows environment. The instructor will send them a link for each new lab environment prior to when they will use it in class for the first time. Students will only need to click the link for the new environment. Then, it will appear on their Azure dashboard. 
+Let students know that when they log in they will see the lab for windows, which will appear on their Azure dashboard. 
 
 :warning: **Heads Up** Cover the following best practices to ensure that students properly use and don't unintentionaly lose access to their lab environments.
 
@@ -947,17 +945,15 @@ Take a moment to address remaining questions before proceeding.
 
 Complete the following steps:
 
-1. Slack students the Azure Windows registration link.
-
-2. Send students their unique Azure log-in credentials.
+1. Send students their unique Azure log-in credentials.
 
   - You can do this individually, but if you have a large class you can share a sheet containing all student credentials and ask students to find their specific username and password. (Please remember to copy the credentials on your university specific spreadsheet to a new sheet, and share that with students.)
 
-3. Distribute the [Lab Access Guide](https://docs.google.com/document/d/1TIRFGK9IabM7GFKXvMG31-y6UkHS2135jpZlwJUenJE/edit?usp=sharing).
+2. Distribute the [Lab Access Guide](https://docs.google.com/document/d/1TIRFGK9IabM7GFKXvMG31-y6UkHS2135jpZlwJUenJE/edit?usp=sharing).
 
-4. Distribute the [Azure Support Guide](./AzureSupportOnBCS.pdf).
+3. Distribute the [Azure Support Guide](./AzureSupportOnBCS.pdf).
 
-5. Instruct students to click the registration link and sign up using their credentials. 
+4. Instruct students to sign up using their credentials. 
 
     - They will be prompted to create a new password. 
 
@@ -967,7 +963,7 @@ Spend time making sure all students are set up on Azure. They should have access
 
 Students should stop once they have gotten to this step. Do not click on the Windows title card.
 
-If students are having issues with their credentials, or if their credentials are missing, they will need to submit a ticket in BCS following the [Azure Support Guide](./AzureSupportOnBCS.pdf)  
+If students are having issues with their credentials, or if their credentials are missing, instructional staff can submit a `/cyberlabsupport` ticket in the #05-cyber-security channel.
 
 #### Azure RDP Demonstration 
 
@@ -976,8 +972,6 @@ Explain that we will connect to our lab environments using RDP. In this section,
 1. Log in using your provided Azure credentials.
 
 2. After loading the dashboard, point out the card titled **Windows**.
-
-    - Explain that each new lab environment will have a different registration link, which will be provided in class at later dates. Once students have clicked a registration link, a new card with the new lab environment title will show up in their dashboard. 
 
 3. Explain that lab environments automatically turn on approximately 30 minutes before class starts and shut off approximately 15 minutes after class ends. This means that students will not have to manually start labs in class. However, they will need to start them manually should they wish to use them at home.
 
@@ -1001,9 +995,12 @@ Explain that we will connect to our lab environments using RDP. In this section,
 
 7. Everyone will use the same credentials to open the RDP connection:
 
-    - **Username**: `azadmin` OR `~\azadmin`
-
-    - **Password**: `p4ssw0rd*`
+  - RDP login credentials for labs provisioned prior to 9/12/23
+    - Username: `azadmin`
+    - Password: `p4ssw0rd*`
+  - RDP login credentials for labs provisioned after 9/12/23
+    - Username: `azadmin`
+    - Password: `p@ssw0rdp@ssw0rd`
 
 8. Click **OK** on the prompts raised by the RDP Client and demonstrate that logging in brings you to a completely different Windows desktop environment.
 

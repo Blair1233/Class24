@@ -36,7 +36,7 @@ The contents of the `.flag_1` file read:
 A famous hacker had created a user on the system a year ago. Find this user, crack his password and login to his account.
 
 **Solution:**
-- The hacker is 'Kevin Mitnik'.
+- The hacker is 'Kevin Mitnick'.
 
 - Use these files to crack his password:
 
@@ -50,7 +50,7 @@ Created directory: /home/student/.john
 Loaded 2 password hashes with 2 different salts (crypt, generic crypt(3) [?/64])
 Press 'q' or Ctrl-C to abort, almost any other key for status
 letmein     (student)
-trustno1    (mitnik)
+trustno1    (mitnick)
 2g 0:00:00:00 100% 3.030g/s 145.4p/s 290.9C/s 123456..webcam1
 Use the "--show" option to display all of the cracked passwords reliably
 Session completed
@@ -58,19 +58,19 @@ student:Desktop\ $
 student:Desktop\ $ 
 student:Desktop\ $  john --show ../Documents/my-files/shadow
 student:letmein:18197:0:99999:7:::
-mitnik:trustno1:18197:0:99999:7:::
+mitnick:trustno1:18197:0:99999:7:::
 
 2 password hashes cracked, 0 left
 student:Desktop\ $ 
-student:Desktop\ $  su mitnik
+student:Desktop\ $  su mitnick
 Password:
 
 You found flag_2:$1$PEDICYq8$6/U/a5Ykxw1OP0.eSrMZO0
 
-mitnik:Desktop\ $
+mitnick:Desktop\ $
 ```
 
-The password for the mitnik user is: `trustno1 `. Because the password changes happend _after_ the machine was hacked, we can still login as mitnik. 
+The password for the mitnick user is: `trustno1 `. Because the password changes happend _after_ the machine was hacked, we can still login as mitnick. 
 
 ### flag_3:
 
@@ -81,11 +81,11 @@ Find a ‘log’ file _and_ a zip file related to the hacker's name.
 **Solution:**
 - The unique number of IP addresses is the password for the hidden zipfile. opening that zipfile will give you the credentials for the `babbage` user.
 
-- Running `ls -Ra` in the  `/home/mitnik` directory, will show all the directories and files within them. The `.secret.zip` file is located in `/home/mitnik/Desktop`
+- Running `ls -Ra` in the  `/home/mitnick` directory, will show all the directories and files within them. The `.secret.zip` file is located in `/home/mitnick/Desktop`
 
 ```bash
-mitnik:/\ $ cd /home/mitnik
-mitnik:~\ $ls -Ra
+mitnick:/\ $ cd /home/mitnick
+mitnick:~\ $ls -Ra
 .:
 .   ..  .bash_logout    .bashrc Desktop Documents   Downloads   Pictures    .profile    Public  Videos
 
@@ -97,16 +97,16 @@ mitnik:~\ $ls -Ra
 
 ```
 
-The log file is located in `/var/log/mitnik.log`
+The log file is located in `/var/log/mitnick.log`
 
 ```bash
-mitnik:~\ $ ls /var/log
+mitnick:~\ $ ls /var/log
 alternatives.log  dpkg.log   lastlog     tallylog
 apt               faillog    lxd         vboxadd-setup.log
-auth.log          journal    mitnik.log  vboxadd-setup.log.1
+auth.log          journal    mitnick.log  vboxadd-setup.log.1
 btmp              kern.log   samba       vboxadd-setup.log.3
 dist-upgrade      landscape  syslog      wtmp
-mitnik:~\ $ 
+mitnick:~\ $ 
 ```
 Inspecting the file shows that the IP addresses are only at the beginning of each line.
 
@@ -124,21 +124,21 @@ Inspecting the file shows that the IP addresses are only at the beginning of eac
 We can create a compound command that counts the number of uniqe lines.
 
 ```bash
-mitnik:~\ $ cat /var/log/mitnik.log | sort | uniq | wc -l
+mitnick:~\ $ cat /var/log/mitnick.log | sort | uniq | wc -l
 102
-mitnik:~\ $ 
+mitnick:~\ $ 
 ```
 
 The password for the `/home/Documents/.secret.zip` is `102`
 
 ```bash
-mitnik:~\ $ unzip ~/Documents/.secret.zip 
-Archive:  /home/mitnik/Documents/.secret.zip
-[/home/mitnik/Documents/.secret.zip] babbage password: 
+mitnick:~\ $ unzip ~/Documents/.secret.zip 
+Archive:  /home/mitnick/Documents/.secret.zip
+[/home/mitnick/Documents/.secret.zip] babbage password: 
  inflating: babbage                 
-mitnik:~\ $ ls
+mitnick:~\ $ ls
 babbage  Desktop  Documents  Downloads  Pictures  Public  Videos
-mitnik:~\ $ cat babbage 
+mitnick:~\ $ cat babbage 
 -----------------
 babbage : freedom
 -----------------
@@ -149,12 +149,12 @@ The password for the `babbage` user is `freedom`
 Login as babbage to find flag_3:
 
 ```bash
-mitnik:~\ $ su babbage
+mitnick:~\ $ su babbage
 Password: 
 
 You found flag_3:$1$Y9tp8XTi$m6pAR1bQ36oAh.At4G5s3.
 
-babbage:mitnik\ $
+babbage:mitnick\ $
 ```
 
 ### flag_4:
@@ -166,7 +166,7 @@ Find a directory with a list of hackers. Look for a file that has `read` permiss
 Switch to the babbage home folder and list all his files:
 
 ```bash
-babbage:mitnik\ $ cd /home/babbage/
+babbage:mitnick\ $ cd /home/babbage/
 babbage:~\ $ ls -Ra
 .:
 .bash_logout  Desktop    Downloads  .profile  Videos
@@ -175,7 +175,7 @@ babbage:~\ $ ls -Ra
 ./Desktop:
 
 ./Documents:
-ancheta    berners-lee  gonzalez  kernighan  mitnik   rossum      torvalds
+ancheta    berners-lee  gonzalez  kernighan  mitnick   rossum      torvalds
 anonymous  bevan        gosling   knuth      poulsen  stallman    wirth
 assange    calce        hopper    lamo       pryce    stroustrup  woz
 astra      gates        james     lovelace   ritchie  thompson
@@ -204,7 +204,7 @@ total 4
 ---x---r-- 1 babbage babbage 0 Oct 30 21:05 knuth
 -rw-r--r-- 1 babbage babbage 0 Oct 30 21:05 lamo
 -rwx-w---- 1 babbage babbage 0 Oct 30 21:05 lovelace
--rw-r--r-- 1 babbage babbage 0 Oct 30 21:05 mitnik
+-rw-r--r-- 1 babbage babbage 0 Oct 30 21:05 mitnick
 --w--w-rwx 1 babbage babbage 0 Oct 30 21:05 poulsen
 --w--w-rwx 1 babbage babbage 0 Oct 30 21:05 pryce
 -rw-rw-rw- 1 babbage babbage 0 Oct 30 21:05 ritchie
@@ -463,7 +463,7 @@ Once inside `less` open a bash shell with `:` then `!bash`
 
 ```bash
 sysadmin:~\ $ touch file && sudo less file
-root:~\ $ 
+root:/home/sysadmin#
 ```
 
 ### flag_7:
@@ -505,7 +505,7 @@ root@scavenger-hunt:~# grep -ir 'flag' /home/
 /home/student/Desktop/.flag_1: You found 'flag_1:$1$WYmnR327$5C1yY4flBxB1cLjkc92Tq.'
 /home/babbage/.bashrc:echo You found 'flag_3:$1$Y9tp8XTi$m6pAR1bQ36oAh.At4G5s3.'
 /home/stallman/.bashrc:echo You found 'flag_4:$1$lGQ7QprJ$m4eE.b8jhvsp8CNbuIF5U0'
-/home/mitnik/.bashrc:echo You found 'flag_2:$1$PEDICYq8$6/U/a5Ykxw1OP0.eSrMZO0'
+/home/mitnick/.bashrc:echo You found 'flag_2:$1$PEDICYq8$6/U/a5Ykxw1OP0.eSrMZO0'
 /home/sysadmin/.bashrc:alias flag="echo You found 'flag_6:\$1\$Qbq.XLLp\$oj.BXuxR2q99bJwNEFhSH1'"
 ```
 

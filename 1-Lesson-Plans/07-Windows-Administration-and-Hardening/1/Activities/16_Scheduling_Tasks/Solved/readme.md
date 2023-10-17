@@ -15,6 +15,10 @@
 
     - Enter a **Name** for the task.
 
+    - Under the Action tab, select `new` then select `Start a program` and click `Browse`
+    - Select the System32 Folder on the left and type `CMD` in the File Name section
+    - Select CMD.exe from the list
+
 4. Navigate to the scheduling section.
 
    - In the Create Task GUI window, navigate to the **Triggers** tab, and click **New...**.
@@ -31,6 +35,7 @@
 
    - Select **OK** to save your changes and return to the Create Task window.
 
+7. In about one minute, the CMD.exe program will run and a Command Prompt will appear on your Desktop.
 ----
 
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

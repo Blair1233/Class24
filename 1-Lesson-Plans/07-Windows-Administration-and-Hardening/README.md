@@ -49,9 +49,12 @@ This module will use an online Azure lab environment. This environment consists 
 
 - Windows RDP Host Machine
 
-   - Username: `azadmin`
-
-   - Password: `p4ssw0rd*`
+  - RDP login credentials for labs provisioned prior to 9/12/23
+    - Username: `azadmin`
+    - Password: `p4ssw0rd*`
+  - RDP login credentials for labs provisioned after 9/12/23
+    - Username: `azadmin`
+    - Password: `p@ssw0rdp@ssw0rd`
 
 - Windows 10 Machine (used on Day 3)
 
