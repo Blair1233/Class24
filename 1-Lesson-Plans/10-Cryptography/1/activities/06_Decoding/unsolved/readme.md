@@ -8,6 +8,8 @@ You will continue the role of a security analyst working for the Hill Valley Pol
 
 - You are tasked with decoding the message to determine the bandit's next target.
 
+[Secret message](../../../resources/Message_left_at_Mayor's_House.txt)
+
 ### Instructions
 
 1. View the message left at the Mayor's house, provided in the TXT file. Use one of the following websites to decode the message:

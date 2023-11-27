@@ -91,7 +91,7 @@ Parsing the output of the `ps` command will require using a program like `awk`.
       - `$1, $2, $3, $4, $11'}`: Each item on a line, separated by white space, that is given to `awk` is given a number. We can later choose those items using the `$`. Here, we are choosing `USER`, `PID`, `%CPU`, `%MEM` and `COMMAND`.
 
 Add the `head` and output parts of the command:
-`ps aux --sort -%mem | awk {'print $1, $2, $3, $4, $11'} | head -n 11> ~/research/top_processes.txt`
+`ps aux --sort -%mem | awk {'print $1, $2, $3, $4, $11'} | head -n 11 > ~/research/top_processes.txt`
 
 - We are using `head -n 11` to give us only the first ten processes plus the title line, before we send the command to our research directory.
 

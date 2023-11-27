@@ -59,7 +59,7 @@ The goal of this activity was to learn how to configure uncomplicated firewall (
 
         - `sudo ufw allow 443`
 
-6. After updating any rule in UFW, stop and restart it.
+6. After updating the rules, enable and verify UFW status.
 
    - Type the command that enables UFW: 
 

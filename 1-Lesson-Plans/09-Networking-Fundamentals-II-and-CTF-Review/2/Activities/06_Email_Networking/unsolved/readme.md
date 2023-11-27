@@ -8,7 +8,7 @@ In this activity, you will continue to play the role of a security analyst at Ac
 
 ### Instructions
 
-[Suspicious Emails File](https://docs.google.com/document/d/1x9xMouZNu2PJsY-FQ8PD3dn0yWEH9Mn3G6WXeSBEh1k/edit?usp=sharing)
+[Suspicious Emails File](../../../Resources/emails.pdf)
    
 Open the suspicious emails provided. For each, determine the following data points:
 

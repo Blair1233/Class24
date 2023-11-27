@@ -74,7 +74,7 @@ The password for the mitnick user is: `trustno1 `. Because the password changes 
 
 ### flag_3:
 
-Find a ‘log’ file _and_ a zip file related to the hacker's name.  
+Find a `log` file related to the hacker's name and a zip file with additional info.
 
 - Use a compound command to figure out the unique count of IP Addresses in this log file. That number is a password.
 

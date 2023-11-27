@@ -40,27 +40,9 @@ To start up the virtual machines, run the following command from the terminal wi
 
 #### Next Week's Lab Environment
 
-Next week, we will be using a new pen testing lab environment located in Windows Azure. You and students will need a class-specific registration link. 
-
-- If you are unsure about where to find this unique registration link, please do the following:
-
-  * Refer to this resource to find your university-specific spreadsheet: [Google Sheets: University Access List](https://docs.google.com/spreadsheets/d/1uHVzvVQftHL4CkUOB03lNelf-kLToZys6ugsIoVOpE0/edit#gid=0).
-
-  * Open your university-specific spreadsheet and navigate to your specific cohort’s tab.
+Next week, we will be using a new pen testing lab environment located in Windows Azure. 
   
-  * Find the registration link for the appropriate lab environment.
-  
-  * Note that these links will be added one to two classes prior to when students will be using the lab environment for the first time. If you would like access to a lab environment earlier for preparation, please reach out to the curriculum team.
-
-- At the end of today's class:
-
-  - Tell students to turn off their virtual machines and return to their local computers.
-
-  - Send the pen testing Azure registration link. When students click on this link, it will add the pen testing environment card to their Azure dashboards.
-
-  - Explain that the machines are found in this environment and then share the login credentials for each one.
-
-  - Remind students to turn off their machines and environment before ending class.
+  * Note that these labs will be added one to two classes prior to when students will be using the lab environment for the first time. If you would like access to a lab environment earlier for preparation, please reach out to the curriculum team.
 
 ### Slideshow
 

@@ -44,7 +44,7 @@ Before you begin Day 3, you are required to have completed the following tasks f
 
 ## Instructions
 
-  * [All Domains (Azure Free Domain OR GoDaddy 99 Cent Domain) - Day 3 Activity Guide](https://docs.google.com/document/d/1Ky56GTSj-xWuU-csKAV0MSV8h8tmdn8rTyj_Es0joRM/edit?usp=sharing)
+  * [All Domains (Azure Free Domain OR GoDaddy 99 Cent Domain) - Day 3 Activity Guide](https://docs.google.com/document/d/1E3_I1NNNKJSpraCgWJ7x84KLnU-QwrFIiuOmCLjPnZ0/edit?usp=sharing)
 ---
 
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.  

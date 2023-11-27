@@ -10,6 +10,10 @@ You will continue the role of a security analyst working for the Hill Valley Pol
 
 - You must use the key to decrypt the most recent message left by the Alphabet Bandit.
 
+[Secret Message](./message.txt)
+
+![Crumpled Note](crumpled_note.png)
+
 ### Instructions
 
 1. View the message and the note from trash left at Dr. Brown's House.

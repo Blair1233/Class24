@@ -71,7 +71,7 @@ Slack out the [Setup Guide](https://docs.google.com/document/d/1gs_09b7eotl7hzTL
 
 - Slack out [Azure Free Tier FAQ's](https://azure.microsoft.com/en-us/free/free-account-faq/)
 
-**Important:** During these classes, students will need to generate Seure Shell (SSH) keys. Please remind any students that are using a Windows machine that they should have downloaded and installed [GitBash](https://gitforwindows.org/) on their machine. GitBash should be used to follow all SSH instructions for these modules.
+**Important:** During these classes, students will need to generate Secure Shell (SSH) keys. Please remind any students that are using a Windows machine that they should have downloaded and installed [GitBash](https://gitforwindows.org/) on their machine. GitBash should be used to follow all SSH instructions for these modules.
 
 #### References
 
@@ -333,7 +333,11 @@ Explain that the Azure Portal is intuitive and easy to use. The easiest way to f
 
 At any time, you can click on the Notifications Bell to see if the resources have been created.
 
-    ![](./Images/notifications.png)
+- ![](Images/notifications.png)
+
+
+
+
 
 Now that we have a resource group, we can add a virtual network.
 

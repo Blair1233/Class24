@@ -35,7 +35,7 @@ The goal for this homework was to solidify your mastery with various Linux syste
 
 1. Cron job for backing up the `/var/log/auth.log` file:
 
-    - `0 6 * * */4   tar -zcf /auth_backup.tgz /var/log/auth.log`
+    - `0 6 * * * 4   tar -zcf /auth_backup.tgz /var/log/auth.log`
 
 ---
 

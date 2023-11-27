@@ -23,16 +23,19 @@ You will continue your role as a security analyst working for the Hill Valley Po
 
 1. Enter any plaintext into the Password Encrypter and determine the algorithm being used for encryption.
 
+- [Detective Tannen's Password Encryption Script](../../../resources/encrypter.py)
+
     - To run the password encrypter, run: `python3 encrypter.py`.
   
          *Hint: Try multiple plaintext passwords to help determine the algorithm.*
 
-3. Once the algorithm has been determined for encryption, apply this method in reverse to determine Tannen's plaintext password from his encrypted password, **cbzhptmm**.
+2. Once the algorithm has been determined for encryption, apply this method in reverse to determine Tannen's plaintext password from his encrypted password, **cbzhptmm**.
 
-4. Apply this password on Tannen's login website to confirm that the password is correct. Look for any hard evidence that suggests Detective Tannen is the Alphabet Bandit. 
+3. Apply this password on Tannen's login website to confirm that the password is correct. Look for any hard evidence that suggests Detective Tannen is the Alphabet Bandit. 
 
     - To test Tannen's Login password, run: `python3 password.py`.
 
+- [Detective Tannen's Computer Login](../../../resources/password.py)
 ---
 
  © 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

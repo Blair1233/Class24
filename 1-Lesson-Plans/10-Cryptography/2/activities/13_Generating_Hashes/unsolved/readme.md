@@ -16,6 +16,8 @@ In this activity, you will continue to be a security analyst working for the Hil
 
 1. Extract the investigation files provided to you.
 
+[Investigation files](../../../resources/Alphabet_Bandit_Investigation_Reports.zip)
+
   - Note that there are directories titled `current` and `backup`, each of which contain the investigation report files.
 
      - It's quite likely that the Alphabet Bandit modified the data in the current files.

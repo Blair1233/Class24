@@ -18,23 +18,13 @@ By the end of class, students will be able to:
 
 ### Instructor Notes
 
-**Next Week's Lab Environment**: Students will use the new NetSec Azure lab environment for the next module. Please find the registration link in the Azure credentials spreadsheet.
+**Next Week's Lab Environment**: Students will use the new NetSec Azure lab environment for the next module.
 
-- If you are unsure about where to find this unique registration link, please do the following:
-
-  * Refer to this [spreadsheet](https://docs.google.com/spreadsheets/d/1uHVzvVQftHL4CkUOB03lNelf-kLToZys6ugsIoVOpE0/edit#gid=0) to find your university specific spreadsheet.
-
-  * Open up your university-specific spreadsheet and navigate to your specific cohort’s tab.
-
-  * Find the registration link for the appropriate lab environment.
-
-  * These links will be added 1-2 classes prior to when students will be using the lab environment for the first time. If you would like access to a lab environment earlier for preparation, please reach out to the curriculum team.
+  * These labs will be added 1-2 classes prior to when students will be using the lab environment for the first time. If you would like access to a lab environment earlier for preparation, please reach out to the curriculum team.
 
 - At the end of today's class:
 
   - Tell students to turn off their virtual machines and return to their local computers.
-
-  - Send the NetSec Azure registration link. When students click on this link, it will add the NetSec environment card to their Azure dashboards.
   
   - Explain that the machines are found in this environment and then share the log-in credentials for each one.
   
@@ -1296,6 +1286,15 @@ Let students know that in the next module, we will be returning to Azure Lab Ser
 Tell students to switch to their local computer environment.
 
 **Details Around the Environment**
+
+Start by making sure you're logged into the **Windows RDP Host Machine** with the following credentials:
+
+  - RDP login credentials for labs provisioned prior to 9/12/23
+    - Username: `azadmin`
+    - Password: `p4ssw0rd*`
+  - RDP login credentials for labs provisioned after 9/12/23
+    - Username: `azadmin`
+    - Password: `p@ssw0rdp@ssw0rd`
 
 Inside of the NetSec instance, you will find a Windows 10 machine hosting a Security Onion machine and two virtual Linux machines named UFW and firewalld.
 

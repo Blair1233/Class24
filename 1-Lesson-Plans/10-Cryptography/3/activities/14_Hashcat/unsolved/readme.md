@@ -12,6 +12,8 @@ You will continue your role as a security analyst working for the Hill Valley Po
 
 ### Instructions
 
+- [Encrypted File from Detective Tannen's Computer](../../../resources/secret.zip)
+
 1. Use Hashcat to determine the plaintext value of the hash found on Detective Tannen's computer.
 
    - The hash found on Detective Tannen's computer is `f31663d6c912b0b1ced885a6c6bbab7c`.

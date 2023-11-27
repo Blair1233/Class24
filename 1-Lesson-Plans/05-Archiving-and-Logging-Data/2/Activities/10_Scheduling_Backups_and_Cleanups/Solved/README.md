@@ -7,7 +7,7 @@ Completing this activity required the following tasks:
 
 - Creating `lynis` scripts to perform security scans.
 
-Move the scripts you wrote in the previous exercise to the appropriate `cron` directories in `/etc`. Specifically, your scripts should run at the following intervals:
+Copy the scripts you wrote in the previous exercise to the appropriate `cron` directories in `/etc`. Specifically, your scripts should run at the following intervals:
 
 - `backup.sh` should run weekly.
 

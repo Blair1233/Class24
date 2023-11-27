@@ -19,10 +19,8 @@ By the end of class, students will be able to:
 ### Instructor Notes
 
 - Today's lesson includes an optional activity: 06. Optimizing with Asymmetric Public Keys Activity. 
-
-  - If class falls on a saturday, you will have time to complete the activity. 
   
-  - If class is not on a Saturday, distribute the file and tell students that it is an optional activity that they can do on their own time and then review during office hours if needed. 
+  -  Distribute the file and encourage students that it is an optional activity that they can do on their own time and then review during office hours if needed. 
 
 - During 08. Applying Public Key Cryptography with GPG, there is a demonstration that depicts two different individuals completing public key encryption. It is recommended to have two virtual machines open in order to simulate two individuals: one VM representing Tim and one VM representing Julie.
 
@@ -439,9 +437,9 @@ Summarize the concepts covered during this lesson:
   
 :warning: **Heads Up**: The next activity and review is optional: 
 
-  - **If this class falls on a Saturday:** Explain that in the next activity, students will see how key management is simplified with asymmetric encryption by determining how many fewer keys are required for asymmetric encryption versus symmetric encryption.
+  - **If there is time:** Explain that in the next activity, students will see how key management is simplified with asymmetric encryption by determining how many fewer keys are required for asymmetric encryption versus symmetric encryption
   
-  - **If this class falls on a weekday**: Explain that you will be sending out an optional activity to reinforce the concepts covered in this section. Students can choose to complete the activity after class.
+  - If there is not enough time, encourage students to do the optional activity to reinforce the concepts covered in this section. Students can choose to complete the activity after class.
     
     - Send out the next activity and solution and proceed to `Instructor Do: Applying Public Key Cryptography with GPG `.
 
@@ -1165,7 +1163,7 @@ Send students the following file:
 
   - Run `cd /Alphabet_Bandit_Investigation_Reports/backup`.
 
-- Create a single hash file for all of the files:
+- Create a hash for each of the files in the directory:
 
   - `md5sum * > hashes`
 
@@ -1183,7 +1181,7 @@ Send students the following file:
   2147a20472c421f2b9af8250d742bbd1 *Investigation_1116
   ```
 
-- Copy the hash file to the `current` folder:
+- Move the hash file to the `current` folder:
 
    - `mv hashes ../current/`
 
@@ -1209,8 +1207,8 @@ Send students the following file:
 
 - Next, since we know which two files were modified, run the following `diff` commands to find out what was changed:
 
-  - `diff Investigation_1101 ../Investigation_1101`
-  - `diff Investigation_1110 ../Investigation_1110`
+  - `diff Investigation_1101 ../backup/Investigation_1101`
+  - `diff Investigation_1110 ../backup/Investigation_1110`
 
 - The results should show:
 

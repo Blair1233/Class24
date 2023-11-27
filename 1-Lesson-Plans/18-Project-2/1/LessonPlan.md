@@ -20,7 +20,7 @@ In the second project week, students will use the skills that they learned in th
 
   - Username: `azadmin`
 
-  - Password: `p4ssw0rd*`
+  - Password: `p@ssw0rdp@ssw0rd`
 
 - Open Hyper-V Manager to access the nested machine, and use the following credentials for the **Kali machine**:
 

@@ -10,7 +10,7 @@ The goal of this exercise was to use hashes to validate the integrity of data. Y
 
   - Run `cd /Alphabet_Bandit_Investigation_Reports/backup`.
          
-- Create a single hash file for all of the files:
+- Create a hash for each of the files in the directory and save this to a single file:
 
   - `md5sum * > hashes`
       
@@ -28,7 +28,7 @@ The goal of this exercise was to use hashes to validate the integrity of data. Y
   2147a20472c421f2b9af8250d742bbd1 *Investigation_1116
   ```
 
-- Copy the hash file to the `current` folder:
+- Move the hash file to the `current` folder:
 
    - `mv hashes ../current/`
     

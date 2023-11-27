@@ -12,7 +12,7 @@ On Day 2, students will continue to exploit Rekall's technical infrastructure, b
 
     - Username: `azadmin`
 
-    - Password: `p4ssw0rd*`
+    - Password: `p@ssw0rdp@ssw0rd`
 
 - Open Hyper-V Manager to access the nested machine, and use the following credentials for the **Kali machine**:
 

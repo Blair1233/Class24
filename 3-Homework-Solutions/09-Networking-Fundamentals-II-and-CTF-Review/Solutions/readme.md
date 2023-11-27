@@ -105,7 +105,7 @@ To view the current NS records for princessleia.site run `nslookup -type=ns prin
 
 Your Mission: 
 
-- View the [Galaxy Network Map](../resources/Galaxy_Network_map.png) and determine the `OSPF` shortest path from `Batuu` to `Jedha`.
+- View the [Galaxy Network Map](https://drive.google.com/file/d/1pzkrxYfNPwBwfG-tZYi5wydGnyq8xVbt/view) and determine the `OSPF` shortest path from `Batuu` to `Jedha`.
 - Confirm your path doesn't include `Planet N` in its route.
 - Document this shortest path so it can be used by the Resistance to develop a static route to improve the traffic.
 
@@ -119,7 +119,7 @@ Your Mission:
 
 **Issue:** Due to all these attacks, the Resistance is determined to seek revenge for the damage the Empire has caused. 
 - You are tasked with gathering secret information from the Dark Side network servers that can be used to launch network attacks against the Empire.
-- You have captured some of the Dark Side's encrypted wireless internet traffic in the following pcap: [Darkside.pcap](resources/Darkside.pcap).
+- You have captured some of the Dark Side's encrypted wireless internet traffic in the following pcap: [Darkside.pcap](https://drive.google.com/file/d/1lleKbGhkSZA-9q2WsHuW6dxMM5KrrRyS/view).
 
 Your Mission:
 
@@ -156,10 +156,10 @@ Your Mission:
 - There are a few ways to view IP addresses. One is to filter by ARP and view the ARP response in packet 315.
   - The packet details show several of the Private IPs and MAC addresses in the network.
       ```
-      Sender MAC address: Cisco-Li_e3:e4:01 (00:0f:66:e3:e4:01)
-      Sender IP address: 172.16.0.1
-      Target MAC address: IntelCor_55:98:ef (00:13:ce:55:98:ef)
-      Target IP address: 172.16.0.101
+      Target MAC address: Cisco-Li_e3:e4:01 (00:0f:66:e3:e4:01)
+      Target IP address: 172.16.0.1
+      Sender MAC address: IntelCor_55:98:ef (00:13:ce:55:98:ef)
+      Sender IP address: 172.16.0.101
       ```          
   - A DNS Filter will also show several IP addresses in the 10.x network.
   

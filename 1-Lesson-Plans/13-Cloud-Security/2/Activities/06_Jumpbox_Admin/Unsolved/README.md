@@ -28,7 +28,7 @@ Next, log into portal.azure.com and complete the following:
 
    - In the configuration settings, select **Inbound security rules** on the left panel. 
 
-   - Makes sure to set a priority level lower than your rule to deny all traffic. 
+   - Makes sure to set a priority level higher than your rule to deny all traffic. **Hint:** Remember rules go in order from lower number to highter number.
 
 	 - Limit traffic from your external IP address and to only the internal IP address of the jump box.
 

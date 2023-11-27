@@ -30,9 +30,9 @@ The goal of this activity was to reinforce concepts related to network security 
     
        -  Outbound from `$HOME_NET`
 
-    - Looking at the DNS resolution information contained in the IP Resolution Window, in what country is the victim located?
+    - Looking at the DNS resolution information contained in the IP Resolution Window, in what country is the server located?
 
-        - The Netherlands
+        - The United States
     
 3. Switch from Sguil to NetworkMiner, select the **Parameters** tab, and answer the following questions.
     

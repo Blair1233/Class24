@@ -20,12 +20,9 @@ By the end of the class, students will be able to:
 
 ### Instructor Notes
 
-- In this module, you will use a new Forensics lab environment located in Windows Azure. You and students will need a class-specific registration link. If you are unsure about where to find this unique registration link, please do the following:
+- In this module, you will use a new Forensics lab environment located in Windows Azure. 
 
-  * Please refer to this [spreadsheet](https://docs.google.com/spreadsheets/d/1uHVzvVQftHL4CkUOB03lNelf-kLToZys6ugsIoVOpE0/edit#gid=0) to find your university-specific spreadsheet.
-  * Open your university-specific spreadsheet and navigate to your specific cohort’s tab.
-  *  Find the registration link for the appropriate lab environment. 
-  * Please note that these links will be added 1&ndash;2 classes prior to when students will be using the lab environment for the first time. If you would like access to a lab environment earlier for preparation, please reach out to the curriculum team. 
+  * Please note that these labs will be added 1&ndash;2 classes prior to when students will be using the lab environment for the first time. If you would like access to a lab environment earlier for preparation, please reach out to the curriculum team. 
 
 - Today's lesson has three parts:
   - Introduction to the science of digital forensics.

@@ -16,7 +16,7 @@ In this activity, you will continue in your role as an SOC analyst for the Calif
 
 Choose a threat and use the following threat intelligence card template to document your findings: 
 
-- [Threat Intelligence Card](https://docs.google.com/document/d/1nG1F5sD1GC3EqZo6a4VMOmBltS7qYAkgf4AfFsFrXu0/edit#).
+- [Threat Intelligence Card](https://docs.google.com/document/d/1nG1F5sD1GC3EqZo6a4VMOmBltS7qYAkgf4AfFsFrXu0/copy).
 
 #### Sample Threat Intelligence Report 
 

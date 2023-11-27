@@ -22,9 +22,9 @@
 
 	- Note: Your Web VMs **should not** have an external IP address. If they **do** have an external IP address, it can be ignored.
 
-5. Change the Ansible **configuration** file to use your administrator account for SSH connections.
-
 	- **HINT:** Remember to add the line: `ansible_python_interpreter=/usr/bin/python3` besides each IP address you enter.
+
+5. Change the Ansible **configuration** file to use your administrator account for SSH connections.
 
 6. Test an Ansible connection using the appropriate Ansible command.
 
