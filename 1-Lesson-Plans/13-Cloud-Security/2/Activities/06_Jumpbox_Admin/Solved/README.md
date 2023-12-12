@@ -17,6 +17,7 @@ Next, log into portal.azure.com to create a security group rule to allow SSH con
     - Click **+ Add** to add a rule.
 
         - Source: Use the **My IP address** setting.
+            - **Note:** Verify that the address that shows matches the address from step `1`
 
         - Source port ranges: Set to **Any** or * here.
 

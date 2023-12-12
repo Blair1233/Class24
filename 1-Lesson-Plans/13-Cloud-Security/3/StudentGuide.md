@@ -137,7 +137,7 @@ Copy the first example for installing Apache and paste it into your playbook.
 - Each task will start with a hyphen (`-`), placed at the same indentation as `tasks`.
 - `- name`: Precedes the name of the task. We can give the task any name, but since we will see this name in Ansible's output when we run the playbook, it should be a name we will recognize.
 - `ansible.builtin.apt`: The name of the module we are using. It is at the same indentation level as the `name` specification.
-- `update_cache: yes`: Runs the equivalent of `supo apt update` to pull the most recent repositories.
+- `update_cache: yes`: Runs the equivalent of `sudo apt update` to pull the most recent repositories.
 - `name`: The next `name` precedes the name of the package we want to install. Here, it is `apache2`. This field is indented two spaces from the start of `apt`.
 - `state`: Precedes the state of the package we want to install, which is either `present` or `absent`.
   - If set to `present`, Ansible checks to see if the package is there. If it is there, Ansible does nothing. If it is not there, Ansible runs the command `sudo apt install apache2` to install Apache2.

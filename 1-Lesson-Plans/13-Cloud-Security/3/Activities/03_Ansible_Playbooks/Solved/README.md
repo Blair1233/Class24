@@ -50,17 +50,14 @@ Your task was to create an Ansible playbook that installed Docker and configure 
 
 ```YAML
  - name: Uninstall apache if needed
-      ansible.builtin.apt:
-        update_cache: yes
-        name: apache2
-        state: absent
+     ansible.builtin.apt:
+      update_cache: yes
+      name: apache2
+      state: absent
         
 ```
-
-
-
 - Use the Ansible `builtin.apt` module to install `docker.io` and `python3-pip`:
-- Use the Ansible `builtin.apt` module to install `docker.io` and `python3-pip`:
+
 **Note:** `update_cache` must be used here, or `docker.io` will not install. (This is the equivalent of running `apt update`.)
 
   ```YAML
@@ -78,6 +75,8 @@ Your task was to create an Ansible playbook that installed Docker and configure 
   ```
 
 Note: `update_cache: yes` is needed to refresh the repositories to download and install docker.io.
+
+Note: `force_apt_get` is used to prevent the broken packages or missing dependencies from erroring out on install.
 
 - Use the Ansible `pip` module to install `docker`:
 
@@ -122,39 +121,41 @@ You will also need to use the `systemd` module to restart the docker service whe
       hosts: webservers
       become: true
       tasks:
+
         - name: Uninstall apache if needed
           ansible.builtin.apt:
             update_cache: yes
             name: apache2
             state: absent
       
-       - name: docker.io
-         ansible.builtin.apt:
-           update_cache: yes
-           name: docker.io
-           state: present
+        - name: docker.io
+          ansible.builtin.apt:
+            update_cache: yes
+            name: docker.io
+            state: present
 
-       - name: Install pip3
-         ansible.builtin.apt:
-           name: python3-pip
-           state: present
+        - name: Install pip3
+          ansible.builtin.apt:
+            force_apt_get: yes
+            name: python3-pip
+            state: present
 
-       - name: Install Docker python module
-         pip:
-           name: docker
-           state: present
+        - name: Install Docker python module
+          pip:
+            name: docker
+            state: present
 
-       - name: download and launch a docker web container
-         docker_container:
-           name: dvwa
-           image: cyberxsecurity/dvwa
-           state: started
-           published_ports: 80:80
+        - name: download and launch a docker web container
+          docker_container:
+            name: dvwa
+            image: cyberxsecurity/dvwa
+            state: started
+            published_ports: 80:80
 
-       - name: Enable docker service
-         systemd:
-           name: docker
-           enabled: yes
+        - name: Enable docker service
+          systemd:
+            name: docker
+            enabled: yes
     ```
 
   - Running your playbook should produce an output similar to the following:
