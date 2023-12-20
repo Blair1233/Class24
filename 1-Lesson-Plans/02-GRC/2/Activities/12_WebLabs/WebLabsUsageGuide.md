@@ -1,4 +1,6 @@
-## Web Labs Student Guide
+## Web Labs / Student Portal Guide
+
+**Web Labs**
 
 ### 01. Signing into to Web Labs
 
@@ -60,7 +62,27 @@ Web labs use a service called **Guacamole** to render the virtual machine in you
 	
 - There shouldn't be a reason to tamper with any settings within Guacamole unless instructed to do so. 
 
-- If the VMs within Guacamole become corrupted or have a major issue, your instructor has the ability to reset the VM.
+
+
+
+**Student Portal**
+
+- To access the **student portal** go to the following URL: https://control.vmportal.org
+- Unless you have already logged in, you will be redirected to authenticate
+
+![StudentPortal1](../../Images/student_portal_1.png)
+  
+- You will then recieve a Microsoft prompt to login with your provided credentials
+
+![StudentPortal2](../../Images/student_portal_2.png)
+
+- After logging in, you will see the following page with your labs.
+    - **Lab Toggle** - This can be used to turn on and off your lab during non class hours
+       - Note your lab will automatically be turned on during class hours
+    - **Lab Reset** - This will reset all your Lab setting and remove all files and anything saved within your lab.
+        - - If the VMs within Guacamole become corrupted or have a major issue, you can utilize this option.
+
+
 
 ---
 

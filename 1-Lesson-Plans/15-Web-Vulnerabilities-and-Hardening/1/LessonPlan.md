@@ -714,7 +714,7 @@ Take a moment to ask the class if they have any questions on how we used a paylo
 
   - Security analysts would also have to try multiple payloads to determine which ones will end up working.
 
-    - 📚 Distribute the following resource that lists thousands of available SQL injection payloads to test: [Medium: SQL Injection Payload List](https://medium.com/@ismailtasdelen/sql-injection-payload-list-b97656cfd66b).
+    - 📚 Distribute the following resource that lists thousands of available SQL injection payloads to test: [SQL Injection Payload Tutorial](https://techyrick.com/sql-injection-payload-tutorial/).
   
 - **Variety of attacks**
 

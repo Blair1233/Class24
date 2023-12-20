@@ -30,6 +30,11 @@
 
     - Run: `curl localhost/setup.php` to test the connection. If everything is working, you should get back some HTML from the DVWA container.
 
+
+**Note:** You are encouraged to create the `yml` from scratch, but if you get stuck, an example yml is located at [playbook_example.yml](./playbook_example.yml)
+
+
+
 ---
 
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

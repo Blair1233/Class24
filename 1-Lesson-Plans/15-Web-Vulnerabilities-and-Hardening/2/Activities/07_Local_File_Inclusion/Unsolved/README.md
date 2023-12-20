@@ -75,19 +75,6 @@ The webpage you have accessed represents a page within the Replicants website. T
 
       - Note that this is how the application is intended to work, by providing a user an option to upload and view an image!
 
-          - There will be a file on your desktop called `image.jpg`.
-
-          - Select that image.
-
-        - Back on the file upload page, you should see the `image.jpg` file name that you selected.
-
-          - To upload the file, select Upload.
-
-        - You should then receive a success message that states the following:
-
-          `../../hackable/uploads/image.jpg succesfully uploaded!`
-        
-      - Note that this is how the application is intended to work, by providing the user with an option to upload and view an image!
 
 2. Test an unintended function of the application by loading a malicious PHP script.
 

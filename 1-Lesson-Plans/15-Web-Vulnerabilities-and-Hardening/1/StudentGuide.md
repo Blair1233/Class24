@@ -585,7 +585,7 @@ Since we were able to modify the intended functionality of the website with a ma
 
   - Security analysts would also have to try multiple payloads to determine which ones will end up working.
 
-    - 📚 The following resource lists thousands of available SQL injection payloads to test: [Medium: SQL Injection Payload List](https://medium.com/@ismailtasdelen/sql-injection-payload-list-b97656cfd66b).
+    - 📚 The following resource lists thousands of available SQL injection payloads to test: [SQL Injection Payload Tutorial](https://techyrick.com/sql-injection-payload-tutorial/).
   
 - **Variety of attacks**
 

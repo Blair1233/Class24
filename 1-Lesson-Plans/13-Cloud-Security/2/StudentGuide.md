@@ -451,6 +451,10 @@ Once you are connected, there are a few Docker commands we will need in order to
 - We want to make sure we are only running one container and that it is the same container every time we use Ansible.
 
 **IMPORTANT NOTE** The difference between `docker run` and `docker start` is very important! `docker run` will create a _new_ container from the container image and that new container will have default settings. None of your previous Ansible changes will be there. Because of this, `docker run` should only be used on the first time the Ansible container is created/started. `docker start` should be used _every_ time thereafter, or problems with the activities will arise because of missing files on the Ansible container.
+
+Refer to this document for additional information: [Docker Container Commands](../DockerCheatSheet.md)
+
+
 Begin by connecting to your jump box via SSH.
 
 List all the containers created on the system:

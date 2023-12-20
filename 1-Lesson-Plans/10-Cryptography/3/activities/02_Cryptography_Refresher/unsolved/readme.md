@@ -30,7 +30,7 @@ sub   rsa3072 2020-05-27 [E] [expires: 2022-05-27]
 
 3. Using GPG, clearsign the message with a digital signature, and name your output file with your name, such as: `Important_Communication_by_Myname` 
 
-4. Working with the same partner as in the assymetric key activity from last class, send the clearsigned message to the partner.
+4. Working with the same partner as in the asymmetric key activity from last class, send the clearsigned message to the partner.
 
     - Note: If this partner isn't available, join another group to exchange exported public keys and clearsigned messages with.
 

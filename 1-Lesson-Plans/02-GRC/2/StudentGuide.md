@@ -495,9 +495,9 @@ Some example controls for this problem:
 
 ---
 
-### 12. Class Do: Web Labs Introduction (0:15)
+### 12. Class Do: Web Labs Introduction (0:10)
 
-For the rest of the day you will learn about the virtual environment we will use for the majority of future class activities. 
+For the rest of the day we will introduce the virtual environment we will use for the majority of future class activities. 
 
 - During these first two weeks, the in-class activities were mostly big-picture security thinking and conceptual exercises.  
 
@@ -505,17 +505,14 @@ For the rest of the day you will learn about the virtual environment we will use
 
 - To complete these activities, you will need access to virtual machines and virtual networks. You will use these tools to practice attacking and securing systems.
 
-Note the following:
+Emphasize the following:
 
-* While you will not use the virtual machine until Module 3, we want to provide students ample time and resources to set up their environment so they are ready to work immediately when we start the module. 
+* While we will not use the virtual machine until Module 3, we want to provide you ample time and resources to set up their environment so you are ready to work immediately when we start the module. 
 
-* If you experience any issues during this set up process, you should schedule time to visit office hours so the instructional staff can assist. 
 
 #### What is a Virtual Machine?
 
-:question: : Can you explain what a virtual machine is? 
-
-Answer: 
+:question: What is a Virtual Machine?
 
 - To most people, a computer means a desktop or laptop. These are the common **physical machines** we use in everyday life.
 
@@ -529,37 +526,49 @@ In other words, it's possible to simply run an application that acts like a comp
 
   - These software versions of physical computers are called **virtual machines (VMs)**.
 
-  - You can use a single physical machine to run multiple virtual machines, effectively turning one computer into many.
+  - We can use a single physical machine to run multiple virtual machines, effectively turning one computer into many.
 
 Virtual machines have many advantages over physical machines:
 
   - They are easy and inexpensive (often free) to set up and run.
 
-  - You can easily distribute them. In this class, we will distribute VMs so that each student is running the exact same setup.
+  - We can easily distribute them. In this class, we will distribute VMs so that each student is running the exact same setup.
 
-  - A single physical machine can run multiple VMs. Among other scenarios, a single device will run multiple machines to set up and attack target other machines and set up redundant back-up machines. 
+  - As mentioned earlier, a single physical machine can run multiple VMs. Among other scenarios, a single device will run multiple machines to set up and attack target other machines and set up redundant back-up machines. 
 
 The main advantage of physical machines over virtual machines is that they are typically more efficient because they access the hardware components directly.
 
-- To ensure every student is on the same hardware,  the virtual machines are hosted for everyone with Microsoft's cloud platform, called Azure. 
+- To ensure everyone is on the same hardware, we've hosted the virtual machines for everyone in the Microsoft's cloud platform, called Azure. 
 
-- You will be able to access their own virtual machine via their own web browser. This is made possible through a solution called **Guacamole**. 
+- You will be able to access your own virtual machine via their own web browser. This is made possible through a solution called **Guacamole**. 
   - Guacamole simply allows connection to a remote machine by using a web browser.
 
-View the following activity file: 
+You will have access to two websites:
+
+- (1)  **Web Lab**  (http://cybersecurity.vmportal.org/) This is the website you will go to access your lab.
+  - Your Web Lab will automatically be accessible during class hours.
+- (2)  **Student Portal** (https://control.vmportal.org)  This is the website you will access to administer the following for your web lab:
+   - Enable your Web Lab during non class hours
+      - Be sure to disable when you are finished!
+   - Reset your Web Lab
+       - Note that this option will reset all settings and remove all files you may have saved in your lab.
+  
+Note the following activity file: 
 
 - [Activity File: Web Labs Setup](/v3.0-Curriculum/1-Lesson-Plans/02-GRC/2/Activities/12_WebLabs/WebLabsUsageGuide.md)
 
-- Browse to the Lab URL and login with your credentials provided.
+**Web Lab**
+
+- Browse to the Web Lab URL and login with their credentials you were provided.
 
 	![LoginScreen](Images/LoginScreen.png)
 	
-- Once you login, you will be asked to change their password.
+- Once you login, you will be asked to change your password.
 
 	![NewPW](Images/NewPW.png)
 	
 - Once logged in, ensure you can access the Ubuntu VM.
-   - Select your Ubuntu machine 
+   - Then select their Ubuntu machine 
 
 	![Connections](Images/connections.png)
 
@@ -567,10 +576,33 @@ View the following activity file:
 
 	![ubuntu](Images/ubuntu.png)
 	
-After successfully logging into the Ubuntu machine, this is the Virtual Machine where you will be conducting many of our class activities.
-  - If the a lesson or activity calls for using a **web lab**, this is where you will access the lesson/activity.
-  - We will not need to access this machine until the third week
+After successfully logging into the Ubuntu machine, note this is the Virtual Machine where we will be conducting many of our class activities.
+  - If the lesson or activity calls for using a **web lab**, this is where you will access the lesson/activity.
+  - You will not need to access this machine until the third week
 
-For the remaining time in class, feel free to explore the "web lab" environment.
+For the remaining time in class, you can feel free to explore the "web lab" environment.
+
+**Student Portal**
+
+You will also have access to the Student Portal to self-administer their Web Lab
+
+- To access the **student portal** go to the following URL: https://control.vmportal.org
+- Unless you have already logged in, you will be redirected to setup your authentication.
+   - Note: [Microsoft's Authenticator](https://www.microsoft.com/en-us/security/mobile-authenticator-app) is the recommended authenticator app
+
+![StudentPortal1](Images/student_portal_1.png)
+  
+- You will then recieve a Microsoft prompt to login with your provided credentials
+
+![StudentPortal2](Images/student_portal_2.png)
+
+- After logging in, you will see the following page with your labs:
+    - **Lab Toggle** - This can be used to turn on and off your lab during non class hours
+       - Note: Your lab will automatically be turned on during class hours and kept off outside of class hours. If you manually turn your lab ON outside of class time, make sure to turn it OFF before logging out.
+    - **Lab Reset** - This will reset all your Lab settings and remove all files and anything saved within your lab.
+       - If the VMs within Guacamole become corrupted or have a major issue, you can utilize this option.
+
+![StudentPortal2](Images/student_portal_3.png)
+
 
 © 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

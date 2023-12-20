@@ -24,6 +24,8 @@ Today's demonstrations and activities include the following:
 
 - An explanation of containers and an activity using Docker to install and run containers.
 
+**Note:** A Docker cheat sheet has been provided for the students at [Docker Cheat Sheet](../DockerCheatSheet.md)
+
 - After the break, a demonstration and activity using Ansible.
 
 **Note:** Be sure to explore these activities prior to class, especially if you are new to Docker and Ansible.

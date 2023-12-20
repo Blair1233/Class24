@@ -28,8 +28,8 @@ Today's lesson will use the **OWASP Threat Modelling** protocol and its subseque
 
 ### Instructor Lab Environment Setup
 
-You will set up the Guacamole Web Lab environment today and walk students through logging into their Web Lab VM. While we won't use the environment until next week, it's important to set it up now to ensure any issues can be solved as early as possible.
-- Be sure to leave 10 - 15 minutes to introduce Web Labs to the class
+You will set up the Guacamole Web Lab environment today and walk students through logging into their Web Lab VM and student portal. While we won't use the environment until next week, it's important to set it up now to ensure any issues can be solved as early as possible.
+- Be sure to leave 10 - 15 minutes to introduce Web Lab and Student Portal to the class
 
 - Navigate to the [Instructor Administrative Site](https://instructorpanel.azurewebsites.net/) and login with your @instructors.2u.com email address. 
 
@@ -855,11 +855,23 @@ The main advantage of physical machines over virtual machines is that they are t
 - Everyone will be able to access their own virtual machine via their own web browser. This is made possible through a solution called **Guacamole**. 
   - Guacamole simply allows connection to a remote machine by using a web browser.
 
+Explain that students will have access to two websites:
+
+- (1)  **Web Lab**  (http://cybersecurity.vmportal.org/) This is the website you will go to access your lab.
+  - Your Web Lab will automatically be accessible during class hours.
+- (2)  **Student Portal** (https://control.vmportal.org)  This is the website you will access to administer the following for your web lab:
+   - Enable your Web Lab during non class hours
+      - Be sure to disable when you are finished!
+   - Reset your Web Lab
+       - Note that this option will reset all settings and remove all files you may have saved in your lab.
+  
 Send students the following activity file: 
 
 - [Activity File: Web Labs Setup](/v3.0-Curriculum/1-Lesson-Plans/02-GRC/2/Activities/12_WebLabs/WebLabsUsageGuide.md)
 
-- Have students browse to the Lab URL and login with their credentials you provided.
+**Web Lab**
+
+- Have students browse to the Web Lab URL and login with their credentials you provided.
 
 	![LoginScreen](Images/LoginScreen.png)
 	
@@ -881,6 +893,29 @@ After successfully logging into the Ubuntu machine, explain that this is the Vir
   - Point out that we will not need to access this machine until the third week
 
 Let the students know that for the remaining time in class, they can feel free to explore the "web lab" environment.
+
+**Student Portal**
+
+Explain that students will also have access to the Student Portal to self-administer their Web Lab
+
+- To access the **student portal** go to the following URL: https://control.vmportal.org
+- Unless you have already logged in, you will be redirected to setup your authentication.
+   - Note: [Microsoft's Authenticator](https://www.microsoft.com/en-us/security/mobile-authenticator-app) is the recommended authenticator app
+
+![StudentPortal1](Images/student_portal_1.png)
+  
+- You will then recieve a Microsoft prompt to login with your provided credentials
+
+![StudentPortal2](Images/student_portal_2.png)
+
+- After logging in, you will see the following page with your labs:
+    - **Lab Toggle** - This can be used to turn on and off your lab during non class hours
+       - Note: Your lab will automatically be turned on during class hours and kept off outside of class hours. If you manually turn your lab ON outside of class time, make sure to turn it OFF before logging out.
+    - **Lab Reset** - This will reset all your Lab settings and remove all files and anything saved within your lab.
+       - If the VMs within Guacamole become corrupted or have a major issue, you can utilize this option.
+
+![StudentPortal2](Images/student_portal_3.png)
+
   - Ask the class if they have any questions before wrapping up the class.
 
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
